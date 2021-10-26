@@ -1,0 +1,1 @@
+[30-Jul-2021 16:24:14 America/Bogota] PHP Fatal error:  Call to undefined function connect_kit() in /home/nikkenlatam/public_html/interno/incorporacion-web-test-new/mexico/login-cupon-incorporate.php on line 27
