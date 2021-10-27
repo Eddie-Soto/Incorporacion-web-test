@@ -43,9 +43,9 @@ if($item == 5027 || $item=="5027"){
 }elseif ($item == 5025 || $item=="5025") {
 	$item=502519;
 }elseif ($item == 5024 || $item=="5024") {
-	$item=502419;
+	$item=50249;
 }elseif ($item == 5023 || $item=="5023") {
-	$item=502319;
+	$item=50239;
 }
 
 

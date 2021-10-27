@@ -31,7 +31,7 @@ function Code_consecutive()
 
 
 
-		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes_test order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes order by id_consecutive_code desc");
 
 		$queryResult->execute();
 
@@ -45,7 +45,7 @@ function Code_consecutive()
 
 
 
-			$sql = "INSERT INTO consecutive_codes_test (code) VALUES (:code)";
+			$sql = "INSERT INTO consecutive_codes (code) VALUES (:code)";
 
 			$query = $pdo->prepare($sql);
 
