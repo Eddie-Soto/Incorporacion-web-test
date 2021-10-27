@@ -159,16 +159,21 @@ if($type_sponsor == 3)
 	$platform="https://nikkenlatam.com/incorporacion-web/";
 
 	$sponsor = Assigned_sponsor($name,$email,$cellular,$country,$residency_two,$platform,$user);
+	$sponsor=12345;
 
 }
+
 
 else
 
 {
 
 	$sponsor = $_POST["sponsor"];
+	$sponsor=12345;
 
 	if($sponsor == 0){	$sponsor = 0;	}
+
+
 
 }
 
@@ -409,13 +414,14 @@ else
 
 		try
 	{
+		/*
 		$conn = connect_new_tv_test();
 		$query="INSERT INTO users (country_id, email, sap_code, sap_code_sponsor, password,secret_nikken, client_type, rank, name, phone, cell_phone, state, status, created_at) values ('$country','$email','$code','$sponsor','0','$secret_nikken','$type_letter','Directo','$name','$cellular','$cellular','$residency_two','1','$created_at')";
 
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
 		disconnect($conn);
-
+	*/
 	}
 	catch (Exception $e)
 	{
