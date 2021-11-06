@@ -11,7 +11,7 @@ function Code_consecutive()
 
 {
 
-	$dbHost = '104.238.83.157';
+	$dbHost = '104.130.46.73';
 
 	$dbName = 'nikkenla_incorporation';
 
@@ -31,7 +31,7 @@ function Code_consecutive()
 
 
 
-		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes_test order by id_consecutive_code desc");
 
 		$queryResult->execute();
 
@@ -45,7 +45,7 @@ function Code_consecutive()
 
 
 
-			$sql = "INSERT INTO consecutive_codes (code) VALUES (:code)";
+			$sql = "INSERT INTO consecutive_codes_test (code) VALUES (:code)";
 
 			$query = $pdo->prepare($sql);
 
@@ -94,7 +94,7 @@ function Code_consecutive()
 //Generar consecutivo de código alternativa
 function Code_consecutive_second()
 {
-	$dbHost = '104.238.83.157';
+	$dbHost = '104.130.46.73';
 	$dbName = 'nikkenla_incorporation';
 	$dbUser = 'nikkenla_mkrt';
 	$dbPass = 'NNikken2011$$';
@@ -209,10 +209,10 @@ fputs($file, $detail);
 fputs($file,"\r\n");
 fclose($file);
 //Generar archivo de bitacora
-$dbHost = '104.238.83.157';
+$dbHost = '104.130.46.73';
 $dbName = 'nikkenla_office';
-$dbUser = 'nikkenla_blog';
-$dbPass = 'N1kk3nbl0g2020$$..';
+$dbUser = 'nikkenla_mkrt';
+$dbPass = 'NNikken2011$$';
 
 try{
 	$pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));

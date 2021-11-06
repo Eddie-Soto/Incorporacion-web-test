@@ -10,6 +10,12 @@ $country = $_POST["country"];
 $type_incorporate = $_POST["type_incorporate"];
 
 
+$type_document_two = $_POST["type_document_two"];
+$number_document_two = $_POST["number_document_two"];
+
+echo $type_document_two."<br>".$number_document_two;
+
+
 /*Variables*/
 
 if (empty($_POST['checkip'])){ $ip = $_SERVER["REMOTE_ADDR"]; }else{ $ip = $_POST['checkip']; } //Consultar IP
@@ -252,7 +258,7 @@ try
 
 {
 
-	$sql = "INSERT INTO contracts (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit)";
+	$sql = "INSERT INTO contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit)";
 
 	$query = $pdo->prepare($sql);
 
@@ -360,7 +366,7 @@ else
 
 	{
 
-		$sql = "INSERT INTO nikkenla_marketing.control_ci (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES (:pais, :tipo, :codigo, :nombre, :codigop, :correo, :celular, :b1, :b2)";
+		$sql = "INSERT INTO nikkenla_marketing.control_ci_test (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES (:pais, :tipo, :codigo, :nombre, :codigop, :correo, :celular, :b1, :b2)";
 
 		$query = $pdo->prepare($sql);
 
@@ -414,14 +420,14 @@ else
 
 		try
 	{
-		/*
+		
 		$conn = connect_new_tv_test();
 		$query="INSERT INTO users (country_id, email, sap_code, sap_code_sponsor, password,secret_nikken, client_type, rank, name, phone, cell_phone, state, status, created_at) values ('$country','$email','$code','$sponsor','0','$secret_nikken','$type_letter','Directo','$name','$cellular','$cellular','$residency_two','1','$created_at')";
 
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
 		disconnect($conn);
-	*/
+	
 	}
 	catch (Exception $e)
 	{

@@ -160,7 +160,7 @@ if ($country != 7) {
 <div class="col-md-6">
 			<div class="form-group">
 				<div class="styled-select">
-					<select class="required input-type-document" name="type-document-two" id="type-document-two">
+					<select class="required input-type-document-two" name="type-document-two" id="type-document-two">
 						<option value="23" selected="true">NIT</option>
 					</select>
 
@@ -169,7 +169,7 @@ if ($country != 7) {
 </div>
 <div class="col-md-6">
 		<div class="form-group">
-			<input type="text" id="number-document-two"  name="number-document-two"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="13"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+			<input type="text" id="number-document-two"  name="number-document-two"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="13"  class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 			<input type="hidden" class="form-control required" id="validator-identification-two" value="">
 		</div>
 	</div>

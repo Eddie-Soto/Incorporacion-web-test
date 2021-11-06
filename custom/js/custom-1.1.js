@@ -1502,6 +1502,14 @@ $(function () {
         var number_document = $form.find('.input-number-document').val(); // Número de documento
 
 
+            var type_document_two =0;
+            var number_document_two =0;
+
+        type_document_two = $form.find('.input-type-document-two').val(); // Tipo de documento
+
+        number_document_two = $form.find('.input-number-document-two').val(); // Número de documento
+
+
 
         var rfc = $form.find('.input-rfc').val(); // RFC
 
@@ -1618,7 +1626,7 @@ $(function () {
 
         var verify_digit = $form.find('.verify_digit').val(); 
 
-        var dataString = 'id=' + id + '&type=' + type + '&gender=' + gender + '&country=' + country + '&type_incorporate=' + type_incorporate + '&last_name=' + encodeURIComponent(last_name) + '&name=' + encodeURIComponent(name) + '&birthday=' + encodeURIComponent(birthday) + '&email=' + encodeURIComponent(email) + '&cellular=' + encodeURIComponent(cellular) + '&residency_one=' + encodeURIComponent(residency_one) + '&residency_two=' + residency_two + '&residency_three=' + encodeURIComponent(residency_three) + '&residency_four=' + encodeURIComponent(residency_four) + '&name_legal_representative=' + encodeURIComponent(name_legal_representative) + '&type_document=' + type_document + '&number_document=' + encodeURIComponent(number_document) + '&address=' + encodeURIComponent(address) + '&name_cotitular=' + encodeURIComponent(name_cotitular) + '&type_document_cotitular=' + type_document_cotitular + '&number_document_cotitular=' + encodeURIComponent(number_document_cotitular) + '&bank=' + bank + '&bank_type=' + bank_type + '&number_account=' + encodeURIComponent(number_account) + '&number_clabe=' + encodeURIComponent(number_clabe) + '&type_sponsor=' + type_sponsor + '&sponsor=' + encodeURIComponent(sponsor) + '&rfc=' + encodeURIComponent(rfc) + '&type-kit=' + encodeURIComponent(type_item) + '&type-msi=' + encodeURIComponent(type_msi) + '&shirt-size=' + encodeURIComponent(playera) + '&tallaLetra=' + encodeURIComponent(tallaLetra) + '&verify_digit=' + encodeURIComponent(verify_digit) + '&segmentacion=' + encodeURIComponent(segmentacion);
+        var dataString = 'id=' + id + '&type=' + type + '&gender=' + gender + '&country=' + country + '&type_incorporate=' + type_incorporate + '&last_name=' + encodeURIComponent(last_name) + '&name=' + encodeURIComponent(name) + '&birthday=' + encodeURIComponent(birthday) + '&email=' + encodeURIComponent(email) + '&cellular=' + encodeURIComponent(cellular) + '&residency_one=' + encodeURIComponent(residency_one) + '&residency_two=' + residency_two + '&residency_three=' + encodeURIComponent(residency_three) + '&residency_four=' + encodeURIComponent(residency_four) + '&name_legal_representative=' + encodeURIComponent(name_legal_representative) + '&type_document=' + type_document + '&number_document=' + encodeURIComponent(number_document) + '&address=' + encodeURIComponent(address) + '&name_cotitular=' + encodeURIComponent(name_cotitular) + '&type_document_cotitular=' + type_document_cotitular + '&number_document_cotitular=' + encodeURIComponent(number_document_cotitular) + '&bank=' + bank + '&bank_type=' + bank_type + '&number_account=' + encodeURIComponent(number_account) + '&number_clabe=' + encodeURIComponent(number_clabe) + '&type_sponsor=' + type_sponsor + '&sponsor=' + encodeURIComponent(sponsor) + '&rfc=' + encodeURIComponent(rfc) + '&type-kit=' + encodeURIComponent(type_item) + '&type-msi=' + encodeURIComponent(type_msi) + '&shirt-size=' + encodeURIComponent(playera) + '&tallaLetra=' + encodeURIComponent(tallaLetra) + '&verify_digit=' + encodeURIComponent(verify_digit) + '&segmentacion=' + encodeURIComponent(segmentacion) + '&type_document_two=' + encodeURIComponent(type_document_two) + '&number_document_two=' + encodeURIComponent(number_document_two);
 
                     
 
