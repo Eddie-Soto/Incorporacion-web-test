@@ -14,6 +14,7 @@ $type_document_two = $_POST["type_document_two"];
 $number_document_two = $_POST["number_document_two"];
 
 echo $type_document_two."<br>".$number_document_two;
+exit;
 
 
 /*Variables*/
