@@ -169,7 +169,7 @@ if ($country != 7) {
 </div>
 <div class="col-md-6">
 		<div class="form-group">
-			<input type="text" id="number-document-two"  name="number-document-two"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?>  maxlength="13"  class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
+			<input type="text" id="number-document-two"  name="number-document-two"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?>  maxlength="14"  class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
 			
 		</div>
 	</div>

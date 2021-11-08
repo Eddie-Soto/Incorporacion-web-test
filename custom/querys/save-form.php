@@ -13,8 +13,7 @@ $type_incorporate = $_POST["type_incorporate"];
 $type_document_two = $_POST["type_document_two"];
 $number_document_two = $_POST["number_document_two"];
 
-echo $type_document_two."<br>".$number_document_two;
-exit;
+
 
 
 /*Variables*/
@@ -254,6 +253,11 @@ if($result != true)
 
 }
 /*Guardar en base de datos*/
+/*echo $type_document_two."<br>".$number_document_two;
+exit;*/
+if ($country == 7) {
+	$number_document=$number_document.",".$number_document_two;
+}
 
 try
 
@@ -291,7 +295,7 @@ try
 
 		'residency_one'	=> $residency_one, 
 
-		'residency_two'	=> $residency_two, 
+		'residency_two'	=>number_document $residency_two, 
 
 		'residency_three'	=> $residency_three, 
 
@@ -301,7 +305,7 @@ try
 
 		'type_document'	=> $type_document, 
 
-		'number_document'	=> $number_document, 
+		'number_document'	=> $, 
 
 		'name_cotitular'	=> $name_cotitular, 
 
