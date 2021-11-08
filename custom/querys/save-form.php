@@ -438,7 +438,8 @@ else
 	{
 		$result = $e;
 	}
-
+echo "datos guardados";
+exit;
 		if($type_sponsor == 2) /*Pendiente por asignar patrocinador*/
 
 		{
