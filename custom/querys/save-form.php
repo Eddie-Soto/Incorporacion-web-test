@@ -261,7 +261,7 @@ if($type_sponsor == 3)
 
 	$platform="https://nikkenlatam.com/incorporacion-web/";
 
-	$sponsor = Assigned_sponsores($name,$email,$cellular,$country,$residency_two,$platform,$user);
+	$sponsor = Assigned_sponsor($name,$email,$cellular,$country,$residency_two,$platform,$user);
 
 	
 
