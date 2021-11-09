@@ -223,7 +223,7 @@ $number_document_cotitular = $_POST["number_document_cotitular"];
 
 $bank = $_POST["bank"];
 
-
+if($bank == 0){	$bank = 0;	}
 
 
 $bank_type = $_POST["bank_type"];
