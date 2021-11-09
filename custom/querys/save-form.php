@@ -176,6 +176,11 @@ $name_legal_representative = $_POST["name_legal_representative"];
 
 $verify_digit = $_POST['verify_digit'];
 
+if ($verify_digit == undefined || $verify_digit=='undefined') {
+	$verify_digit=0;
+	# code...
+}
+
 $type_document = $_POST["type_document"];
 
 //Cambios Adolfo
