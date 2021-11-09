@@ -1,14 +1,82 @@
 <?php 
-
 date_default_timezone_set("America/Bogota");
-if(!isset($_SESSION)) 
-    { 
 session_name("incorporacion");
 session_start();
-}
 require_once('../../conexion-modified-for-tv.php');
 require_once('../../functions.php'); /*Funciones*/
 
+$type = $_POST["type"];
+
+$country = $_POST["country"];
+
+$type_incorporate = $_POST["type_incorporate"];
+
+/*SEGMENTACION*/
+$segmentacion = $_POST["segmentacion"];
+
+
+
+/* Logica que verifica el nuemro de archivos al final del formularío solo para COLOMBIA */
+/*
+if($country == 1){
+	if($type == 1 and $type_incorporate == 1){ // si es asesor y es persona natural
+		if(isset($_SESSION["cou"])) {
+				$count1=$_SESSION["count_files"];
+				$ope = $count1 - $_SESSION["cou"];
+				if($ope < 1){
+					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 1 archivo </strong> <br>";
+					//echo "se han borrado hasta el momento".$_SESSION["cou"];
+					//echo "<br>se deben subir: ".$count1;
+					//echo "<br> la operacion da:".$ope;
+					?>
+					<script>
+                           document.getElementById("validator").value = "";
+                            </script>
+                            <?php
+					exit;
+				}
+			}
+	}else if($type == 1 and $type_incorporate == 0){ // si es asesor y es empresa
+		if(isset($_SESSION["cou"])) {
+				$count1=$_SESSION["count_files"];
+				$ope = $count1 - $_SESSION["cou"];
+				if($ope < 5){
+					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 5 archivos </strong> <br>";
+					//echo "se han borrado hasta el momento".$_SESSION["cou"];
+					//echo "<br>se deben subir: ".$count1;
+					//echo "<br> la operacion da:".$ope;
+					?>
+					<script>
+                           document.getElementById("validator").value = "";
+                            </script>
+                            <?php
+					exit;
+				}
+			}
+	}else if($type == 0 and $type_incorporate == 1){ // si es club y es persona natural
+
+	}else if($type == 0 and $type_incorporate == 0){ // si es club y es empresa
+		if(isset($_SESSION["cou"])) {
+				$count1=$_SESSION["count_files"];
+				$ope = $count1 - $_SESSION["cou"];
+				if($ope < 4){
+					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 4 archivos </strong> <br>";
+				//	echo "se han borrado hasta el momento".$_SESSION["cou"];
+			//		echo "<br>se deben subir: ".$count1;
+			//		echo "<br> la operacion da:".$ope;
+					?>
+					<script>
+                           document.getElementById("validator").value = "";
+                            </script>
+                            <?php
+					exit;
+				}
+			}
+	}
+session_destroy();
+}
+*/
+/* Logica que verifica el nuemro de archivos al final del formularío solo para COLOMBIA */
 
 
 /*Variables*/
@@ -17,27 +85,24 @@ if (empty($_POST['checkip'])){ $ip = $_SERVER["REMOTE_ADDR"]; }else{ $ip = $_POS
 
 $browser = $_SERVER['HTTP_USER_AGENT']; //Consultar navegador
 
-$segmentacion = $_POST["segmentacion"];
+
 
 $id = $_POST["id"];
 
-$type = $_POST["type"];
+//$type = $_POST["type"];
 
 $type_letter = Type_letter($type);
 
-$country = $_POST["country"];
+//country = $_POST["country"];
 
-$type_incorporate = $_POST["type_incorporate"];
+//$type_incorporate = $_POST["type_incorporate"];
 
 $last_name = strtoupper($_POST["last_name"]);
 
-/* Obtenemos los datos de influencer  */
+/* =====================================================*/
 
 $item =  $_POST["type-kit"];
 $msi =  $_POST["type-msi"];
-$playera = $_POST["shirt-size"];
-$tallaLetra = $_POST['tallaLetra'];
-
 
 if($country == 2)
 {
@@ -47,11 +112,7 @@ if($country == 2)
 	}
 }
 
-
-
-/* Obtenemos los datos de influencer   */
-
-
+/* =====================================================*/
 
 $name = strtoupper($_POST["name"]);
 
@@ -64,8 +125,6 @@ $birthday = substr($_POST["birthday"], 6 ,4) . "-" . substr($_POST["birthday"], 
 $email = strtolower($_POST["email"]);
 
 $cellular = $_POST["cellular"];
-
-
 
 $address = $_POST["address"];
 
@@ -113,19 +172,32 @@ if($address_invoice == "")
 
 /*Deseo factura*/
 
-
-
 $name_legal_representative = $_POST["name_legal_representative"];
 
-
+$verify_digit = $_POST['verify_digit'];
 
 $type_document = $_POST["type_document"];
 
-if($type_document == 0){	$type_document = 0;	}
+//Cambios Adolfo
+
+if($type_document == 0){
+
+	$type_document = 0;	
+
+}
 
 
 
 $number_document = $_POST["number_document"];
+if ($country == 7) {
+	$type_document_two = $_POST["type_document_two"];
+$number_document_two = $_POST["number_document_two"];
+	$number_document=$number_document.",".$number_document_two;
+
+
+
+
+}
 
 
 
@@ -153,6 +225,7 @@ $bank = $_POST["bank"];
 
 
 
+
 $bank_type = $_POST["bank_type"];
 
 if($bank_type == 0){	$bank_type = 0;	}
@@ -169,8 +242,16 @@ $gender = $_POST["gender"];
 
 $type_kit = $_POST["type-kit"];
 
+$playera = $_POST["shirt-size"];
+
+$tallaLetra = $_POST['tallaLetra'];
+
+
+$created_at=date("Y-m-d H:i:s");
 
 $type_sponsor = $_POST["type_sponsor"];
+
+
 
 if($type_sponsor == 3)
 
@@ -180,8 +261,9 @@ if($type_sponsor == 3)
 
 	$platform="https://nikkenlatam.com/incorporacion-web/";
 
-	//$sponsor = Assigned_sponsor($name,$email,$cellular,$country,$residency_two,$platform,$user);
 	$sponsor = Assigned_sponsor($name,$email,$cellular,$country,$residency_two,$platform,$user);
+
+	
 
 }
 
@@ -196,28 +278,306 @@ else
 }
 
 /*Variables*/
-if ($type_kit == "" || $type_kit == "undefined") {
-	echo "No has elegido un kit de inicio, por favor regresa al paso #1, para elegirlo";
-	
-	exit;
-}
-if ($type_kit == "undefined" and $type==0) {
-	$type_kit=5031;
-	$item=5031;
-}elseif ($type_kit == "undefined" and $type == 1) {
-	$type_kit=5006;
-	$item = 5006;
-}
+
+
 
 /*Generar codigo*/
 
 $code = Code_consecutive();
 
 /*Generar codigo*/
-$created_at=date("Y-m-d H:i:s");
-$secret_nikken="";
 
-try
+
+if(isset($_SESSION["boleto"])){
+
+	$idticket=$_SESSION["boleto"];
+	
+
+//Verificar que no exista el codigo
+	try
+
+	{
+	$queryResult = $pdo->prepare("SELECT code_ticket FROM nikkenla_incorporation.user_promotion_kit_test where code_ticket = :code_ticket");
+	$queryResult->execute(array(':code_ticket' => $idticket));
+	$done = $queryResult->fetch();
+	}catch (Exception $e)
+
+	{
+
+		echo "error en la consulta".$e;
+		exit;
+
+	}
+	if($done)
+	{
+		echo 'el <strong>boleto'.$idticket.' ya se encuentra redimido</strong>, por favor utilizar uno nuevo';
+		exit;
+	/*if($done['payment'] == 0)
+	{
+		echo "el correo ingresado esta pendiente por generar el pago del Kit de inicio, por favor, utiliza la opción <strong>RETOMAR INCORPORACIÓN</strong>";
+		exit;
+	}
+	else
+	{
+		echo "el <strong>correo ingresado ya se encuentra utilizado</strong>, por favor utilizar uno nuevo";
+		exit;
+	}*/
+}
+else
+{
+	
+
+//Verificar que no exista el codigo
+	try
+
+	{
+
+		$sql = "INSERT INTO nikkenla_incorporation.user_promotion_kit_test (code_sponsor, code_redeem, kit, status, country_id, code_ticket, created_at) VALUES (:code_sponsor, :code_redeem, :kit, :status, :country_id, :code_ticket, :created_at)";
+
+		$query = $pdo->prepare($sql);
+
+		$result = $query->execute([
+
+			'code_sponsor'	=> $sponsor, 
+
+			'code_redeem'	=> $code, 
+
+			'kit'	=> $type_kit, 
+
+			'status'	=> 2, 
+
+			'country_id'	=> $country, 
+
+			'code_ticket'	=> $idticket, 
+
+			'created_at'	=> $created_at
+		]);
+
+	}
+
+	catch (Exception $e)
+
+	{
+
+		$result = false;
+
+	}
+
+
+
+	if($result != true)
+
+	{
+		echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo kit USD " . $result;
+
+		exit;
+	}
+}
+}
+
+//Verificar que no exista el codigo en contracts
+$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.contracts_test where code = :code");
+$queryResult->execute(array(':code' => $code));
+$done = $queryResult->fetch();
+if($done)
+{
+	echo 'el <strong>codigo'.$code.' ya se encuentra utilizado en la Incorporacion Web</strong>, por favor utilizar uno nuevo';
+	$code = Code_consecutive_second();
+	try
+
+	{
+
+
+
+		$sql = "INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit)";
+
+		$query = $pdo->prepare($sql);
+
+		$result = $query->execute([
+
+			'id'	=> $id, 
+
+			'country'	=> $country, 
+
+			'code'	=> $code, 
+
+			'name'	=> $name, 
+
+			'type'	=> $type, 
+
+			'type_incorporate'	=> $type_incorporate, 
+
+			'type_sponsor'	=> $type_sponsor, 
+
+			'sponsor'	=> $sponsor, 
+
+			'email'	=> $email, 
+
+			'cellular'	=> $cellular, 
+
+			'birthday'	=> $birthday, 
+
+			'address'	=> $address, 
+
+			'residency_one'	=> $residency_one, 
+
+			'residency_two'	=> $residency_two, 
+
+			'residency_three'	=> $residency_three, 
+
+			'residency_four'	=> $residency_four, 
+
+			'name_legal_representative'	=> $name_legal_representative, 
+
+			'type_document'	=> $type_document, 
+
+			'number_document'	=> $number_document, 
+
+			'name_cotitular'	=> $name_cotitular, 
+
+			'type_document_cotitular'	=> $type_document_cotitular, 
+
+			'number_document_cotitular'	=> $number_document_cotitular, 
+
+			'bank'	=> $bank, 
+
+			'bank_type'	=> $bank_type, 
+
+			'number_account'	=> $number_account, 
+
+			'number_clabe'	=> $number_clabe,
+
+			'rfc'	=> $rfc,
+
+			'ip'	=> $ip,
+
+			'browser'	=> $browser,
+
+			'gender'	=> $gender,
+
+			'kit' => $type_kit,
+
+			'playera' => $playera,
+
+			'tallaLetra' => $tallaLetra,
+
+			'verify_digit' => $verify_digit
+
+		]);
+
+	}
+
+	catch (Exception $e)
+
+	{
+
+		$result = $e;
+
+	}
+}
+else
+{
+	try
+
+	{
+
+
+
+		$sql = "INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit)";
+
+		$query = $pdo->prepare($sql);
+
+		$result = $query->execute([
+
+			'id'	=> $id, 
+
+			'country'	=> $country, 
+
+			'code'	=> $code, 
+
+			'name'	=> $name, 
+
+			'type'	=> $type, 
+
+			'type_incorporate'	=> $type_incorporate, 
+
+			'type_sponsor'	=> $type_sponsor, 
+
+			'sponsor'	=> $sponsor, 
+
+			'email'	=> $email, 
+
+			'cellular'	=> $cellular, 
+
+			'birthday'	=> $birthday, 
+
+			'address'	=> $address, 
+
+			'residency_one'	=> $residency_one, 
+
+			'residency_two'	=> $residency_two, 
+
+			'residency_three'	=> $residency_three, 
+
+			'residency_four'	=> $residency_four, 
+
+			'name_legal_representative'	=> $name_legal_representative, 
+
+			'type_document'	=> $type_document, 
+
+			'number_document'	=> $number_document, 
+
+			'name_cotitular'	=> $name_cotitular, 
+
+			'type_document_cotitular'	=> $type_document_cotitular, 
+
+			'number_document_cotitular'	=> $number_document_cotitular, 
+
+			'bank'	=> $bank, 
+
+			'bank_type'	=> $bank_type, 
+
+			'number_account'	=> $number_account, 
+
+			'number_clabe'	=> $number_clabe,
+
+			'rfc'	=> $rfc,
+
+			'ip'	=> $ip,
+
+			'browser'	=> $browser,
+
+			'gender'	=> $gender,
+
+			'kit' => $type_kit,
+
+			'playera' => $playera,
+
+			'tallaLetra' => $tallaLetra,
+
+			'verify_digit' => $verify_digit
+
+		]);
+
+	}
+
+	catch (Exception $e)
+
+	{
+
+		$result = $e;
+
+	}
+if($result != true)
+
+{
+
+	echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo " . $result;
+
+	exit;
+
+}else{
+	try
 
 	{
 
@@ -252,145 +612,16 @@ try
 		$result = $e;
 
 	}
-
-
-/*Guardar en base de datos*/
-
-if(isset($_SESSION["boleto"])){
-		$sponsor=$_SESSION["sponsor"];
-//if (isset($_SESSION["sponsor"]) && isset($_SESSION["kit"]) && isset($_SESSION["boleto"])) {
-
-	$idticket=$_SESSION["boleto"];
-
-	//Verificar que no exista el codigo
-	$queryResult = $pdo->prepare("SELECT code_ticket FROM nikkenla_incorporation.user_promotion_kit_test where code_ticket = :idticket");
-	$queryResult->execute(array(':idticket' => $idticket));
-	$done = $queryResult->fetch();
-	if($done)
-	{
-		echo 'el <strong>boleto'.$idticket.' ya se encuentra redimido</strong>, por favor utilizar uno nuevo';
-		exit;
-	}else{
-
-
-try
-
-	{
-
-		$sql = "INSERT INTO nikkenla_incorporation.user_promotion_kit_test (code_sponsor, code_redeem, kit, status, country_id, code_ticket, created_at) VALUES (:code_sponsor, :code_redeem, :kit, :status, :country_id, :code_ticket, :created_at)";
-
-		$query = $pdo->prepare($sql);
-
-		$result = $query->execute([
-
-			//'id' => $id_kit,
-
-			'code_sponsor'	=> $sponsor, 
-
-			'code_redeem'	=> $code, 
-
-			'kit'	=> $type_kit, 
-
-			'status'	=> 2, 
-
-			'country_id'	=> $country, 
-
-			'code_ticket'	=> $idticket, 
-
-			'created_at'	=> $created_at
-		]);
-
-	}
-
-	catch (Exception $e)
-
-	{
-
-		$result = false;
-
-	}
-
-
-
-if($result != true)
-
-{
-	echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo kit USD ";
-
-	exit;
 }
-}
-}
-
-
 //Verificar que no exista el codigo en contracts
-$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.contracts_test where code = :code");
-$queryResult->execute(array(':code' => $code));
-$done = $queryResult->fetch();
-if($done)
-{
-	echo 'el <strong>codigo'.$code.' ya se encuentra utilizado en la Incorporacion Web</strong>, por favor utilizar uno nuevo';
-	$code = Code_consecutive_second();
-	try
+	/*Guardar en base de datos*/
 
-	{
-
-if ($bank=='') {
-		$bank=0;
-		# code...
-	}
-
-
-		$conn = connect_kit();
-		$query="INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, address_invoice, residency_one_invoice, residency_two_invoice, residency_three_invoice, residency_four_invoice,  name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, cfdi, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$address_invoice', '$residency_one_invoice', '$residency_two_invoice', '$residency_three_invoice', '$residency_four_invoice', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$rfc', '$ip', '$browser', '$cfdi', '$gender', '$type_kit', '$playera', '$tallaLetra')";
-
-		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
-
-		disconnect($conn);
-
-	}
-
-	catch (Exception $e)
-
-	{
-
-		$result = $e;
-
-	}
-}
-else
-{
-try
-
-{
-	//$bank=0;
-	if ($bank=='') {
-		$bank=0;
-		# code...
-	}
-
-	$conn = connect_kit();
-		$query="INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, address_invoice, residency_one_invoice, residency_two_invoice, residency_three_invoice, residency_four_invoice,  name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, cfdi, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$address_invoice', '$residency_one_invoice', '$residency_two_invoice', '$residency_three_invoice', '$residency_four_invoice', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$rfc', '$ip', '$browser', '$cfdi', '$gender', '$type_kit', '$playera', '$tallaLetra')";
-
-		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
-
-		disconnect($conn);
-
+	
+	
 
 
 
 }
-
-catch (Exception $e)
-
-{
-
-	$result = $e;
-
-}
-
-}
-
 if($result != true)
 
 {
@@ -404,6 +635,7 @@ if($result != true)
 else
 
 {
+
 	/*Verificar que no exista el codigo en control_ci*/
 	$queryResult = $pdo->prepare("SELECT codigo FROM nikkenla_marketing.control_ci_test where codigo = :code");
 	$queryResult->execute(array(':code' => $code));
@@ -460,55 +692,55 @@ else
 //Verificar que no exista el codigo en control_ci
 
 
-	/*Guardar registro en marketing*/
+		/*Guardar registro en marketing*/
 
-	try
+		try
 
-	{
+		{
 
-		$sql = "INSERT INTO nikkenla_marketing.control_ci_test (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES (:pais, :tipo, :codigo, :nombre, :codigop, :correo, :celular, :b1, :b2)";
+			$sql = "INSERT INTO nikkenla_marketing.control_ci_test (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES (:pais, :tipo, :codigo, :nombre, :codigop, :correo, :celular, :b1, :b2)";
 
-		$query = $pdo->prepare($sql);
+			$query = $pdo->prepare($sql);
 
-		$result = $query->execute([
+			$result = $query->execute([
 
-			'pais'	=> $country, 
+				'pais'	=> $country, 
 
-			'tipo'	=> $type_letter, 
+				'tipo'	=> $type_letter, 
 
-			'codigo'	=> $code, 
+				'codigo'	=> $code, 
 
-			'nombre'	=> $name, 
+				'nombre'	=> $name, 
 
-			'codigop'	=> $sponsor, 
+				'codigop'	=> $sponsor, 
 
-			'correo'	=> $email, 
+				'correo'	=> $email, 
 
-			'celular'	=> $cellular, 
+				'celular'	=> $cellular, 
 
-			'b1'	=> 1, 
+				'b1'	=> 1, 
 
-			'b2'	=> 1
+				'b2'	=> 1
 
-		]);
+			]);
 
+		}
+
+		catch (Exception $e)
+
+		{
+
+			$result = false;
+
+		}
 	}
 
-	catch (Exception $e)
-
-	{
-
-		$result = false;
-
-	}
-
-}
 
 	if($result == false)
 
 	{
 
-		echo "<strong>no fue posible toda la incorporación</strong>, por favor verifica la información e intentalo de nuevo ci".$e;
+		echo "<strong>no fue posible toda la incorporación</strong>, por favor verifica la información e intentalo de nuevo";
 
 		exit;
 
@@ -517,32 +749,22 @@ else
 	else
 
 	{
-try
-	{
-		$conn = connect_new_tv_test();
-		$query="INSERT INTO users (country_id, email, sap_code, sap_code_sponsor, password,secret_nikken, client_type, rank, name, phone, cell_phone, state, status, created_at) values ('$country','$email','$code','$sponsor','0','$secret_nikken','$type_letter','Directo','$name','$cellular','$cellular','$residency_two','1','$created_at')";
 
-		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
+		try
+		{
+			$conn = connect_new_tv_test();
+			$query="INSERT INTO users (country_id, email, sap_code, sap_code_sponsor, password,secret_nikken, client_type, rank, name, phone, cell_phone, state, status, created_at) values ('$country','$email','$code','$sponsor','0','$secret_nikken','$type_letter','Directo','$name','$cellular','$cellular','$residency_two','1','$created_at')";
 
-		disconnect($conn);
+			$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
-	}
-	catch (Exception $e)
-	{
-		$result = $e;
-	}
+			disconnect($conn);
 
-if($result == false)
+		}
+		catch (Exception $e)
+		{
+			$result = $e;
+		}
 
-	{
-
-		echo "<strong>no fue posible toda la incorporación</strong>, por favor verifica la información e intentalo de nuevo tv".$e;
-
-		exit;
-
-	}	else
-
-	{
 		if($type_sponsor == 2) /*Pendiente por asignar patrocinador*/
 
 		{
@@ -557,29 +779,70 @@ if($result == false)
 
 		{
 
+			if(isset($_SESSION["country_nc"])){ unset($_SESSION["country_nc"]); }
+
+			if(isset($_SESSION["type_nc"] )){ unset($_SESSION["type_nc"] ); }
+
+			if(isset($_SESSION["type_incorporate_nc"])){ unset($_SESSION["type_incorporate_nc"]); }
+
+			if(isset($_SESSION["sponsor_nc"])){ unset($_SESSION["sponsor_nc"]); }
+
+			if(isset($_SESSION["email_nc"] )){ unset($_SESSION["email_nc"] ); }
+
+			if(isset($_SESSION["cellular_nc"] )){ unset($_SESSION["cellular_nc"] ); }
+
+			if(isset($_SESSION["birthday_nc"] )){ unset($_SESSION["birthday_nc"] ); }
+
+			if(isset($_SESSION["address_nc"] )){ unset($_SESSION["address_nc"] ); }
+
+			if(isset($_SESSION["residency_one_nc"] )){ unset($_SESSION["residency_one_nc"] ); }
+
+			if(isset($_SESSION["residency_two_nc"] )){ unset($_SESSION["residency_two_nc"] ); }
+
+			if(isset($_SESSION["residency_three_nc"] )){ unset($_SESSION["residency_three_nc"] ); }
+
+			if(isset($_SESSION["residency_four_nc"] )){ unset($_SESSION["residency_four_nc"] ); }
+
+			if(isset($_SESSION["type_document_nc"] )){ unset($_SESSION["type_document_nc"] ); }
+
+			if(isset($_SESSION["number_document_nc"] )){ unset($_SESSION["number_document_nc"] ); }
+
+			if(isset($_SESSION["rfc_nc"] )){ unset($_SESSION["rfc_nc"] ); }
+
+			if(isset($_SESSION["name_nc"] )){ unset($_SESSION["name_nc"] ); }
+
+			if(isset($_SESSION["name_legal_representative_nc"] )){ unset($_SESSION["name_legal_representative_nc"] ); }
+
+
+
 			if($type == 1) /*Enviar a 7/10*/
 
 			{
 
-				echo "1///https://shopingcart.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
+				echo "registro guardado con exito";
+				exit;
+
+				echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
 
 			}
 
-			/*APARTADO CAMBIO*/
 			else if($type == 0 and $item=="5032") /*Enviar a arma tu entorno*/
 
 			{
 
-				echo "1///https://shopingcart.nikkenlatam.com/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
-				
+				echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
+				//echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
+				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
 
 			}
-/*APARTADO CAMBIO*/
-			elseif($type == 0 and $item=="5031")
+			else if($type == 0 and $item=="5031") /*Enviar a arma tu entorno*/
 
 			{
 
-				echo "1///https://mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email)."?force_change=".base64_encode('1441:14412');
+				//echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
+				echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email)."?force_change=".base64_encode('1441:14412');
+				
+				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
 
 			}
 
@@ -596,7 +859,6 @@ if($result == false)
 		}
 
 	}
-    }
 
 	/*Guardar registro en marketing*/
 
