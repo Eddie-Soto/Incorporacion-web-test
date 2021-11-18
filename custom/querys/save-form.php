@@ -532,8 +532,7 @@ else
 				 echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 				 //echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 			}elseif($type == 1 && $country == 1 && $type_kit==5023){
-				echo "entro al kit 5023";
-				exit;
+				
 				$discount_abi = "S";
 
 				 $products_checkout=$item.':1;'.$playera.':1;';
