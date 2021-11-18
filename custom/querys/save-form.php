@@ -490,7 +490,7 @@ else
 				 $products_checkout=$item.':1;'.$item1.':1;'.$playera.':1;';
 
 				 $data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
-				 echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
+				 echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 				// echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 			}elseif($type == 1 && $country == 1 && $type_kit==5027){
 				$discount_abi = "S";
@@ -539,17 +539,17 @@ else
 				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 				 //echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 			}elseif($type == 1 && $country == 1 && $type_kit==5006){
-				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
+				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
 			}
 			elseif($type == 1 && $country == 1 && $type_kit==5002){
-				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
+				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
 			}
 
 			elseif($type == 1 && $country != 1) /*Enviar a 7/10*/
 
 			{
 
-				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
+				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
 
 			}
 			elseif($type == 0 and $country!=1) /*Enviar a arma tu entorno*/
