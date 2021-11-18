@@ -870,7 +870,7 @@ function Search_ce($sponsor, $email)
 
 {
 
-	$dbHost = '104.238.83.157';
+	$dbHost = '104.130.46.73';
 
 	$dbName = 'nikkenla_elite';
 
