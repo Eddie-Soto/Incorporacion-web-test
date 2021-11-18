@@ -25,7 +25,8 @@ $done = $queryResult->fetch();
 if($done)
 
 {
-
+$type_kit=$done['kit'];
+$playera=$done['playera'];
 	if($done['payment'] != 0)
 
 	{
@@ -54,76 +55,58 @@ if($done)
 
 		{
 
-			if($done['kit'] == "5027" && $done['country'] == 1){
+		if($done['kit'] == "5027" && $done['country'] == 1){
 
-				$discount_abi = "S";
-
-				$products_checkout='502719:1;'.$item1.':1;'.$done['playera'].':1;';
-
-				$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
-
-				// echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
-
-				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
+				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=502719&item2=" . $playera;
 
 			}elseif($done['kit'] == "5026" && $done['country'] == 1){
 
-				$discount_abi = "S";
-
-				$products_checkout='502619:1;'.$item1.':1;'.'502419:1;'.$done['playera'].':1;';
-
-				$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
-
-				 //echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
-				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
+				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
 
 			}elseif($done['kit'] == "5025" && $done['country'] == 1){
 
-				$discount_abi = "S";
-
-				$products_checkout='502519:1;'.$item1.':1;'.'502319:1;'.$done['playera'].':1;';
-
-				$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
-
-				// echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
-
-				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
+				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit. "&item2=" . $playera;
 
 			}elseif($done['kit'] == "5024" && $done['country'] == 1){
 
 				$discount_abi = "S";
 
-				$products_checkout='502419:1;'.$item1.':1;'.$done['playera'].':1;';
+				 $products_checkout='50249:1;'.$done['playera'].':1;';
 
-				$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
+				 $data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
 
-				 //echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
-				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
+				 echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
+				//echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
 
 			}elseif($done['kit'] == "5023" && $done['country'] == 1 ){
 
 				$discount_abi = "S";
 
-				$products_checkout='502319:1;'.$item1.':1;'.$done['playera'].':1;';
+				 $products_checkout='50239:1;'.$done['playera'].':1;';
 
-				$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
+				 $data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
 
-				// echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
-				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
+				 echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
+				//echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
 
 			}elseif($done['kit'] == "5028" && $done['country'] == 1 || $done['kit'] == 5028 && $done['country'] == 1){
 
 				$discount_abi = "S";
 
-				$products_checkout='502819:1;'.$item1.':1;'.$done['playera'].':1;';
+				 $products_checkout='502819:1;'.$item1.':1;'.$done['playera'].':1;';
 
-				$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
+				 $data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
 
-				//echo "1///https://nikkenlatam.com/services/checkout/redirect.php?app=incorporacion&data=$data";
-				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
+				echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
+				//echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=pruebas&data=$data";
 
 			}
-			
+			elseif($done['type'] == 0 && $done['country'] == 1){
+
+				echo "1///https://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
+
+
+			}
 
 			//if($done['type'] == 1)
 			elseif($done['type'] == 1 && $done['kit'] == "5006" && $done['country'] !=1  || $done['type'] == 1 && $done['kit'] == "5023" && $done['country'] !=1  || $done['type'] == 1 && $done['kit'] == "5024" && $done['country'] !=1  || $done['type'] == 1 && $done['kit'] == "5025" && $done['country'] !=1  || $done['type'] == 1 && $done['kit'] == "5026" && $done['country'] !=1  || $done['type'] == 1 && $done['kit'] == "5027" && $done['country'] !=1  || $done['type'] == 1 && $done['kit'] == "5028" && $done['country'] !=1 || $done['type'] == 1 && $done['kit'] == "5002")
@@ -131,26 +114,17 @@ if($done)
 
 				/*Enviar al 7/10*/
 
-				echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate.php?email=" . base64_encode($email) . '&item=' . $done['kit'] . "&item2=" . $done['playera'];
+				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email) . '&item=' . $done['kit'] . "&item2=" . $done['playera'];
 
 			}
 
-			else if($type == 0 and $done['kit'] =="5032") /*Enviar a arma tu entorno*/
+			elseif($done['type'] == 0 && $done['country'] != 1)
 
 			{
 
-				echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
-				//echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
-				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
+				/*Enviar a arma tu entorno*/
 
-			}
-			else if($type == 0 and $done['kit'] =="5031") /*Enviar a arma tu entorno*/
-
-			{
-
-				//echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
-				echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
-				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
+				echo "1///https://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
 
 			}
 
