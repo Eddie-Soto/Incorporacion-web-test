@@ -326,7 +326,7 @@ try
 	}
 
 
-		$conn = connect_kit();
+		$conn = connect_mk();
 		$query="INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, ip, browser, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$ip', '$browser',  '$gender', '$type_kit', '$playera', '$tallaLetra')";
 
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
@@ -340,6 +340,8 @@ catch (Exception $e)
 {
 
 	$result = $e;
+	echo $result;
+	exit;
 
 }
 
@@ -530,6 +532,8 @@ else
 				 echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 				 //echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
 			}elseif($type == 1 && $country == 1 && $type_kit==5023){
+				echo "entro al kit 5023";
+				exit;
 				$discount_abi = "S";
 
 				 $products_checkout=$item.':1;'.$playera.':1;';
