@@ -49,7 +49,7 @@ if(isset($_SESSION["sponsor"]))
 	</div>
 </div>
 <hr>
-<div class="col-sm-12">
+<div class="col-sm-12" hidden="true">
 	<p>Queremos conocerte mejor y saber que es lo que más te interesa en NIKKEN:</p>
   <input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
   <label for="html">1. Consumo </label><br>

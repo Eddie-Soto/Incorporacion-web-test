@@ -849,7 +849,7 @@ function View_sponsor()
 
     var type = $('input[name=type]:checked', '#wrapped').val();
 
-    var segmentacion = $('input[name=segmentacion]:checked', '#wrapped').val();
+    
 
     var divMensaje = document.getElementById("view-sponsor");
 
@@ -891,7 +891,7 @@ function View_sponsor()
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    ajax.send("type=" + type + "&country=" + country + "&segmentacion=" + segmentacion);
+    ajax.send("type=" + type + "&country=" + country);
 
 }
 
@@ -1553,7 +1553,7 @@ $(function () {
 
         if(number_clabe == undefined || number_clabe == 'undefined'){ number_clabe = ''; }
 
-        var segmentacion = $('input[name=segmentacion]:checked', '#wrapped').val(); // Tipo de seleccion de patrocinador
+      
 
 
         var type_sponsor = $('input[name=type-sponsor]:checked', '#wrapped').val(); // Tipo de seleccion de patrocinador
@@ -1626,7 +1626,7 @@ $(function () {
 
         var verify_digit = $form.find('.verify_digit').val(); 
 
-        var dataString = 'id=' + id + '&type=' + type + '&gender=' + gender + '&country=' + country + '&type_incorporate=' + type_incorporate + '&last_name=' + encodeURIComponent(last_name) + '&name=' + encodeURIComponent(name) + '&birthday=' + encodeURIComponent(birthday) + '&email=' + encodeURIComponent(email) + '&cellular=' + encodeURIComponent(cellular) + '&residency_one=' + encodeURIComponent(residency_one) + '&residency_two=' + residency_two + '&residency_three=' + encodeURIComponent(residency_three) + '&residency_four=' + encodeURIComponent(residency_four) + '&name_legal_representative=' + encodeURIComponent(name_legal_representative) + '&type_document=' + type_document + '&number_document=' + encodeURIComponent(number_document) + '&address=' + encodeURIComponent(address) + '&name_cotitular=' + encodeURIComponent(name_cotitular) + '&type_document_cotitular=' + type_document_cotitular + '&number_document_cotitular=' + encodeURIComponent(number_document_cotitular) + '&bank=' + bank + '&bank_type=' + bank_type + '&number_account=' + encodeURIComponent(number_account) + '&number_clabe=' + encodeURIComponent(number_clabe) + '&type_sponsor=' + type_sponsor + '&sponsor=' + encodeURIComponent(sponsor) + '&rfc=' + encodeURIComponent(rfc) + '&type-kit=' + encodeURIComponent(type_item) + '&type-msi=' + encodeURIComponent(type_msi) + '&shirt-size=' + encodeURIComponent(playera) + '&tallaLetra=' + encodeURIComponent(tallaLetra) + '&verify_digit=' + encodeURIComponent(verify_digit) + '&segmentacion=' + encodeURIComponent(segmentacion) + '&type_document_two=' + encodeURIComponent(type_document_two) + '&number_document_two=' + encodeURIComponent(number_document_two);
+        var dataString = 'id=' + id + '&type=' + type + '&gender=' + gender + '&country=' + country + '&type_incorporate=' + type_incorporate + '&last_name=' + encodeURIComponent(last_name) + '&name=' + encodeURIComponent(name) + '&birthday=' + encodeURIComponent(birthday) + '&email=' + encodeURIComponent(email) + '&cellular=' + encodeURIComponent(cellular) + '&residency_one=' + encodeURIComponent(residency_one) + '&residency_two=' + residency_two + '&residency_three=' + encodeURIComponent(residency_three) + '&residency_four=' + encodeURIComponent(residency_four) + '&name_legal_representative=' + encodeURIComponent(name_legal_representative) + '&type_document=' + type_document + '&number_document=' + encodeURIComponent(number_document) + '&address=' + encodeURIComponent(address) + '&name_cotitular=' + encodeURIComponent(name_cotitular) + '&type_document_cotitular=' + type_document_cotitular + '&number_document_cotitular=' + encodeURIComponent(number_document_cotitular) + '&bank=' + bank + '&bank_type=' + bank_type + '&number_account=' + encodeURIComponent(number_account) + '&number_clabe=' + encodeURIComponent(number_clabe) + '&type_sponsor=' + type_sponsor + '&sponsor=' + encodeURIComponent(sponsor) + '&rfc=' + encodeURIComponent(rfc) + '&type-kit=' + encodeURIComponent(type_item) + '&type-msi=' + encodeURIComponent(type_msi) + '&shirt-size=' + encodeURIComponent(playera) + '&tallaLetra=' + encodeURIComponent(tallaLetra) + '&verify_digit=' + encodeURIComponent(verify_digit) + '&type_document_two=' + encodeURIComponent(type_document_two) + '&number_document_two=' + encodeURIComponent(number_document_two);
 
                     
 
@@ -1634,9 +1634,6 @@ $(function () {
 
         document.getElementById('btn-process-form').innerHTML = '<strong><i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i><span class="sr-only"></span> Guardando<strong>';
 
-        var myVar;
-
-        myVar = setTimeout(function(){  
 
         $.ajax({
 
@@ -1705,7 +1702,7 @@ $(function () {
 
         });
 
-}, 5000);
+
 
         return false;
 
