@@ -12,7 +12,7 @@ function Code_consecutive()
 
 {
 
-	$dbHost = '104.238.83.157';
+	$dbHost = '104.130.46.73';
 
 	$dbName = 'nikkenla_incorporation';
 
@@ -95,7 +95,7 @@ function Code_consecutive()
 //Generar consecutivo de código alternativa
 function Code_consecutive_second()
 {
-	$dbHost = '104.238.83.157';
+	$dbHost = '104.130.46.73';
 	$dbName = 'nikkenla_incorporation';
 	$dbUser = 'nikkenla_mkrt';
 	$dbPass = 'NNikken2011$$';
@@ -142,7 +142,7 @@ function Assigned_sponsor($name,$email,$phone,$country,$state,$platform,$user)
 
 	//Asignar sponsor
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL,"https://servicios.nikkenlatam.com/panel/administracion/services/assigned-sponsor/prod.php");
+		curl_setopt($ch, CURLOPT_URL,"https://panelmrkt.nikkenlatam.com/panel-marketing-v1/administracion/services/assigned-sponsor/prod.php");
 		curl_setopt($ch, CURLOPT_POST, TRUE);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, "name=$name&email=$email&phone=$phone&country=$country&state=$state&platform=$platform&user=$user");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -482,7 +482,7 @@ function Search_ce($sponsor, $email)
 
 {
 
-	$dbHost = '104.238.83.157';
+	$dbHost = '104.130.46.73';
 
 	$dbName = 'nikkenla_elite';
 

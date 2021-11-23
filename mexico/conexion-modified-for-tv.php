@@ -1,7 +1,7 @@
 <?php
 function connect_kit()
 {
-	$conn = mysqli_connect("104.238.83.157", "nikkenla_mkrt", 'NNikken2011$$');
+	$conn = mysqli_connect("104.130.46.73", "nikkenla_mkrt", 'NNikken2011$$');
 	mysqli_select_db($conn, "nikkenla_incorporation");
 	mysqli_set_charset( $conn, 'utf8');
 
@@ -9,7 +9,7 @@ function connect_kit()
 }
 function connect_mk()
 {
-	$conn = mysqli_connect("104.238.83.157", "nikkenla_mkrt", 'NNikken2011$$');
+	$conn = mysqli_connect("104.130.46.73", "nikkenla_mkrt", 'NNikken2011$$');
 	mysqli_select_db($conn, "nikkenla_marketing");
 	mysqli_set_charset( $conn, 'utf8');
 
