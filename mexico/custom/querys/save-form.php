@@ -802,23 +802,37 @@ else
 
 			}
 
-			/*APARTADO CAMBIO*/
 			else if($type == 0 and $item=="5032") /*Enviar a arma tu entorno*/
 
 			{
 
 				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
-				
+				//echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
+				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
 
 			}
-/*APARTADO CAMBIO*/
-			elseif($type == 0 and $item=="5031")
+
+			else if($type == 0 and $item=="5031" and $productos!="") /*Enviar a arma tu entorno*/
 
 			{
 
-				echo "1///https://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email)."?force_change=".base64_encode('1441:14412');
+				//echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
+				//echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
+				echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email)."?products=".$productos."&sale_id=".$id_venta;
+			
 
 			}
+			else if($type == 0 and $item=="5031" and $productos=="") /*Enviar a arma tu entorno*/
+
+			{
+
+				//echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
+				echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
+				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
+
+			}
+
+			
 
 			else
 
