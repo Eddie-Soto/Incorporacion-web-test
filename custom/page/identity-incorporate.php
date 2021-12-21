@@ -139,7 +139,7 @@ if ($country != 7) {
 			<input id="number_document_input_value" style="display: none;" value="<?php echo $number_document_value ?>">
 		</div>
 	</div>
-<?php }else{  ?>
+<?php }else{ /*SOLO PARA SLV*/ ?>
 	<?php if ($type_incorporate == 1) {
 	 ?>
 <div class="col-md-6">
@@ -154,7 +154,7 @@ if ($country != 7) {
 </div>
 	<div class="col-md-6">
 		<div class="form-group">
-			<input type="text" id="number-document-one"  name="number-document"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="13"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+			<input type="text" id="number-document-one"  name="number-document" onclick="NitSlv();" onblur="Validate_identification(this.value);" maxlength="10" minlength="10"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 			<input type="hidden" class="form-control required" id="validator-identification" value="">
 		</div>
 	</div>
@@ -264,6 +264,10 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
   $('#number-document-one').mask('000000000-0');
 
 }
+	}
+
+	function NitSlv(){
+		$('#number-document-one').mask('00000000-0');
 	}
 
 	
