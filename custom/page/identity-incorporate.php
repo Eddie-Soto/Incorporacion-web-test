@@ -140,6 +140,8 @@ if ($country != 7) {
 		</div>
 	</div>
 <?php }else{  ?>
+	<?php if ($type_incorporate != 0) {
+	 ?>
 <div class="col-md-6">
 			<div class="form-group">
 				<div class="styled-select">
@@ -156,7 +158,7 @@ if ($country != 7) {
 			<input type="hidden" class="form-control required" id="validator-identification" value="">
 		</div>
 	</div>
-
+<?php } ?>
 <div class="col-md-6">
 			<div class="form-group">
 				<div class="styled-select">
