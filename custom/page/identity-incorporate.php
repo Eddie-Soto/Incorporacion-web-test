@@ -140,7 +140,7 @@ if ($country != 7) {
 		</div>
 	</div>
 <?php }else{  ?>
-	<?php if ($type_incorporate != 0) {
+	<?php if ($type_incorporate == 1) {
 	 ?>
 <div class="col-md-6">
 			<div class="form-group">
