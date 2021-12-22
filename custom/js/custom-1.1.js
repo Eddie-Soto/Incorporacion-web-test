@@ -545,6 +545,28 @@ function Always_ABI(){
 
     //Mostrar los datos de identificación cotitular
 
+        //Mostrar los datos de identificación cotitular
+
+    function View_identity_nrc()
+
+    {
+
+        if (jQuery("#check-nrc").is(":checked")) {
+
+            document.getElementById("ContribuyenteIva").removeAttribute("hidden",false);
+
+        }
+
+        else 
+
+        {
+
+            document.getElementById("ContribuyenteIva").setAttribute("hidden",true);
+
+        }
+
+    }
+
 //COTITULAR ------------------------------------------------------------------------------------------
 
 

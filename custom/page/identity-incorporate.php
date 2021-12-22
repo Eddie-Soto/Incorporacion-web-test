@@ -140,6 +140,9 @@ if ($country != 7) {
 		</div>
 	</div>
 <?php }else{ /*SOLO PARA SLV*/ ?>
+
+
+
 	<?php if ($type_incorporate == 1) {
 	 ?>
 <div class="col-md-6">
@@ -175,6 +178,26 @@ if ($country != 7) {
 			
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<input name="check-nrc" id="check-nrc" type="checkbox" class="icheck" value="1" onclick="View_identity_nrc(); ">
+				<label>Contribuyente de IVA</label>
+			</div>
+		</div>
+
+		
+
+			<div class="col-md-6" hidden="true" id="ContribuyenteIva">
+				<div class="form-group">
+					<input type="text" id="number-document-nrc" onclick="NrcSlv();"  name="number-document-nrc"  minlength="12" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
+					
+				</div>
+			</div>
+	</div>
+
+
 
 <?php } ?>
 </div>
@@ -272,6 +295,10 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 
 	function NitSlv(){
 		$('#number-document-two').mask('0000-000000-000-0');
+	}
+
+	function NrcSlv(){
+		$('#number-document-two').mask('0000000000-0');
 	}
 
 	
