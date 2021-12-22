@@ -189,7 +189,7 @@ if ($country != 7) {
 
 		
 
-			<div class="col-md-6" hidden="true" id="ContribuyenteIva">
+			<div class="col-md-12" hidden="true" id="ContribuyenteIva">
 				<div class="form-group">
 					<input type="text" id="number-document-nrc" onclick="NrcSlv();"  name="number-document-nrc"  minlength="12" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
 					
@@ -298,7 +298,7 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 	}
 
 	function NrcSlv(){
-		$('#number-document-two').mask('0000000000-0');
+		$('#number-document-nrc').mask('0000000000-0');
 	}
 
 	
