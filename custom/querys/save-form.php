@@ -182,7 +182,7 @@ if ($verify_digit == undefined || $verify_digit=='undefined') {
 }
 
 if ($verify_digit == 0 and $country == 7) {
-	$ContribuyenteIva = $_POST['number-document-nrc'];
+	$ContribuyenteIva = $_POST['number_document_nrc'];
 	$verify_digit = $ContribuyenteIva;
 }
 
