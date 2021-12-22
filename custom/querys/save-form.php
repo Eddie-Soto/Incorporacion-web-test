@@ -181,6 +181,11 @@ if ($verify_digit == undefined || $verify_digit=='undefined') {
 	# code...
 }
 
+if ($verify_digit == 0 and $country == 7) {
+	$ContribuyenteIva = $_POST['number-document-nrc'];
+	$verify_digit = $ContribuyenteIva;
+}
+
 $type_document = $_POST["type_document"];
 
 //Cambios Adolfo

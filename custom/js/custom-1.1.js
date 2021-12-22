@@ -1526,10 +1526,13 @@ $(function () {
 
             var type_document_two =0;
             var number_document_two =0;
+             var number_document_nrc =0;
 
         type_document_two = $form.find('.input-type-document-two').val(); // Tipo de documento
 
         number_document_two = $form.find('.input-number-document-two').val(); // Número de documento
+
+        number_document_nrc = $form.find('.input-number-document-nrc').val(); // Número de documento iva slv
 
 
 
