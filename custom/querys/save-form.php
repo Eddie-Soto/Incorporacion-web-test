@@ -834,10 +834,9 @@ else
 
 				
 				$url="https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
-				echo $url;
-				exit;
+				
 				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
-				exit;
+				
 
 			}
 
