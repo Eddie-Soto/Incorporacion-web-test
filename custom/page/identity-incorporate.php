@@ -205,7 +205,25 @@ if ($country != 7) {
 
 
 <script type="text/javascript">
-	
+	function View_alert(text, type)
+
+    {
+
+        $.notify({
+
+            message: text
+
+
+
+        },{
+
+            type: type,
+
+            timer: 9000
+
+        });
+
+    }
 function soloNumeros(e){
 	var key = window.Event ? e.which : e.keyCode
 	return (key >= 48 && key <= 57)
@@ -304,7 +322,7 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 
 		}else{
 			alert("error debe llevar -");
-			 View_alert("Lo sentimos, N° de Registro (NRC) debe contener -", "Warning");
+			 View_alert("Lo sentimos, N° de Registro (NRC) debe contener <strong>-</strong>", "arning");
 		}
 
 	}
