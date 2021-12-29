@@ -179,7 +179,7 @@ if ($country != 7) {
 		</div>
 	</div>
 
-	<div class="row">
+	
 		<div class="col-md-12">
 			<div class="form-group">
 				<input name="check-nrc" id="check-nrc" type="checkbox" class="icheck" value="1" onclick="View_identity_nrc(); ">
@@ -195,7 +195,7 @@ if ($country != 7) {
 					
 				</div>
 			</div>
-	</div>
+	
 
 
 
@@ -339,8 +339,8 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 	}		
 
 	$('#number-document-one').on('input', function (e) {
-	    if (!/^[a-z0-9]*$/i.test(this.value)) {
-	        this.value = this.value.replace(/[^a-z0-9]+/ig,"");
+	    if (!/^[a-z0-9]-*$/i.test(this.value)) {
+	        this.value = this.value.replace(/[^a-z0-9]-+/ig,"");
 	    }
 	});
 
