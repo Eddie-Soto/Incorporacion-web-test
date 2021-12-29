@@ -321,8 +321,8 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 		if (search == true) {
 
 		}else{
-			alert("error debe llevar -");
-			 View_alert("Lo sentimos, N° de Registro (NRC) debe contener <strong>-</strong>", "arning");
+			//alert("error debe llevar -");
+			 View_alert("Lo sentimos, N° de Registro (NRC) debe contener <strong>-</strong>", "warning");
 		}
 
 	}
