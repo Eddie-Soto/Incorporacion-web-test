@@ -191,7 +191,7 @@ if ($country != 7) {
 
 			<div class="col-md-12" hidden="true" id="ContribuyenteIva">
 				<div class="form-group">
-					<input type="text" id="number-document-nrc" onclick="NrcSlv();"  name="number-document-nrc"  minlength="12" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
+					<input type="text" id="number-document-nrc" onclick="NrcSlv();"  name="number-document-nrc"  minlength="12" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
 					
 				</div>
 			</div>
@@ -460,7 +460,7 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 		  
     });
 
-	$('#number-document-two').on('input', function (e) {
+	$('#number-document-twos').on('input', function (e) {
 	    if (!/^[a-z0-9]*$/i.test(this.value)) {
 	        this.value = this.value.replace(/[^a-z0-9]+/ig,"");
 	    }
