@@ -191,7 +191,7 @@ if ($country != 7) {
 
 			<div class="col-md-12" hidden="true" id="ContribuyenteIva">
 				<div class="form-group">
-					<input type="text" id="number-document-nrc" onclick="NrcSlv();"  name="number-document-nrc"  minlength="12" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
+					<input type="text" id="number-document-nrc" onchange="NrcSlv();"  name="number-document-nrc"  minlength="3" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
 					
 				</div>
 			</div>
@@ -298,7 +298,14 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 	}
 
 	function NrcSlv(){
-		$('#number-document-nrc').mask('0000000000-0');
+		let nrc = $('#number-document-nrc').val();
+		let search =nrc.includes('-');
+		if (search == true) {
+
+		}else{
+			 View_alert("Lo sentimos, N° de Registro (NRC) debe contener -", "Warning");
+		}
+
 	}
 
 	
