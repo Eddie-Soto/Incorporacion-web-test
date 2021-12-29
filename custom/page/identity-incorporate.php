@@ -461,8 +461,8 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
     });
 
 	$('#number-document-two').on('input', function (e) {
-	    if (!/^[a-z0-9]*$/i.test(this.value)) {
-	        this.value = this.value.replace(/[^a-z0-9]+/ig,"");
+	    if (!/^[a-z0-9]-*$/i.test(this.value)) {
+	        this.value = this.value.replace(/[^a-z0-9]-+/ig,"");
 	    }
 	});
 
