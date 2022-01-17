@@ -50,7 +50,7 @@
 ?>
 <!-- KIT MOKUTEKI -->
 <?php
-if ($country != 'SLV' || $country != 'GTM') {
+if ($country == 'SLV' || $country == 'GTM') {
     echo "entro al diferente no debe mostar";
     }else{
         echo "entro al que si debe mostrar";
