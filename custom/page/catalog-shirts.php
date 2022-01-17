@@ -49,7 +49,11 @@
     }
 ?>
 <!-- KIT MOKUTEKI -->
-<?php if($kit_influencer){ ?>
+<?php
+if ($country != 'SLV' || $country != 'GTM') {
+    # code...
+
+ if($kit_influencer){ ?>
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
@@ -112,4 +116,4 @@
         inputProtect.value = tallaLetra;
     }
 </script>
-<?php } ?>
+<?php } } ?>
