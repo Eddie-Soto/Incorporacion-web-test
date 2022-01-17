@@ -51,8 +51,9 @@
 <!-- KIT MOKUTEKI -->
 <?php
 if ($country != 'SLV' || $country != 'GTM') {
-    echo "entro en el es diferente de SLV y GTM".$country;
-
+    echo "entro al diferente no debe mostar";
+    }else{
+        echo "entro al que si debe mostrar";
  if($kit_influencer){ ?>
 <div class="row">
     <div class="col-md-6">
