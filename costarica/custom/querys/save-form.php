@@ -194,7 +194,7 @@ if($result != true)
 }
 
 //Verificar que no exista el codigo en contracts
-$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.contracts where code = :code");
+$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.contracts_test where code = :code");
 $queryResult->execute(array(':code' => $code));
 $done = $queryResult->fetch();
 if($done)
@@ -214,7 +214,7 @@ if($done)
 
 
 		$conn = connect_kit();
-		$query="INSERT INTO nikkenla_incorporation.contracts (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, ip, browser, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$ip', '$browser',  '$gender', '$type_kit', '$playera', '$tallaLetra')";
+		$query="INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, ip, browser, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$ip', '$browser',  '$gender', '$type_kit', '$playera', '$tallaLetra')";
 
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
@@ -243,7 +243,7 @@ try
 
 
 		$conn = connect_kit();
-		$query="INSERT INTO nikkenla_incorporation.contracts (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, ip, browser, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$ip', '$browser',  '$gender', '$type_kit', '$playera', '$tallaLetra')";
+		$query="INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, ip, browser, gender, kit, playera, talla) VALUES ('$id', '$country', '$code', '$name', '$type', '$type_incorporate', '$type_sponsor', '$sponsor', '$email', '$cellular', '$birthday', '$address', '$residency_one', '$residency_two', '$residency_three', '$residency_four', '$name_legal_representative', '$type_document', '$number_document', '$name_cotitular', '$type_document_cotitular', '$number_document_cotitular', '$bank', '$bank_type', '$number_account', '$number_clabe', '$ip', '$browser',  '$gender', '$type_kit', '$playera', '$tallaLetra')";
 
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
@@ -264,7 +264,7 @@ else{
 	/*Guardar registro en marketing*/
 
 /*Verificar que no exista el codigo en control_ci*/
-	$queryResult = $pdo->prepare("SELECT codigo FROM nikkenla_marketing.control_ci where codigo = :code");
+	$queryResult = $pdo->prepare("SELECT codigo FROM nikkenla_marketing.control_ci_test where codigo = :code");
 	$queryResult->execute(array(':code' => $code));
 	$done = $queryResult->fetch();
 	if($done)
@@ -277,7 +277,7 @@ else{
 
 		{
 
-			$sql = "INSERT INTO nikkenla_marketing.control_ci (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES (:pais, :tipo, :codigo, :nombre, :codigop, :correo, :celular, :b1, :b2)";
+			$sql = "INSERT INTO nikkenla_marketing.control_ci_test (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES (:pais, :tipo, :codigo, :nombre, :codigop, :correo, :celular, :b1, :b2)";
 
 			$query = $pdo->prepare($sql);
 
@@ -320,7 +320,7 @@ else{
 	try
 	{
 		$conn = connect_mk();
-		$query="INSERT INTO nikkenla_marketing.control_ci (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES ('$country', '$type_letter', '$code', '$name', '$sponsor', '$email', '$cellular', '1', '1')";
+		$query="INSERT INTO nikkenla_marketing.control_ci_test (pais, tipo, codigo, nombre, codigop, correo, celular, b1, b2) VALUES ('$country', '$type_letter', '$code', '$name', '$sponsor', '$email', '$cellular', '1', '1')";
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
 
 		disconnect($conn);
@@ -342,7 +342,7 @@ else
 
 	try
 	{
-		$conn = connect_new_tv();
+		$conn = connect_new_tv_test();
 		$query="INSERT INTO users (country_id, email, sap_code, sap_code_sponsor, password,secret_nikken, client_type, rank, name, phone, cell_phone, state, status, created_at) values ('$country','$email','$code','$sponsor','0','$secret_nikken','$type_letter','Directo','$name','$cellular','$cellular','$residency_two','1','$created_at')";
 
 		$result = mysqli_query($conn, $query) or die (mysqli_error($conn));
@@ -388,6 +388,9 @@ else{
 		if(isset($_SESSION["name_nc"] )){ unset($_SESSION["name_nc"] ); }
 		if(isset($_SESSION["name_legal_representative_nc"] )){ unset($_SESSION["name_legal_representative_nc"] ); }
 
+
+echo "datos guadados correctamente";
+exit;
 		if($type == 1) /*Enviar a 7/10*/
 		{
 			echo "1///https://shopingcart.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera . "&item2=" . $playera;
