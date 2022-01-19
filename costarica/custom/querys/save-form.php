@@ -389,18 +389,17 @@ else{
 		if(isset($_SESSION["name_legal_representative_nc"] )){ unset($_SESSION["name_legal_representative_nc"] ); }
 
 
-echo "datos guadados correctamente";
-exit;
+
 		if($type == 1) /*Enviar a 7/10*/
 		{
-			echo "1///https://shopingcart.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera . "&item2=" . $playera;
+			echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
 		}
 		/*APARTADO CAMBIO*/
 			else if($type == 0 and $item=="5032") /*Enviar a arma tu entorno*/
 
 			{
 
-				echo "1///https://shopingcart.nikkenlatam.com/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
+				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
 				
 
 			}
@@ -408,7 +407,7 @@ exit;
 		elseif($type == 0 and $item=="5031") /*Enviar a arma tu entorno En este caso en especial de costarica se enviará a la T.V. con un autologin para que el usuario proceda a comprar*/
 		{
 			//echo "1///https://nikkenlatam.com/armatuentorno/login-integration-incorporation.php?email=" . base64_encode($email);
-			echo "1///http://mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email)."?force_change=".base64_encode('1441:14412');
+			echo "1///https://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email)."?force_change=".base64_encode('1441:14412');
 
 		}
 		else
