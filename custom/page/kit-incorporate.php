@@ -32,7 +32,7 @@ if($country == 1 and $type== 1)
 {
 
 
-	$kit = "5006 Kit Clásico $61,000.00";
+	$kit = "5006 Kit Clásico $384,800.00";
 
 	/* 
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	$755,400.00";
@@ -90,7 +90,7 @@ if($country == 1 and $type== 1)
 }
 if($country == 2 and $type== 1)
 {
-	$kit = "5006 Kit Clásico $400.00";
+	$kit = "5006 Kit Clásico $2,050.00";
 
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	$4,301.00";
 
@@ -108,7 +108,7 @@ if($country == 2 and $type== 1)
 }
 if($country == 3 and $type== 1)
 {
-	$kit = "5006 Kit Clasico S/ 68.00";
+	$kit = "5006 Kit Clasico S/ 415.00";
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	S/ 719.00";
 	$kit3 = "5024 KIT INFLUENCER  WATERFALL	S/ 1,444.00";
 	$kit4 = "5025 KIT INFLUENCER  PAQUETE PI WATER+ OPTIMIZER  S/ 2,095.00";
@@ -120,7 +120,7 @@ if($country == 3 and $type== 1)
 if($country == 4 and $type== 1)
 {
 	//precios nuevos 03/08/2020
-	$kit = "5006 Kit Clasico $28.00";
+	$kit = "5006 Kit Clasico $100.00";
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	$264.00";
 	$kit3 = "5024 KIT INFLUENCER  WATERFALL	$498.00";
 	$kit4 = "5025 KIT INFLUENCER  PAQUETE PI WATER+ OPTIMIZER  $634.00";
@@ -140,7 +140,7 @@ if($country == 4 and $type== 1)
 }
 if($country == 5 and $type== 1)
 {
-	$kit = "5006 Kit Clasico $32.00";
+	$kit = "5006 Kit Clasico $100.00";
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	$209.00";
 	$kit3 = "5024 KIT INFLUENCER  WATERFALL	$386.00";
 	$kit4 = "5025 KIT INFLUENCER  PAQUETE PI WATER+ OPTIMIZER  $490.00";
@@ -161,7 +161,7 @@ if($country == 5 and $type== 1)
 }
 if($country == 6 and $type== 1) //gTM
 {
-	$kit = "5006 Kit Clasico Q 196.00";
+	$kit = "5006 Kit Clasico Q 775.00";
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	Q 1,461.00";
 	$kit3 = "5024 KIT INFLUENCER  WATERFALL	Q 3,109.00";
 	$kit4 = "5025 KIT INFLUENCER  PAQUETE PI WATER+ OPTIMIZER  Q 4,082.00";
@@ -181,7 +181,7 @@ if($country == 6 and $type== 1) //gTM
 }
 if($country == 7 and $type== 1) //sLV
 {
-	$kit = "5006 Kit Clasico $28.00";
+	$kit = "5006 Kit Clasico $100.00";
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	$194.00";
 	$kit3 = "5024 KIT INFLUENCER  WATERFALL	$411.00";
 	$kit4 = "5025 KIT INFLUENCER  PAQUETE PI WATER+ OPTIMIZER  $539.00";
@@ -200,7 +200,7 @@ if($country == 7 and $type== 1) //sLV
 }
 if($country == 8 and $type== 1)
 {
-	$kit = "5006 Kit Clasico ₡ 17100.00";
+	$kit = "5006 Kit Clasico ₡ 64,500.00";
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	₡ 118,380.00";
 	$kit3 = "5024 KIT INFLUENCER  WATERFALL	₡ 216,780.00";
 	$kit4 = "5025 KIT INFLUENCER  PAQUETE PI WATER+ OPTIMIZER  ₡ 293,980.00";
@@ -316,7 +316,7 @@ if ($country > 0 and $type == 1) {
 						<option value="5024"><?php echo $kit3 ?></option>
 						<!--option value="5025"><?php echo $kit4 ?></option> 
 						<option value="5026"><?php echo $kit5 ?></option-->  
-				<option value="5027"><?php echo $kit6 ?></option> 
+				<!--option value="5027"><?php echo $kit6 ?></option--> 
 						<!--option value="5028"><?php echo $kit7 ?></option-->
 						 
 					</select>

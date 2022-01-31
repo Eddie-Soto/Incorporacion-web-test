@@ -52,7 +52,7 @@ if($country == 2 and $type== 1)
 
 {
 
-	$kit = "5006 INSCRIPCION ASESOR DE BIENESTAR - KIT VIRTUAL $400.00";
+	$kit = "5006 INSCRIPCION ASESOR DE BIENESTAR - KIT VIRTUAL $2,050.00";
 
 	$kit2 = "5023 KIT INFLUENCER  PI WATER	$4,105.00";
 
@@ -242,16 +242,10 @@ if ($country > 0 and $type== 1) {
 
 						<option value="5024"><?php echo $kit3 ?></option>
 
-						<option value="5025"><?php echo $kit4 ?></option>
-
-						<option value="5026"><?php echo $kit5 ?></option>
-
-						<option value="5027"><?php echo $kit6 ?></option>
-
-						<option value="5028"><?php echo $kit7 ?></option>
-
+						
+<?php if(isset($kitcupon)){ ?>
 						<option value="5002" <?php if(isset($kitcupon)){ ?> selected="true" <?php } ?> ><?php echo $kit8 ?></option>
-
+					<?php } ?>
 					</select>
 
 				</div>
