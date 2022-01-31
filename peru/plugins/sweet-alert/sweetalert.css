@@ -212,8 +212,8 @@ body.stop-scrolling {
   .sweet-alert[data-has-confirm-button=false][data-has-cancel-button=false] {
     padding-bottom: 40px; }
   .sweet-alert .sa-icon {
-    width: 80px;
-    height: 80px;
+    width: 300px !important; 
+    height: 150px !important;
     border: 4px solid gray;
     -webkit-border-radius: 40px;
     border-radius: 40px;
