@@ -453,6 +453,32 @@
 
 										</div>
 
+										<div class="row">
+
+
+											<div class="col-md-12">
+
+												<div class="form-group">
+
+													<div class="styled-select">
+
+														<select class="required input-require-billing" onchange="" name="require-billing" id="require-billing">
+															<option value="1">SI</option>
+															<option value="0">NO</option>
+														</select>
+
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+										<div id="billing">
+											
+										</div>
+
 										<div id="kit-incorporate"></div>
 
 										<div id="names-incorporate"></div>
