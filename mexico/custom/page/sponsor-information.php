@@ -65,9 +65,10 @@ if(isset($_SESSION["sponsor"]))
 	<label for="css">2. Recuperar tu inversión</label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
-	<input type="radio" id="segmentacion" name="segmentacion" value="30">
+	
 </div>
 <div class="col-md-12">
+	<input type="radio" id="segmentacion" name="segmentacion" value="40">
 	<label for="other">3. Otro.</label>
 
 	<div class="form-group">
