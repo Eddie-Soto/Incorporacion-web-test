@@ -218,6 +218,8 @@ function Type_person(country)
 
 }
 
+
+
 //Tipo de incorporacion
 //Mostrar los datos de identificación
 function View_kit(type,country)

@@ -51,6 +51,12 @@ if(isset($_SESSION["sponsor"]))
 
 
 <hr>
+<div class="col-md-12 format-radio">
+	<div class="form-group radio_input">
+		<label><input type="radio" value="1" name="type_question" id="asesor" checked onclick="">&nbsp;Inscribe Asesor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<label><input type="radio" value="0" name="type_question" id="persona" onclick=""  >&nbsp;Inscribe Persona Nueva</label>
+	</div>
+</div>
 <div class="col-sm-12">
 	<p>Queremos conocerte mejor y saber que es lo que más te interesa en NIKKEN:</p>
   <input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
@@ -59,6 +65,13 @@ if(isset($_SESSION["sponsor"]))
   <label for="css">2. Recuperar tu inversión</label><br>
   <input type="radio" id="segmentacion" name="segmentacion" value="30">
   <label for="javascript">3. Emprender.</label>
+    <input type="radio" id="segmentacion" name="segmentacion" value="30">
+  <label for="javascript">3. Otro.</label>
+  <div class="col-md-3">
+			<div class="form-group">
+				<input type="text" name="last-name" id="last-name" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-last-name required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
+			</div>
+		</div>
 		<br/>
 	</div>
 

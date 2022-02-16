@@ -206,6 +206,52 @@ function Type_document(country, type, type_incorporate)
 
 //Tipo de documento
 
+function View_Billing_Options(typeperson,requirebilling)
+{
+    
+      var divMensaje = document.getElementById("billing");
+
+    var ajax = Ajax();
+
+
+
+    ajax.onreadystatechange=function()
+
+    {
+
+        if (ajax.readyState == 4 && ajax.status==200)
+
+        {
+
+            var scs=ajax.responseText.extractScript();
+
+            divMensaje.innerHTML=ajax.responseText;
+
+            scs.evalScript();
+
+            divMensaje.innerHTML=ajax.responseText;
+
+        }
+
+        else
+
+        {
+
+            divMensaje.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+
+        }
+
+    }
+
+
+
+    ajax.open("POST", "custom/page/billing-options.php", true);
+
+    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    ajax.send("typeperson=" + typeperson + "&requirebilling=" + requirebilling);
+
+}
 
 //Mostrar los datos de identificación
 function View_kit(type,country)

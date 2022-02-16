@@ -463,6 +463,7 @@
 													<div class="styled-select">
 
 														<select class="required input-require-billing" onchange="" name="require-billing" id="require-billing">
+															<option value="">Requieres Factura</option>
 															<option value="1">SI</option>
 															<option value="0">NO</option>
 														</select>
