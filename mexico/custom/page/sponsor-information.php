@@ -53,8 +53,8 @@ if(isset($_SESSION["sponsor"]))
 <hr>
 <div class="col-md-12 format-radio">
 	<div class="form-group radio_input">
-		<label><input type="radio" value="1" name="type_question" id="asesor" checked onclick="">&nbsp;Inscribe Asesor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-		<label><input type="radio" value="0" name="type_question" id="persona" onclick=""  >&nbsp;Inscribe Persona Nueva</label>
+		<label><input type="radio" value="1" name="type_question" id="asesor" checked onclick="Encuesta();">&nbsp;Inscribe Asesor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<label><input type="radio" value="0" name="type_question" id="persona" onclick="Encuesta();"  >&nbsp;Inscribe Persona Nueva</label>
 	</div>
 </div>
 <div class="col-sm-12">
