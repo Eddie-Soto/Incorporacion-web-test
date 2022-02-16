@@ -59,21 +59,23 @@ if(isset($_SESSION["sponsor"]))
 </div>
 <div class="col-sm-12">
 	<p>Queremos conocerte mejor y saber que es lo que más te interesa en NIKKEN:</p>
-  <input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
-  <label for="html">1. Consumo </label><br>
-  <input type="radio" id="segmentacion" name="segmentacion" value="20">
-  <label for="css">2. Recuperar tu inversión</label><br>
-  <input type="radio" id="segmentacion" name="segmentacion" value="30">
-  <label for="javascript">3. Emprender.</label>
-    <input type="radio" id="segmentacion" name="segmentacion" value="30">
-  <label for="javascript">3. Otro.</label>
-  <div class="col-md-3">
-			<div class="form-group">
-				<input type="text" name="last-name" id="last-name" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-last-name required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
-			</div>
-		</div>
-		<br/>
+	<input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
+	<label for="html">1. Consumo </label><br>
+	<input type="radio" id="segmentacion" name="segmentacion" value="20">
+	<label for="css">2. Recuperar tu inversión</label><br>
+	<input type="radio" id="segmentacion" name="segmentacion" value="30">
+	<label for="javascript">3. Emprender.</label>
+	<input type="radio" id="segmentacion" name="segmentacion" value="30">
+</div>
+<div class="col-md-12">
+	<label for="other">3. Otro.</label>
+
+	<div class="form-group">
+		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
 	</div>
+</div>
+<br/>
+</div>
 
 <div class="form-group terms format-check">
 	<label><input name="terms-document" type="checkbox" class="icheck required" id="terms-document">&nbsp;Acepto los <a href="#" data-toggle="modal" data-target="#terms-txt" onclick="Load_documents_modal(<?php echo $country ?>, <?php echo $type ?>);">términos de este contrato</a></label>
@@ -111,6 +113,17 @@ elseif($country == 3)
 <div class="form-group terms format-check">
 	<label><input name="declare-document" type="checkbox" class="icheck required" id="declare-document">&nbsp;Declaro que la información proporcionada es verdadera, correcta y completa a mi mejor saber y entender. Comprendo que la información proporcionada en esta solicitud estará sujeta a verificación por parte de NIKKEN y en su momento podrá ser rechazada la solicitud de inscripción de acuerdo a las políticas y/o ordenamientos legales vigentes. Entiendo que no se pueden hacer cambios en las facturas de acuerdo a los datos proporcionados.</a></label>
 </div>
+<script type="text/javascript">
+	
+	function Encuesta(){
+		var typeencuesta = $('input[name=type_question]:checked', '#wrapped').val();
+		if (typeencuesta == 1) {
+				alert('isncribe asesor');
+		}else{
+				alert('isncribe persona');
+		}
+	}
+</script>
 
 <!-- Buscar asesor -->
 <script>
