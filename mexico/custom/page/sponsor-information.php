@@ -52,25 +52,42 @@ if(isset($_SESSION["sponsor"]))
 
 <hr>
 <div class="col-md-12 format-radio">
+	<p>Queremos conocerte mejor y saber qué es lo que más te interesa en NIKKEN.
+Por favor, responde las siguientes preguntas:
+<br>
+¿Quién está llenando la incorporación?
+:</p>
 	<div class="form-group radio_input">
-		<label><input type="radio" value="1" name="type_question" id="asesor" checked onclick="Encuesta();">&nbsp;Inscribe Asesor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-		<label><input type="radio" value="0" name="type_question" id="persona" onclick="Encuesta();"  >&nbsp;Inscribe Persona Nueva</label>
+		<label><input type="radio" value="1" name="type_question" id="asesor" checked onclick="Encuesta();">&nbsp;Soy influencer (patrocinador) y estoy incorporando &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<label><input type="radio" value="0" name="type_question" id="persona" onclick="Encuesta();"  >&nbsp;Soy la persona interesada en ingresar a la comunidad NIKKEN como influencer </label>
 	</div>
 </div>
-<div class="col-sm-12">
-	<p>Queremos conocerte mejor y saber que es lo que más te interesa en NIKKEN:</p>
+<div class="col-sm-12" id="patrocinador" hidden="true">
+	
+	<input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
+	<label for="html">1. Consumo</label><br>
+	<input type="radio" id="segmentacion" name="segmentacion" value="20">
+	<label for="css">2. Recuperar tu inversión</label><br>
+	<input type="radio" id="segmentacion" name="segmentacion" value="30">
+	<label for="javascript">3. Emprender.</label>
+	<input type="radio" id="segmentacion" name="segmentacion" value="40">
+	<label for="javascript">4. Estoy trabajando una estrategia como patrocinador.</label>
+	<label for="other">5. Otro.</label>
+	<div class="form-group">
+		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
+	</div>
+	
+</div>
+<div class="col-md-12" id="nuevoincorporado" hidden="true">
+	
 	<input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
 	<label for="html">1. Consumo </label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="20">
 	<label for="css">2. Recuperar tu inversión</label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
-	
-</div>
-<div class="col-md-12">
 	<input type="radio" id="segmentacion" name="segmentacion" value="40">
 	<label for="other">3. Otro.</label>
-
 	<div class="form-group">
 		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
 	</div>
@@ -117,10 +134,17 @@ elseif($country == 3)
 <script type="text/javascript">
 	
 	function Encuesta(){
+		var divpatrocinador = document.getElementById('patrocinador');
+		var divnuevoincorporado = document.getElementById('nuevoincorporado');
 		var typeencuesta = $('input[name=type_question]:checked', '#wrapped').val();
 		if (typeencuesta == 1) {
+			divnuevoincorporado.setAttribute("hidden", true);
+			divpatrocinador.removeAttribute("hidden", true);
 				alert('isncribe asesor');
+
 		}else{
+			divpatrocinador.setAttribute("hidden", true);
+			divnuevoincorporado.removeAttribute("hidden", true);
 				alert('isncribe persona');
 		}
 	}
