@@ -70,12 +70,13 @@ Por favor, responde las siguientes preguntas:
 	<label for="css">2. Recuperar tu inversión</label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
-	<input type="radio" id="segmentacion" name="segmentacion" value="40">
+	<input type="radio" id="segmentacion" name="segmentacion" value="40"><br>
 	<label for="javascript">4. Estoy trabajando una estrategia como patrocinador.</label>
 	
 	<div class="form-group">
-		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
 		<label for="other">5. Otro.</label>
+		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
+		
 	</div>
 	
 </div>
@@ -88,10 +89,12 @@ Por favor, responde las siguientes preguntas:
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
 	<input type="radio" id="segmentacion" name="segmentacion" value="40">
+	<br>
 	
 	<div class="form-group">
-		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
 		<label for="other">4. Otro.</label>
+		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
+		
 	</div>
 </div>
 <br/>
