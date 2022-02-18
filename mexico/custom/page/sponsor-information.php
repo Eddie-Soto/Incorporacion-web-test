@@ -89,7 +89,7 @@ Por favor, responde las siguientes preguntas:
 	<label for="css">2. Recuperar tu inversión</label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
-	<input type="radio" id="segmentacion" name="segmentacion" value="30">
+
 	
 	
 	
