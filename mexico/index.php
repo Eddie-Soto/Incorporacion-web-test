@@ -453,7 +453,7 @@
 
 										</div>
 
-										<div class="row">
+										<div class="row" hidden="true">
 
 
 											<div class="col-md-12">
