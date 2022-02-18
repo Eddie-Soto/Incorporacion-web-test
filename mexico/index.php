@@ -763,11 +763,8 @@
 			function tst(){
 
 				swal({
-					title: '¡Te damos la bienvenida a NIKKEN!',
-					text: 'Por tu incorporación en el mes de abril del 2021,  queremos que disfrutes  de tu sistema de aire KenkoAir Purifier con un 30% de descuento. Comparte este beneficio con las personas que te rodean y maximiza tus ingresos.  Ten presente que este beneficio se activara en 2 horas en tu Tienda Virtual.',
-					imageUrl: 'img/aire100.png',
-
-					imageAlt: 'Custom image',
+					title: '¡GRACIAS POR CONTESTAR LA ENCUESTA!',
+					text: 'Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.<br>BIENVENIDO A NIKKEN<br>Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.',
 				})
 
 
