@@ -62,7 +62,7 @@ Por favor, responde las siguientes preguntas:
 		<label><input type="radio" value="0" name="type_question" id="persona" onclick="Encuesta();"  >&nbsp;Soy la persona interesada en ingresar a la comunidad NIKKEN como influencer </label>
 	</div>
 </div>
-<div class="col-sm-12" id="patrocinador" hidden="true">
+<div class="col-sm-12" id="patrocinador">
 	
 	<input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
 	<label for="html">1. Consumo</label><br>
@@ -72,9 +72,10 @@ Por favor, responde las siguientes preguntas:
 	<label for="javascript">3. Emprender.</label>
 	<input type="radio" id="segmentacion" name="segmentacion" value="40">
 	<label for="javascript">4. Estoy trabajando una estrategia como patrocinador.</label>
-	<label for="other">5. Otro.</label>
+	
 	<div class="form-group">
 		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
+		<label for="other">5. Otro.</label>
 	</div>
 	
 </div>
@@ -87,9 +88,10 @@ Por favor, responde las siguientes preguntas:
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
 	<input type="radio" id="segmentacion" name="segmentacion" value="40">
-	<label for="other">3. Otro.</label>
+	
 	<div class="form-group">
 		<input type="text" name="other" id="other" onkeypress="return Only_letter(event);" oncopy="return false" onpaste="return false" maxlength="60" class="form-control input-other required" placeholder="<?php echo $last_name_value ?>"  value="<?php echo $last_name_nc ?>">
+		<label for="other">4. Otro.</label>
 	</div>
 </div>
 <br/>
@@ -140,12 +142,12 @@ elseif($country == 3)
 		if (typeencuesta == 1) {
 			divnuevoincorporado.setAttribute("hidden", true);
 			divpatrocinador.removeAttribute("hidden", true);
-				alert('isncribe asesor');
+				
 
 		}else{
 			divpatrocinador.setAttribute("hidden", true);
 			divnuevoincorporado.removeAttribute("hidden", true);
-				alert('isncribe persona');
+				
 		}
 	}
 </script>
