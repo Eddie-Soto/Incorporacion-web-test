@@ -69,8 +69,8 @@ Por favor, responde las siguientes preguntas:
 	<input type="radio" id="segmentacion" name="segmentacion" value="20">
 	<label for="css">2. Recuperar tu inversión</label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
-	<label for="javascript">3. Emprender.</label>
-	<input type="radio" id="segmentacion" name="segmentacion" value="40"><br>
+	<label for="javascript">3. Emprender.</label><br>
+	<input type="radio" id="segmentacion" name="segmentacion" value="40">
 	<label for="javascript">4. Estoy trabajando una estrategia como patrocinador.</label>
 	
 	<div class="form-group">
@@ -88,8 +88,9 @@ Por favor, responde las siguientes preguntas:
 	<label for="css">2. Recuperar tu inversión</label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="30">
 	<label for="javascript">3. Emprender.</label>
-	<input type="radio" id="segmentacion" name="segmentacion" value="40">
 	<br>
+	<input type="radio" id="segmentacion" name="segmentacion" value="40">
+	
 	
 	<div class="form-group">
 		<label for="other">4. Otro.</label>
