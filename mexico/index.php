@@ -568,7 +568,7 @@
 
 		<footer id="home" class="clearfix">
 
-			<p>© 2018 NIKKEN Latinoamérica</p>
+			<p>© 2022 NIKKEN Latinoamérica</p>
 
 			<ul>
 

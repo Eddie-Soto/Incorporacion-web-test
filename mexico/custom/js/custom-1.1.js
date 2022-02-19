@@ -1533,7 +1533,7 @@ $(function () {
         document.getElementById('btn-process-form').innerHTML = '<strong><i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i><span class="sr-only"></span> Guardando<strong>';
 
 
-
+    setTimeout(function() {
         $.ajax({
 
             type: 'POST',
@@ -1599,6 +1599,7 @@ $(function () {
             }
 
         });
+    }, 6000);
 
 
 
