@@ -251,6 +251,8 @@ if ($country > 0 and $type == 1) {
 
 						<option value="5024"><?php echo $kit3 ?></option>
 
+						<option value="5002"><?php echo $kit ?></option>
+
 						
 
 					</select>
