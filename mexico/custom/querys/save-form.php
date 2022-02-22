@@ -84,6 +84,8 @@ $browser = $_SERVER['HTTP_USER_AGENT']; //Consultar navegador
 
 
 $segmentacion = $_POST["segmentacion"];
+$type_question = $_POST["type_question"];
+$othercoments = $_POST["othercoments"];
 
 $id = $_POST["id"];
 
@@ -463,7 +465,7 @@ else
 
 
 
-		$sql = "INSERT INTO segmentacion_iw (sap_code, email, option_chosen, created_at) VALUES (:sap_code, :email, :option_chosen, :created_at)";
+		$sql = "INSERT INTO segmentacion_iw (sap_code, email, option_chosen, created_at, whoincorporate, coments) VALUES (:sap_code, :email, :option_chosen, :created_at, :whoincorporate, :coments)";
 
 		$query = $pdo->prepare($sql);
 
@@ -477,7 +479,11 @@ else
 
 			'option_chosen'	=> $segmentacion, 
 
-			'created_at'	=> $created_at 
+			'created_at'	=> $created_at,
+
+			'whoincorporate' => $type_question,
+
+			'coments' => $othercoments 
 
 			
 

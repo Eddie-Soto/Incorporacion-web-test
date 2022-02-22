@@ -720,7 +720,7 @@
 
 		<!-- YOUR CUSTOM JS -->
 
-		<script src="custom/js/custom-1.1.js?5.0.1"></script>
+		<script src="custom/js/custom-1.1.js?5.0.20"></script>
 
 		<script src="plugins/Interpretador Ajax/interpretadorAjax.js"></script>
 
