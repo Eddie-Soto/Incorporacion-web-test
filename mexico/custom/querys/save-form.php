@@ -87,6 +87,8 @@ $segmentacion = $_POST["segmentacion"];
 $type_question = $_POST["type_question"];
 $othercoments = $_POST["othercoments"];
 
+
+
 $id = $_POST["id"];
 
 //$type = $_POST["type"];
