@@ -63,6 +63,7 @@ Por favor, responde las siguientes preguntas:
 	</div>
 </div>
 <div class="col-sm-12" id="patrocinador">
+	<p>A Continuación selecciona la razón por la cual se está incorporando la persona que invitaste a NIKKEN</p>
 	
 	<input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
 	<label for="html">1. Consumo</label><br>
@@ -82,7 +83,7 @@ Por favor, responde las siguientes preguntas:
 	
 </div>
 <div class="col-md-12" id="nuevoincorporado" hidden="true">
-	
+	<p>A Continuación selecciona la razón por la cual te estás incorporando a NIKKEN</p>
 	<input type="radio" id="segmentacion" name="segmentacion" value="10" checked="true">
 	<label for="html">1. Consumo </label><br>
 	<input type="radio" id="segmentacion" name="segmentacion" value="20">
