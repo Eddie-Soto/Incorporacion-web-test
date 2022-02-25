@@ -764,9 +764,9 @@
 
 				swal({
 					title: '¡GRACIAS POR CONTESTAR LA ENCUESTA!',
-					text 'Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.',
-					text '¡ BIENVENIDO A NIKKEN !',
-					text 'Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.',
+					text: 'Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.',
+					text: '¡ BIENVENIDO A NIKKEN !',
+					text: 'Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.',
 					
 				})
 
