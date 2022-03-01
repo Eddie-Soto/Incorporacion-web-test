@@ -126,7 +126,7 @@ else
 				$resultado = $mysqli->query("SELECT email from users where email='$email' and client_type = 'CLIENTE'");
 				/* Crear una tabla que no devuelve un conjunto de resultados */
 				if (mysqli_num_rows($resultado)){
-
+					$row = mysqli_fetch_row($resultado);
 
 					echo "<script>Swal.fire({
   title: '¿Deseas liberar el correo, para contunuar con tu incorporación?',
