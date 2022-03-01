@@ -129,7 +129,7 @@ else
 					$row = mysqli_fetch_row($resultado);
 
 					echo "<script>Swal.fire({
-  title: '¿Deseas liberar el correo, para contunuar con tu incorporación?',
+  title: '¿Deseas liberar el correo, para continuar con tu incorporación?',
   showDenyButton: true,
   confirmButtonText: 'Si, Liberar Correo  ".$email = $row[0]."',
   denyButtonText: `Cancelar`,
