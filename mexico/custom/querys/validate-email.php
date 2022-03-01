@@ -138,7 +138,20 @@ else
   if (result.isConfirmed) {
   	var email = document.getElementById('email-incorporate').value;
 
-   alert(email);
+   
+   $.ajax({
+
+        url: 'custom/page/delete-email.php',
+
+        data: 'email=' + email,
+
+        success: function(resp){
+
+         alert(resp);
+
+         }
+
+    });
 
     
     Swal.fire('Saved!', '', 'success')

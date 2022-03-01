@@ -1,6 +1,6 @@
 <?php
 $email = $_GET["email"];
 
-echo $email."depuracion";
+return echo $email."depuracion";
 
 ?>
