@@ -50,6 +50,19 @@
 
     //AJAX
 
+    function Facturacion(){
+                var isbilling = $('input[name=billing-type]:checked', '#wrapped').val(); // Si es asesor o club
+
+                if (isbilling == 1) {
+                    alert("si quiere factura");
+                }else{
+                    alert("no quiere facura");
+                }
+                
+
+                
+            }
+
 
 
     //SOLO PERMITIR NUMEROS

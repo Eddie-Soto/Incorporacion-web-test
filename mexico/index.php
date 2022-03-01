@@ -480,11 +480,11 @@
 												<div class="form-group">
 
 													<div class="col-sm-12">
-														<label id="option-billing-yes"><input type="radio" value="1" name="billing" id="billing-1" onclick="billing();">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Facturacion();">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
 														<br/><br/>
 													</div>
 													<div class="col-sm-12">
-														<label id="option-billing-no"><input type="radio" value="0" name="billing" id="billing-2" onclick="billing();">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="Facturacion();">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
 													</div>
 
 												</div>
@@ -737,7 +737,7 @@
 
 		<!-- YOUR CUSTOM JS -->
 
-		<script src="custom/js/custom-1.1.js?5.0.20"></script>
+		<script src="custom/js/custom-1.1.js?5.0.21"></script>
 
 		<script src="plugins/Interpretador Ajax/interpretadorAjax.js"></script>
 
@@ -776,18 +776,7 @@
 		<!-- Ejecución de scripts -->
 
 		<script>
-			function billing(){
-				var isbilling = $('input[name=billing]:checked', '#wrapped').val(); // Si es asesor o club
-
-				if (isbilling == 1) {
-					alert("si quiere factura");
-				}else{
-					alert("no quiere facura");
-				}
-				
-
-				
-			}
+			
 
 			function tst(){
 
