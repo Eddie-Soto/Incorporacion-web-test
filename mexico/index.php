@@ -479,14 +479,12 @@
 
 												<div class="form-group">
 
-													<div class="styled-select">
-
-														<select class="required input-require-billing" onchange="" name="require-billing" id="require-billing">
-															<option value="">Requieres Factura</option>
-															<option value="1">SI</option>
-															<option value="0">NO</option>
-														</select>
-
+													<div class="col-sm-12" hidden="true">
+														<label id="option-billing-yes"><input type="radio" value="1" name="billing" id="billing-1" onclick="billing();">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
+														<br/><br/>
+													</div>
+													<div class="col-sm-12">
+														<label id="option-billing-no"><input type="radio" value="0" name="billing" id="billing-2" onclick="billing();">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
 													</div>
 
 												</div>
@@ -778,6 +776,18 @@
 		<!-- Ejecución de scripts -->
 
 		<script>
+			function billing(){
+				var isbilling = $('input[name=billing]:checked', '#wrapped').val(); // Si es asesor o club
+
+				if (isbilling == 1) {
+					alert("si quiere factura");
+				}else{
+					alert("no quiere facura");
+				}
+				
+
+				
+			}
 
 			function tst(){
 
