@@ -82,9 +82,8 @@ else
 					echo "<script>Swal.fire({
   title: 'Do you want to save the changes?',
   showDenyButton: true,
-  showCancelButton: true,
-  confirmButtonText: 'Save',
-  denyButtonText: `Don't save`,
+  confirmButtonText: '¿Deseas liberar el correo?',
+  denyButtonText: `Cancelar`,
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
