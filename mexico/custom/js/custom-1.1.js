@@ -172,7 +172,7 @@ function Type_billing(type_incorporate)
 
     $.ajax({
 
-        url: 'custom/page/type-incorporate.php',
+        url: 'custom/page/billing-options.php',
 
         data: 'type_incorporate=' + type_incorporate + '&isbilling=' + isbilling,
 
