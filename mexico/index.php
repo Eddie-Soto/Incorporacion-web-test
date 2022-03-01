@@ -111,6 +111,25 @@
 
 	<link rel="stylesheet" type="text/css" href="plugins/sweet-alert/sweetalert.css?1.0.2">
 
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_animations.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_body.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_core.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_mixins.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_theming.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_toasts.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_toasts-animations.scss">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/src/scss/_toasts-body.scss">
+	
+
+	
+
+
+
+
+
+
+
+
 	<!-- Libreria de alertas javascript -->
 
 
@@ -750,7 +769,7 @@
 
 		<!-- Libreria de alertas javascript -->
 
-		<script src="plugins/sweet-alert/sweetalert.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
 
 		<!-- Libreria de alertas javascript -->
 
@@ -762,13 +781,23 @@
 
 			function tst(){
 
-				swal({
-					title: '¡GRACIAS POR CONTESTAR LA ENCUESTA!',
-					text: 'Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.',
-					text: '¡ BIENVENIDO A NIKKEN !',
-					html: 'Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.',
-					
-				})
+				Swal.fire({
+  title: '<strong>HTML <u>example</u></strong>',
+  icon: 'info',
+  html:
+    'You can use <b>bold text</b>, ' +
+    '<a href="//sweetalert2.github.io">links</a> ' +
+    'and other HTML tags',
+  showCloseButton: true,
+  showCancelButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+    '<i class="fa fa-thumbs-up"></i> Great!',
+  confirmButtonAriaLabel: 'Thumbs up, great!',
+  cancelButtonText:
+    '<i class="fa fa-thumbs-down"></i>',
+  cancelButtonAriaLabel: 'Thumbs down'
+})
 
 
 			}
