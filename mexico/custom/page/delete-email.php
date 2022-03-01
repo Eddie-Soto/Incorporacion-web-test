@@ -32,6 +32,10 @@ try
         $result = $e;
       }
 
-      echo "test";
+      echo "<script>
+      document.getElementById('validator-email').value = 1;
+       
+      
+      </script>";
 
 ?>
