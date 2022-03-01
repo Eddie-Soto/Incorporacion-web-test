@@ -131,7 +131,7 @@ else
 					echo "<script>Swal.fire({
   title: '¿Deseas liberar el correo, para contunuar con tu incorporación?',
   showDenyButton: true,
-  confirmButtonText: 'Si, Liberar Correo".$email = $row[0]."',
+  confirmButtonText: 'Si, Liberar Correo  ".$email = $row[0]."',
   denyButtonText: `Cancelar`,
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
