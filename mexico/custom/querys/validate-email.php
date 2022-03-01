@@ -79,19 +79,47 @@ else
 				if (mysqli_num_rows($resultado)){
 
 
-					echo "<script> Swal.fire({
-					title: '<strong> <u>¡GRACIAS POR CONTESTAR LA ENCUESTA!</u></strong>',
-					icon: 'info',
-					html:'<p>Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.</br></p>' +
-					'<b>¡ BIENVENIDO A NIKKEN !</b></br> ' +
-					'<br><p>Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.</p>',
-					showCloseButton: true,
-					
-					confirmButtonText:
-					'<i class="fa fa-thumbs-up"></i> Excelente!',
-					confirmButtonAriaLabel: 'Good!',
-					
-				}) </script>";
+					echo '<script> swal({
+        title: "Cancelar",
+        text: "¿Desea cancelar la revision de la aclaración?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Si, cancelar",
+        cancelButtonText: "No deseo cancelar",
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }).then(function(result) {
+        if (result.value) {
+            var associateid = $("#nuevaCodigoPropietario").val();
+            $.ajax({
+                type: "GET",
+                url: "/elimiarAclaracion",
+                data: {
+                    associateid: associateid,
+                    factura: factura,
+                },
+                beforeSend: function(){
+                    $("#loader_div_ajax").show();
+                },
+                success: function (response) {
+                    if(response){
+                        alert("Ok", "Se cancelo la solicitud de aclaración correctamente", "success");
+                        navigationTracking(associateid, "Aclaracion de envios", "Abre modal de edición aclaracion "" + factura);
+                    }
+                    else{
+                        alert("Ups", "No se pudo actualizar la información de la aclaración, intenta de nuevo", "error");
+                    }
+                    $("#loader_div_ajax").hide();
+                    loadResumenAclaraciones()
+                },
+                error: function (){
+                    alert("Ups", "No se pudo actualizar la información de la aclaración, intenta de nuevo", "error");
+                    $("#loader_div_ajax").hide();
+                }
+            });
+        }
+    }); </script>';
 					exit;
 				}
    
