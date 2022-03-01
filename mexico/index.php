@@ -860,6 +860,7 @@
 			playeras(country, gender, kit);
 		}
 		*/
+		Type_billing(1);
 		Type_person(2); /*Tipo de persona*/
 
 		View_names(2); /*Nombres según el tipo de persona*/
