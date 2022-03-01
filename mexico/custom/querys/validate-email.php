@@ -74,10 +74,12 @@ else
 					echo ("Falló la conexión:".$mysqli->connect_error);
 					exit;
 				}
-				$resultado = $mysqli->query("SELECT email from users where email='$email'");
+				$resultado = $mysqli->query("SELECT email from users where email='$email' and client_type = 'CLIENTE'");
 				/* Crear una tabla que no devuelve un conjunto de resultados */
 				if (mysqli_num_rows($resultado)){
-					echo "el <strong>correo ingresado ya se encuentra registrado en la tienda virtual</strong>, por favor utilizar uno nuevo";
+
+
+					echo "<script> alert('prueba CLIENTE '); </script> el <strong>correo ingresado ya se encuentra registrado en la tienda virtual</strong>, por favor utilizar uno nuevo";
 					exit;
 				}
    
