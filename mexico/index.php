@@ -432,11 +432,11 @@
 												$productos = $_SESSION["products"];
 
 												?> hidden="true" <?php		
-											}else{ ?> ><input type="radio" value="1" name="type"  checked <?php } ?> onclick="View_identity(); View_upload_documents(); View_sponsor(); View_kit(1,2);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+											}else{ ?> ><input type="radio" value="1" name="type"  checked <?php } ?> onclick=" Type_billing(this.value); View_identity(); View_upload_documents(); View_sponsor(); View_kit(1,2);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
 <?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
 											<label><input  type="radio" value="0" name="type" <?php if(isset($_SESSION["products"]))
 											{
-												?> checked <?php } ?> onclick="View_identity(); View_upload_documents(); View_sponsor();  View_hide(); View_kit(0,2);">&nbsp;Miembro de la Comunidad NIKKEN <?php if(isset($_SESSION["products"]))
+												?> checked <?php } ?> onclick=" Type_billing(this.value); View_identity(); View_upload_documents(); View_sponsor();  View_hide(); View_kit(0,2);">&nbsp;Miembro de la Comunidad NIKKEN <?php if(isset($_SESSION["products"]))
 												{
 													?> <br/><small><p>Para NIKKEN un miembro de la comunidad significa que eres un cliente preferente, el cual <u> puede
 														obtener factura</u> y se preocupa por su salud y el medio ambiente.<br>
@@ -480,7 +480,7 @@
 												<div class="form-group">
 
 													<div class="col-sm-12">
-														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Facturacion(this.value);" checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Facturacion(this.value); " checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
 														<br/><br/>
 													</div>
 													<div class="col-sm-12">
