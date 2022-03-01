@@ -782,10 +782,9 @@
 			function tst(){
 
 				Swal.fire({
-					title: '<strong>HTML <u>¡GRACIAS POR CONTESTAR LA ENCUESTA!</u></strong>',
+					title: '<strong> <u>¡GRACIAS POR CONTESTAR LA ENCUESTA!</u></strong>',
 					icon: 'info',
-					html:
-					'<p>Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.</br></p>' +
+					html:'<p>Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.</br></p>' +
 					'<b>¡ BIENVENIDO A NIKKEN !</b><br> ' +
 					'<p>Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.</p>',
 					showCloseButton: true,
