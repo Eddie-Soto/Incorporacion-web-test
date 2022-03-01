@@ -140,20 +140,7 @@ else
 
    alert(correo);
 
-    $.ajax({
-
-        url: 'custom/page/delete-email.php',
-
-        data: 'email=' + correo,
-
-        success: function(resp){
-        	alert(resp);
-
-         Swal.fire('Saved!', '', 'success')
-
-         }
-
-    });
+    
     Swal.fire('Saved!', '', 'success')
   } else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
