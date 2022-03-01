@@ -141,7 +141,7 @@ else
    
    $.ajax({
 
-        url: 'custom/page/delete-email.php',
+        url: '/custom/page/delete-email.php',
 
         data: 'email=' + email,
 
