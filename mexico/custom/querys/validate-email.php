@@ -79,7 +79,19 @@ else
 				if (mysqli_num_rows($resultado)){
 
 
-					echo "<script> alert('prueba CLIENTE '); </script> el <strong>correo ingresado ya se encuentra registrado en la tienda virtual</strong>, por favor utilizar uno nuevo";
+					echo "<script> Swal.fire({
+					title: '<strong> <u>¡GRACIAS POR CONTESTAR LA ENCUESTA!</u></strong>',
+					icon: 'info',
+					html:'<p>Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.</br></p>' +
+					'<b>¡ BIENVENIDO A NIKKEN !</b></br> ' +
+					'<br><p>Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.</p>',
+					showCloseButton: true,
+					
+					confirmButtonText:
+					'<i class="fa fa-thumbs-up"></i> Excelente!',
+					confirmButtonAriaLabel: 'Good!',
+					
+				}) </script>";
 					exit;
 				}
    
