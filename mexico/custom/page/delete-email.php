@@ -1,9 +1,9 @@
 <?php
 
 $email = $_GET["email"];
-$email_depurad=$email."_depruecion";
+$email_depurado=$email.Date('YmdHis');
 
-echo $email."depuracion";
+
 
 
 try
@@ -15,7 +15,7 @@ try
           echo ("Falló la conexión:".$mysqli->connect_error);
           exit;
         }
-        $resultado = $mysqli->query("UPDATE users SET email='$email_depurad' WHERE email='$email'");
+        $resultado = $mysqli->query("UPDATE users SET email='$email_depurado', status = 0, locked = 1 WHERE email='$email'");
         /* Crear una tabla que no devuelve un conjunto de resultados */
         if (mysqli_num_rows($resultado)){
           $row = mysqli_fetch_row($resultado);
@@ -32,10 +32,6 @@ try
         $result = $e;
       }
 
-      echo "<script>
-      document.getElementById('validator-email').value = 1;
-       
-      
-      </script>";
+      echo "succes";
 
 ?>
