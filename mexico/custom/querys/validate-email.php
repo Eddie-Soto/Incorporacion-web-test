@@ -147,6 +147,7 @@ else
 
         success: function(resp){
         	document.getElementById('validator-email').value = 1;
+        	document.getElementById('email-incorporate').value = email;
          Swal.fire('¡Correo Liberado!', '', 'success')
 
          }
