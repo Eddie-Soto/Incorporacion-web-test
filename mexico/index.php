@@ -472,7 +472,7 @@
 
 										</div>
 
-										<div class="row">
+										<!--div class="row">
 
 
 											<div class="col-md-12">
@@ -491,9 +491,9 @@
 
 											</div>
 
-										</div>
+										</div-->
 
-										<div id="billing">
+										<!--div id="billing">
 											<div class="row">
 
 
@@ -514,7 +514,7 @@
 											</div>
 
 										</div>
-										</div>
+										</div-->
 
 										<div id="kit-incorporate"></div>
 
