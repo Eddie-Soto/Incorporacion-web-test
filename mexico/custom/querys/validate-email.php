@@ -147,7 +147,7 @@ else
         data: 'email=' + email,
 
         success: function(resp){
-        	alert('resp');
+        	alert(resp);
 
          Swal.fire('Saved!', '', 'success')
 
