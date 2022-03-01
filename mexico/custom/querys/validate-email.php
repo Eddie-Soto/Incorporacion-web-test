@@ -176,6 +176,9 @@ else
 
 }
 
-
+echo "<script>
+var email = document.getElementById('email-incorporate').value;
+document.getElementById('validator-email').value = 1;
+        	document.getElementById('email-incorporate').value = email;</script>";
 
 ?>
