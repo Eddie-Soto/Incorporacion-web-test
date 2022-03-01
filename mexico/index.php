@@ -785,8 +785,8 @@
 					title: '<strong>HTML <u>¡GRACIAS POR CONTESTAR LA ENCUESTA!</u></strong>',
 					icon: 'info',
 					html:
-					'Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.<br> ' +
-					'<b>¡ BIENVENIDO A NIKKEN !</b>br>< ' +
+					'<p>Esto nos ayudará a conocer mejor tus inquietudes y/o propósitos en NIKKEN y poder contactarte con información importante de acuerdo a tus intereses.</br></p>' +
+					'<b>¡ BIENVENIDO A NIKKEN !</b><br> ' +
 					'<p>Al momento de concluir tu pago, te estará llegando tu carta de bienvenida al correo electrónico con el que te incorporaste.</p>',
 					showCloseButton: true,
 					
