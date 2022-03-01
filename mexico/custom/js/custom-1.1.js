@@ -163,7 +163,28 @@
 
 //FUNCIONALIDADES GENERALES -----------------------------------------------------------
 
+function Type_billing(type_incorporate)
 
+{
+    var isbilling = $('input[name=billing-type]:checked', '#wrapped').val();
+
+    $('#type-billing').html('<option value="">Cargando...</option>');
+
+    $.ajax({
+
+        url: 'custom/page/type-incorporate.php',
+
+        data: 'type_incorporate=' + type_incorporate + '&isbilling=' + isbilling,
+
+        success: function(resp){
+
+         $('#type-billing').html(resp)
+
+         }
+
+    });
+
+}
 
 //Tipo de incorporacion
 
