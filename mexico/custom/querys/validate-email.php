@@ -1,6 +1,55 @@
 <?php 
 
+echo '<script> //AJAX
 
+    function Ajax()
+
+    {
+
+        /* Crea el objeto AJAX. Esta funcion es generica para cualquier utilidad de este tipo, por
+
+        lo que se puede copiar tal como esta aqui */
+
+        var xmlhttp=false;
+
+        try
+
+        {
+
+            // Creacion del objeto AJAX para navegadores no IE
+
+            xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
+
+        }
+
+        catch(e)
+
+        {
+
+            try
+
+            {
+
+                // Creacion del objet AJAX para IE
+
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+            }
+
+            catch(E) { xmlhttp=false; }
+
+        }
+
+        if (!xmlhttp && typeof XMLHttpRequest!="undefined") { xmlhttp=new XMLHttpRequest(); }
+
+
+
+        return xmlhttp;
+
+    }
+
+    //AJAX
+ </script>';
 
 require_once('../../functions.php'); /*Funciones*/
 
@@ -82,11 +131,12 @@ else
 					echo "<script>Swal.fire({
   title: '¿Deseas liberar el correo, para contunuar con tu incorporación?',
   showDenyButton: true,
-  confirmButtonText: 'Si, Liberar Correo',
+  confirmButtonText: 'Si, Liberar Correo".$resultado[0]['email']."',
   denyButtonText: `Cancelar`,
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
+  	
     Swal.fire('Saved!', '', 'success')
   } else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
