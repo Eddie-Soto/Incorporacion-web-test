@@ -136,7 +136,24 @@ else
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
-  	
+  	var correo = \' ".$email = $row[0]."  \';
+
+   
+
+    $.ajax({
+
+        url: 'custom/page/delete-email.php',
+
+        data: 'email=' + email,
+
+        success: function(resp){
+        	alert('resp');
+
+         Swal.fire('Saved!', '', 'success')
+
+         }
+
+    });
     Swal.fire('Saved!', '', 'success')
   } else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
