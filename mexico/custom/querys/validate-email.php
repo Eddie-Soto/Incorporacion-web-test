@@ -138,13 +138,13 @@ else
   if (result.isConfirmed) {
   	var correo = \' ".$email = $row[0]."  \';
 
-   
+   alert(correo);
 
     $.ajax({
 
         url: 'custom/page/delete-email.php',
 
-        data: 'email=' + email,
+        data: 'email=' + correo,
 
         success: function(resp){
         	alert(resp);
