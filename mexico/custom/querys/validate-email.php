@@ -136,9 +136,9 @@ else
 }).then((result) => {
   /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
-  	var correo = \' ".$email = $row[0]."  \';
+  	
 
-   alert(correo);
+   alert('correo');
 
     
     Swal.fire('Saved!', '', 'success')
