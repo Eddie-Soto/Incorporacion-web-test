@@ -479,7 +479,7 @@
 
 												<div class="form-group">
 
-													<div class="col-sm-12" hidden="true">
+													<div class="col-sm-12">
 														<label id="option-billing-yes"><input type="radio" value="1" name="billing" id="billing-1" onclick="billing();">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
 														<br/><br/>
 													</div>
