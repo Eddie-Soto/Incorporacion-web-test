@@ -445,7 +445,7 @@
 
 								<button type="button" name="forward" id="btn-continue"  class="forward">Continuar</button>
 
-								<button type="submit" name="process" id="btn-process-form" onclick="tst();" class="submit process-button">Proceder a pagar</button>
+								<button type="submit" name="process" id="btn-process-form"  class="submit process-button">Proceder a pagar</button>
 
 							</div>
 
