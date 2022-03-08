@@ -1,5 +1,5 @@
 <?php
 
-	header('Location: https://iw.nikkenlatam.com:8787/');
+	header('Location: https://services.nikken.com.mx/mantenimientoTiendaKoi');
 
 ?>
