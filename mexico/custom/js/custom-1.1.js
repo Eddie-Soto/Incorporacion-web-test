@@ -163,7 +163,7 @@
 
 //FUNCIONALIDADES GENERALES -----------------------------------------------------------
 
-function Type_billing(wantbilling)
+function Type_billing(type_incorporate,country)
 
 {
     var isbilling = $('input[name=billing-type]:checked', '#wrapped').val();
@@ -174,7 +174,7 @@ function Type_billing(wantbilling)
 
         url: 'custom/page/billing-options.php',
 
-        data: '&isbilling=' + isbilling,
+        data: '&type_incorporate=' + type_incorporate + '&country=' + country,
 
         success: function(resp){
 
