@@ -462,7 +462,7 @@
 
 													<div class="styled-select">
 
-														<select class="required input-type-incorporate" onchange="View_names(this.value); View_identity(); View_upload_documents();" name="type-incorporate" id="type-incorporate"></select>
+														<select class="required input-type-incorporate" onchange="View_names(this.value); View_identity(); View_upload_documents(); Type_billing(this.value,document.getElementById('country').value);" name="type-incorporate" id="type-incorporate"></select>
 
 													</div>
 
@@ -474,17 +474,16 @@
 
 										<div class="row">
 
-
 											<div class="col-md-12">
 
 												<div class="form-group">
 
 													<div class="col-sm-12">
-														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Type_billing(this.value); " checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="" checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
 														<br/><br/>
 													</div>
 													<div class="col-sm-12">
-														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="Type_billing(this.value);">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
 													</div>
 
 												</div>
