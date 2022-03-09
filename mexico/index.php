@@ -480,11 +480,11 @@
 												<div class="form-group">
 
 													<div class="col-sm-12">
-														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Facturacion(this.value); " checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Type_billing(this.value); " checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
 														<br/><br/>
 													</div>
 													<div class="col-sm-12">
-														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="Facturacion(this.value);">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="Type_billing(this.value);">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
 													</div>
 
 												</div>
@@ -493,7 +493,7 @@
 
 										</div>
 
-										<!--div id="billing">
+										<div id="billing">
 											<div class="row">
 
 
@@ -503,7 +503,7 @@
 
 													<div class="styled-select">
 
-														<select class="required input-type-billig" onchange="" name="type-billing" id="type-billing">
+														<select class="input-type-billig" onchange="" name="type-billing" id="type-billing">
 
 														</select>
 
@@ -514,7 +514,7 @@
 											</div>
 
 										</div>
-										</div-->
+										</div>
 
 										<div id="kit-incorporate"></div>
 
