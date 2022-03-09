@@ -479,11 +479,11 @@
 												<div class="form-group">
 
 													<div class="col-sm-12">
-														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="" checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-yes"><input type="radio" value="1" name="billing-type" id="billing-1" onclick="Facturacion(this.value);" checked="true">&nbsp;<strong>Quiero registrar mis datos fiscales</strong></label>
 														<br/><br/>
 													</div>
 													<div class="col-sm-12">
-														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
+														<label id="option-billing-no"><input type="radio" value="0" name="billing-type" id="billing-2" onclick="Facturacion(this.value);">&nbsp;<strong>No quiero registrar mis datos fiscales</strong></label>
 													</div>
 
 												</div>
@@ -794,6 +794,18 @@
 		<!-- Ejecución de scripts -->
 
 		<script>
+
+			function Facturacion(billing){
+				var optiosbilling = document.getElementById('type-billing');
+				if (billing == 0) {
+					optiosbilling.setAttribute("hidden", "true");
+					optiosbilling.classList.remove("required");
+				}else{
+					optiosbilling.removeAttribute("hidden", "true");
+					optiosbilling.classList.add("required");
+				}
+
+			}
 			
 
 			function tst(){
