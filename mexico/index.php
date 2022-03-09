@@ -797,10 +797,14 @@
 
 			function Facturacion(billing){
 				var optiosbilling = document.getElementById('type-billing');
+				var divbilling = document.getElementById('billing');
 				if (billing == 0) {
+					divbilling.setAttribute("hidden", "true");
 					optiosbilling.setAttribute("hidden", "true");
+
 					optiosbilling.classList.remove("required");
 				}else{
+					divbilling.removeAttribute("hidden", "true");
 					optiosbilling.removeAttribute("hidden", "true");
 					optiosbilling.classList.add("required");
 				}
