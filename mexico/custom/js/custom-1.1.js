@@ -166,7 +166,7 @@
 function Type_billing(type_incorporate,country)
 
 {
-    var type = 1;
+    var type = 0;
     var isbilling = $('input[name=billing-type]:checked', '#wrapped').val();
 
     $('#type-billing').html('<option value="">Cargando...</option>');
