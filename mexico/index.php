@@ -432,7 +432,7 @@
 												$productos = $_SESSION["products"];
 
 												?> hidden="true" <?php		
-											}else{ ?> ><input type="radio" value="1" name="type"  checked <?php } ?> onclick=" Type_billing(this.value,document.getElementById('country').value,document.getElementById('type-incorporate').value); View_identity(); View_upload_documents(); View_sponsor(); View_kit(1,2);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+											}else{ ?> ><input type="radio" value="1" name="type"  checked <?php } ?> onclick=" Type_billing(this.value,2,document.getElementById('type-incorporate').value); View_identity(); View_upload_documents(); View_sponsor(); View_kit(1,2);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
 <?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
 											<label><input  type="radio" value="0" name="type" <?php if(isset($_SESSION["products"]))
 											{
@@ -462,7 +462,7 @@
 
 													<div class="styled-select">
 
-														<select class="required input-type-incorporate" onchange="View_names(this.value); View_identity(); View_upload_documents(); Type_billing($('input[name=type]:checked', '#wrapped').val(),document.getElementById('country').value,this.value);" name="type-incorporate" id="type-incorporate"></select>
+														<select class="required input-type-incorporate" onchange="View_names(this.value); View_identity(); View_upload_documents(); Type_billing($('input[name=type]:checked', '#wrapped').val(),2,this.value);" name="type-incorporate" id="type-incorporate"></select>
 
 													</div>
 
