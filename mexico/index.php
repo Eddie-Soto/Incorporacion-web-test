@@ -436,7 +436,7 @@
 <?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
 											<label><input  type="radio" value="0" name="type" <?php if(isset($_SESSION["products"]))
 											{
-												?> checked <?php } ?> onclick=" Type_billing(this.value); View_identity(); View_upload_documents(); View_sponsor();  View_hide(); View_kit(0,2);">&nbsp;Miembro de la Comunidad NIKKEN <?php if(isset($_SESSION["products"]))
+												?> checked <?php } ?> onclick=" Type_billing(this.value,2,document.getElementById('type-incorporate').value); View_identity(); View_upload_documents(); View_sponsor();  View_hide(); View_kit(0,2);">&nbsp;Miembro de la Comunidad NIKKEN <?php if(isset($_SESSION["products"]))
 												{
 													?> <br/><small><p>Para NIKKEN un miembro de la comunidad significa que eres un cliente preferente, el cual <u> puede
 														obtener factura</u> y se preocupa por su salud y el medio ambiente.<br>
@@ -875,7 +875,7 @@
 			playeras(country, gender, kit);
 		}
 		*/
-		Type_billing(1);
+		Type_billing($('input[name=type]:checked', '#wrapped').val(),2,this.value,document.getElementById('type-incorporate').value);
 		Type_person(2); /*Tipo de persona*/
 
 		View_names(2); /*Nombres según el tipo de persona*/
