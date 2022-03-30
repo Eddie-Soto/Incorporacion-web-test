@@ -502,7 +502,7 @@
 
 													<div class="styled-select">
 
-														<select class="input-type-billig" onchange="" name="type-billing" id="type-billing">
+														<select class="required input-type-billig" onchange="" name="type-billing" id="type-billing">
 
 														</select>
 
