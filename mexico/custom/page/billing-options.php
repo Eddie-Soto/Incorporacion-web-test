@@ -10,9 +10,11 @@ $type = $_GET["type"];
 $country = $_GET["country"];
 $type_incorporate = $_GET["type_incorporate"];
 
+echo $type;
+
 /*vars*/
 
-$type_billing_value = "Tipo de Facturación";
+$type_billing_value = "Regimwn Fiscal";
 
 ?><option value="" selected><?php echo $type_billing_value ?></option><?php
 
