@@ -432,11 +432,11 @@
 												$productos = $_SESSION["products"];
 
 												?> hidden="true" <?php		
-											}else{ ?> ><input type="radio" value="1" name="type"  checked <?php } ?> onclick=" Type_billing(this.value); View_identity(); View_upload_documents(); View_sponsor(); View_kit(1,2);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+											}else{ ?> ><input type="radio" value="1" name="type"  checked <?php } ?> onclick=" Type_billing(this.value,2); View_identity(); View_upload_documents(); View_sponsor(); View_kit(1,2);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
 <?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
 											<label><input  type="radio" value="0" name="type" <?php if(isset($_SESSION["products"]))
 											{
-												?> checked <?php } ?> onclick=" Type_billing(this.value); View_identity(); View_upload_documents(); View_sponsor();  View_hide(); View_kit(0,2);">&nbsp;Miembro de la Comunidad NIKKEN <?php if(isset($_SESSION["products"]))
+												?> checked <?php } ?> onclick=" Type_billing(this.value,2); View_identity(); View_upload_documents(); View_sponsor();  View_hide(); View_kit(0,2);">&nbsp;Miembro de la Comunidad NIKKEN <?php if(isset($_SESSION["products"]))
 												{
 													?> <br/><small><p>Para NIKKEN un miembro de la comunidad significa que eres un cliente preferente, el cual <u> puede
 														obtener factura</u> y se preocupa por su salud y el medio ambiente.<br>
@@ -462,7 +462,7 @@
 
 													<div class="styled-select">
 
-														<select class="required input-type-incorporate" onchange="View_names(this.value); View_identity(); View_upload_documents(); Type_billing(this.value,document.getElementById('country').value);" name="type-incorporate" id="type-incorporate"></select>
+														<select class="required input-type-incorporate" onchange="View_names(this.value); View_identity(); View_upload_documents(); Type_billing(this.value,2);" name="type-incorporate" id="type-incorporate"></select>
 
 													</div>
 
@@ -875,7 +875,7 @@
 			playeras(country, gender, kit);
 		}
 		*/
-		Type_billing(1);
+		Type_billing(1,2);
 		Type_person(2); /*Tipo de persona*/
 
 		View_names(2); /*Nombres según el tipo de persona*/
