@@ -87,7 +87,7 @@ $segmentacion = $_POST["segmentacion"];
 $type_question = $_POST["type_question"];
 $othercoments = $_POST["othercoments"];
 
-
+$type_billing = $_POST["type_billing"];
 
 $id = $_POST["id"];
 
@@ -365,7 +365,7 @@ if($done)
 
 
 
-	$sql = "INSERT INTO contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, address_invoice, residency_one_invoice, residency_two_invoice, residency_three_invoice, residency_four_invoice,  name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, cfdi, gender, kit, playera, talla) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :address_invoice, :residency_one_invoice, :residency_two_invoice, :residency_three_invoice, :residency_four_invoice, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :cfdi, :gender, :kit, :playera, :tallaLetra)";
+	$sql = "INSERT INTO contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, address_invoice, residency_one_invoice, residency_two_invoice, residency_three_invoice, residency_four_invoice,  name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, cfdi, gender, kit, playera, talla, type_billing) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :address_invoice, :residency_one_invoice, :residency_two_invoice, :residency_three_invoice, :residency_four_invoice, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :cfdi, :gender, :kit, :playera, :tallaLetra, :type_billing)";
 
 	$query = $pdo->prepare($sql);
 
@@ -447,7 +447,10 @@ if($done)
 
 		'playera' => $playera,
 
-		'tallaLetra' => $tallaLetra
+		'tallaLetra' => $tallaLetra,
+
+		'type_billing' => $type_billing
+
 	]);
 }
 
@@ -510,7 +513,7 @@ try
 
 
 
-	$sql = "INSERT INTO contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, address_invoice, residency_one_invoice, residency_two_invoice, residency_three_invoice, residency_four_invoice,  name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, cfdi, gender, kit, playera, talla) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :address_invoice, :residency_one_invoice, :residency_two_invoice, :residency_three_invoice, :residency_four_invoice, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :cfdi, :gender, :kit, :playera, :tallaLetra)";
+	$sql = "INSERT INTO contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, address_invoice, residency_one_invoice, residency_two_invoice, residency_three_invoice, residency_four_invoice,  name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, cfdi, gender, kit, playera, talla, $type_billing) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :address_invoice, :residency_one_invoice, :residency_two_invoice, :residency_three_invoice, :residency_four_invoice, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :cfdi, :gender, :kit, :playera, :tallaLetra, :type_billing)";
 
 	$query = $pdo->prepare($sql);
 
@@ -592,7 +595,9 @@ try
 
 		'playera' => $playera,
 
-		'tallaLetra' => $tallaLetra
+		'tallaLetra' => $tallaLetra,
+
+		'type_billing' => $type_billing
 	]);
 
 }

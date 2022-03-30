@@ -1309,6 +1309,17 @@ $(function () {
 
         var type_incorporate = $form.find('.input-type-incorporate').val(); // Persona o empresa
 
+        var isbilling = $('input[name=billing-type]:checked', '#wrapped').val(); // Si requiere factura o no
+
+        var type_billing = 0;
+        if (isbilling == 1) {
+                 type_billing = $form.find('.input-type-billig').val(); // tipo de facturacion Persona o empresa
+        }else{
+                type_billing = 616;
+        }
+
+        
+
 
 
         var last_name = $form.find('.input-last-name').val(); // Apellidos
@@ -1562,7 +1573,7 @@ $(function () {
 
 
 
-        var dataString = 'id=' + id + '&type=' + type + '&gender=' + gender + '&country=' + country + '&type_incorporate=' + type_incorporate + '&last_name=' + encodeURIComponent(last_name) + '&name=' + encodeURIComponent(name) + '&birthday=' + encodeURIComponent(birthday) + '&email=' + encodeURIComponent(email) + '&cellular=' + encodeURIComponent(cellular) + '&address=' + encodeURIComponent(address) + '&residency_one=' + encodeURIComponent(residency_one) + '&residency_two=' + residency_two + '&residency_three=' + encodeURIComponent(residency_three) + '&residency_four=' + encodeURIComponent(residency_four) + '&address_invoice=' + encodeURIComponent(address_invoice) + '&residency_one_invoice=' + encodeURIComponent(residency_one_invoice) + '&residency_two_invoice=' + residency_two_invoice + '&residency_three_invoice=' + encodeURIComponent(residency_three_invoice) + '&residency_four_invoice=' + encodeURIComponent(residency_four_invoice) + '&name_legal_representative=' + encodeURIComponent(name_legal_representative) + '&type_document=' + type_document + '&number_document=' + encodeURIComponent(number_document) + '&name_cotitular=' + encodeURIComponent(name_cotitular) + '&type_document_cotitular=' + type_document_cotitular + '&number_document_cotitular=' + encodeURIComponent(number_document_cotitular) + '&bank=' + bank + '&bank_type=' + bank_type + '&number_account=' + encodeURIComponent(number_account) + '&number_clabe=' + encodeURIComponent(number_clabe) + '&type_sponsor=' + type_sponsor + '&sponsor=' + encodeURIComponent(sponsor) + '&rfc=' + encodeURIComponent(rfc) + '&cfdi=' + encodeURIComponent(cfdi) + '&type-kit=' + encodeURIComponent(type_item) + '&type-msi=' + encodeURIComponent(type_msi) + '&shirt-size=' + encodeURIComponent(playera) + '&tallaLetra=' + encodeURIComponent(tallaLetra) + '&segmentacion=' + encodeURIComponent(segmentacion) + '&type_question=' + encodeURIComponent(type_question) + '&othercoments=' + encodeURIComponent(comentsquestions);
+        var dataString = 'id=' + id + '&type=' + type + '&gender=' + gender + '&country=' + country + '&type_incorporate=' + type_incorporate + '&last_name=' + encodeURIComponent(last_name) + '&name=' + encodeURIComponent(name) + '&birthday=' + encodeURIComponent(birthday) + '&email=' + encodeURIComponent(email) + '&cellular=' + encodeURIComponent(cellular) + '&address=' + encodeURIComponent(address) + '&residency_one=' + encodeURIComponent(residency_one) + '&residency_two=' + residency_two + '&residency_three=' + encodeURIComponent(residency_three) + '&residency_four=' + encodeURIComponent(residency_four) + '&address_invoice=' + encodeURIComponent(address_invoice) + '&residency_one_invoice=' + encodeURIComponent(residency_one_invoice) + '&residency_two_invoice=' + residency_two_invoice + '&residency_three_invoice=' + encodeURIComponent(residency_three_invoice) + '&residency_four_invoice=' + encodeURIComponent(residency_four_invoice) + '&name_legal_representative=' + encodeURIComponent(name_legal_representative) + '&type_document=' + type_document + '&number_document=' + encodeURIComponent(number_document) + '&name_cotitular=' + encodeURIComponent(name_cotitular) + '&type_document_cotitular=' + type_document_cotitular + '&number_document_cotitular=' + encodeURIComponent(number_document_cotitular) + '&bank=' + bank + '&bank_type=' + bank_type + '&number_account=' + encodeURIComponent(number_account) + '&number_clabe=' + encodeURIComponent(number_clabe) + '&type_sponsor=' + type_sponsor + '&sponsor=' + encodeURIComponent(sponsor) + '&rfc=' + encodeURIComponent(rfc) + '&cfdi=' + encodeURIComponent(cfdi) + '&type-kit=' + encodeURIComponent(type_item) + '&type-msi=' + encodeURIComponent(type_msi) + '&shirt-size=' + encodeURIComponent(playera) + '&tallaLetra=' + encodeURIComponent(tallaLetra) + '&segmentacion=' + encodeURIComponent(segmentacion) + '&type_question=' + encodeURIComponent(type_question) + '&othercoments=' + encodeURIComponent(comentsquestions) + '&type_billing=' + encodeURIComponent(type_billing);
 
 
 
