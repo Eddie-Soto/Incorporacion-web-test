@@ -10,8 +10,7 @@ $type = $_GET["type"];
 $country = $_GET["country"];
 $type_incorporate = $_GET["type_incorporate"];
 
-echo $type;
-exit;
+
 
 /*vars*/
 

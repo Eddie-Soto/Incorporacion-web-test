@@ -174,7 +174,7 @@ function Type_billing(type,country,type_incorporate)
 
         url: 'custom/page/billing-options.php',
 
-        data: '&type=' + type + '&country=' + country + '&type_incorporate=' + type_incorporate,
+        data: 'type=' + type + '&country=' + country + '&type_incorporate=' + type_incorporate,
 
         success: function(resp){
 
