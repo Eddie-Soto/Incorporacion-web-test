@@ -334,7 +334,11 @@ if($country == 8)
 
 				<div class="form-group">
 
-					<select class="required input-residency-three" name="residency-three" id="residency-three" onchange="Search_municipality(this.value);"></select>
+					<div class="styled-select">
+
+						<select class="required input-residency-three" name="residency-three" id="residency-three"></select>
+
+					</div>
 
 				</div>
 
