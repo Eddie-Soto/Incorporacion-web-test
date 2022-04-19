@@ -317,6 +317,14 @@ if($country == 8)
 			<!-- Traer catálogo de ciudades -->
 
 			<script>Catalog_residency(<?php echo $country ?>);</script>
+			<?php if ($country == '1') {
+				# code...
+			?>
+			<script>Search_municipality(<?php echo $country ?>);</script>
+			<?php
+			} 
+			?>
+
 
 			<!-- Traer catálogo de ciudades -->
 
@@ -333,6 +341,10 @@ if($country == 8)
 			<div class="col-md-6">
 
 				<div class="form-group">
+					<?php if ($country == '1') {
+				
+					?>
+
 
 					<div class="styled-select">
 
@@ -340,6 +352,13 @@ if($country == 8)
 
 					</div>
 
+					<?php
+					}else{ 
+					?>
+						<input type="text" name="residency-three" onkeypress="return Only_letter(event);" class="form-control required input-residency-three" maxlength="49" placeholder="<?php echo $residency_three_value ?>" value="<?php echo $residency_three_nc ?>">
+					<?php
+					} 
+					?>
 				</div>
 
 			</div>
