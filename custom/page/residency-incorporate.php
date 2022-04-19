@@ -304,7 +304,7 @@ if($country == 8)
 
 					<div class="styled-select">
 
-						<select class="required input-residency-two" name="residency-two" id="residency-two"></select>
+						<select class="required input-residency-two" name="residency-two" id="residency-two" onchange="Search_municipality(this.value);"></select>
 
 					</div>
 
@@ -334,7 +334,7 @@ if($country == 8)
 
 				<div class="form-group">
 
-					<input type="text" name="residency-three" class="form-control required input-residency-three" maxlength="49" placeholder="<?php echo $residency_three_value ?>" value="<?php echo $residency_three_nc ?>">
+					<select class="required input-residency-three" name="residency-three" id="residency-three" onchange="Search_municipality(this.value);"></select>
 
 				</div>
 

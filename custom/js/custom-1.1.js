@@ -726,6 +726,36 @@ function Catalog_residency(country)
 
 //Catálogo de ciudades
 
+/*Mostrar municipios*/
+
+function Search_municipality(state)
+
+{
+
+    
+
+    //esperando la carga...
+
+   $('#residency-three').html('<option value="">Cargando...</option>');
+
+   //realizo la call via jquery ajax
+
+   $.ajax({
+
+        url: 'custom/page/catalog-municipality.php',
+
+        data: 'state='+state,
+
+        success: function(resp){
+
+         $('#residency-three').html(resp)
+
+         }
+
+    });
+
+}
+
 //Mostrar cargador de documentos
 
 function View_upload_documentos()
