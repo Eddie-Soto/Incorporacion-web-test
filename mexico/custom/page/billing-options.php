@@ -11,7 +11,7 @@ $country = $_GET["country"];
 
 /*vars*/
 
-$type_billing_value = "Régimen Fiscal";
+$type_billing_value = "Selecciona una Opción";
 
 ?><option value="" selected><?php echo $type_billing_value ?></option><?php
 
