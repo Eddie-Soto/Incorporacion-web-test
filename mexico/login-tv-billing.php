@@ -11,8 +11,7 @@ $sponsor = $_GET["sap_code"];
 
 if(isset($_GET["sap_code"])){
 	$_SESSION["sponsor"] = $_GET["sap_code"];
-	echo $_GET["sap_code"];
-	exit;
+	
 }else{
 	echo "no se obtuvó el dato";
 	exit;
