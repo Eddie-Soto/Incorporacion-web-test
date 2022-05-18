@@ -7,11 +7,11 @@ session_name("incorporacion");
 session_start();
 
 
-$sponsor = $_GET["sap_code"];
+$sponsor = base64_decode($_GET["sap_code"]);
 
 if(isset($_GET["sap_code"])){
-	$_SESSION["sponsor"] = $_GET["sap_code"];
-	
+	$_SESSION["sponsor"] = base64_decode($_GET["sap_code"]);
+
 }else{
 	echo "no se obtuvó el dato";
 	exit;
