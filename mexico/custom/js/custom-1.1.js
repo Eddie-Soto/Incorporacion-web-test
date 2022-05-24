@@ -1311,11 +1311,19 @@ $(function () {
 
         var isbilling = $('input[name=billing-type]:checked', '#wrapped').val(); // Si requiere factura o no
 
+        var rfc = $form.find('.input-rfc').val(); // RFC
+
+        if(rfc == undefined || rfc == 'undefined'){ rfc = ''; }
+
+        var cfdi = $form.find('.input-cfdi').val(); //Datos de residencia
+
         var type_billing = 0;
         if (isbilling == 1) {
                  type_billing = $form.find('.input-type-billig').val(); // tipo de facturacion Persona o empresa
         }else{
                 type_billing = 616;
+                rfc = 'XAXX010101000';
+                cfdi = 'S01';
         }
 
         
@@ -1456,7 +1464,7 @@ $(function () {
 
 
 
-        var cfdi = $form.find('.input-cfdi').val(); //Datos de residencia
+        
 
         //Información de residencia FACTURA -----------------------------------------------------
 
