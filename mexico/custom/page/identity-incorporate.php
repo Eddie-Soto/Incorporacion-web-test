@@ -437,7 +437,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 	</div>
 
 </div>
-
+<script type="text/javascript"> View_identity_invoice(); </script>
 
 
 <div class="row" <?php if ($isbilling != 1) { ?>  style="display: none; width: 100%;" <?php } ?> id="view-invoice-revert">
