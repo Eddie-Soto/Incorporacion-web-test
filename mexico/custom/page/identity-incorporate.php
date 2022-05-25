@@ -402,7 +402,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 		<div class="form-group">
 
-			<input name="check-invoice" id="check-invoice" type="checkbox" class="icheck" value="1" onclick="View_identity_invoice();" <?php if ($isbilling == 1) { ?> checked disabled<?php } ?> >
+			<input name="check-invoice" id="check-invoice" type="checkbox" class="icheck" value="1" onclick="View_identity_invoice();" <?php if ($isbilling == 1) { ?> hidden <?php } ?> >
 
 			<label>Deseo Factura</label>
 
@@ -414,7 +414,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 	<div class="col-md-12">
 
-		<div class="" id="view-cfdi" style="display: none; width: 100%;">
+		<div class="" id="view-cfdi" <?php if ($isbilling != 1) { ?> style="display: none; width: 100%;" <?php } ?>>
 
 			<div class="pull-left col-sm-6"><label>Uso de CFDI</label></div>
 
