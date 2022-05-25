@@ -440,7 +440,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 
 
-<div class="row" style="display: none; width: 100%;" id="view-invoice-revert">
+<div class="row" <?php if ($isbilling != 1) { ?>  style="display: none; width: 100%;" <?php } ?> id="view-invoice-revert">
 
 	<div class="col-md-12">
 
