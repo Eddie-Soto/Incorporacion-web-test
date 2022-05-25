@@ -28,6 +28,8 @@
 
 $country = $_POST["country"];
 
+$isbilling = $_POST["isbilling"];
+
 $type = $_POST["type"];
 
 $type_incorporate = $_POST["type_incorporate"];
@@ -391,6 +393,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 </div>
 
+<?php if ($isbilling == 1) { }?>
 
 
 <div class="row">
@@ -399,7 +402,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 		<div class="form-group">
 
-			<input name="check-invoice" id="check-invoice" type="checkbox" class="icheck" value="1" onclick="View_identity_invoice();">
+			<input name="check-invoice" id="check-invoice" type="checkbox" class="icheck" value="1" onclick="View_identity_invoice();" <?php if ($isbilling == 1) { ?> checked disabled<?php } ?> >
 
 			<label>Deseo Factura</label>
 

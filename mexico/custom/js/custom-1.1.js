@@ -458,6 +458,8 @@ function View_identity()
 
     var country = document.getElementById("country").value;
 
+    var isbilling = $('input[name=billing-type]:checked', '#wrapped').val(); 
+
 
 
     var divMensaje = document.getElementById("identify-incorporate");
@@ -500,7 +502,7 @@ function View_identity()
 
     ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    ajax.send("country=" + country + "&type=" + type + "&type_incorporate=" + type_incorporate);
+    ajax.send("country=" + country + "&type=" + type + "&type_incorporate=" + type_incorporate + "&isbilling=" + isbilling);
 
 }
 
