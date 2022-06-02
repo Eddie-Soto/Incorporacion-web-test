@@ -409,8 +409,9 @@ if($type_incorporate == 0) /*Solo para empresas*/
 		</div>
 
 	</div>
-<?php if ($isbilling != 1) { ?> <script type="text/javascript">
-	document.querySelector('#check-invoice').click();
+<?php if ($isbilling == 1) { ?> <script type="text/javascript">
+	View_identity_invoice();
+	console.log("entro");
 </script> <?php } ?>
 	<div class="clearfix"></div>
 
