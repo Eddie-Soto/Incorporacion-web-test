@@ -409,7 +409,9 @@ if($type_incorporate == 0) /*Solo para empresas*/
 		</div>
 
 	</div>
-<?php if ($isbilling != 1) { ?>  <?php } ?>
+<?php if ($isbilling != 1) { ?> <script type="text/javascript">
+	document.querySelector('#check-invoice').click();
+</script> <?php } ?>
 	<div class="clearfix"></div>
 
 	<div class="col-md-12">
