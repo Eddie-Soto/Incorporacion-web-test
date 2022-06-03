@@ -796,6 +796,7 @@
 		<script>
 
 			function Facturacion(billing){
+				View_identity();
 				var optiosbilling = document.getElementById('type-billing');
 				var divbilling = document.getElementById('billing');
 				if (billing == 0) {
