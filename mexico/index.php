@@ -796,7 +796,7 @@
 		<script>
 
 			function Facturacion(billing){
-				//View_identity();
+				View_identity();
 				View_identity_invoice();
 				var optiosbilling = document.getElementById('type-billing');
 				var divbilling = document.getElementById('billing');
@@ -806,7 +806,6 @@
 
 					optiosbilling.classList.remove("required");
 				}else{
-					$('#check-invoice').prop('checked', true);
 					divbilling.removeAttribute("hidden", "true");
 					optiosbilling.removeAttribute("hidden", "true");
 					optiosbilling.classList.add("required");
