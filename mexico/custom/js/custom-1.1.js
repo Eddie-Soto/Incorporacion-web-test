@@ -50,18 +50,7 @@
 
     //AJAX
 
-    function Facturacion(){
-                var isbilling = $('input[name=billing-type]:checked', '#wrapped').val(); // Si es asesor o club
-
-                if (isbilling == 1) {
-                    alert("si quiere factura");
-                }else{
-                    alert("no quiere facura");
-                }
-                
-
-                
-            }
+   
 
 
 
@@ -1862,6 +1851,7 @@ function View_identity_invoice()
 
     if (isbilling == 1) {
         $('#check-invoice').prop('checked', true);
+        $('#check-invoice').attr("false",true);
     }else{
         alert("entro al else de no quiero");
         $('#check-invoice').attr("hidden",true);
