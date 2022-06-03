@@ -459,7 +459,7 @@ function View_identity()
     var country = document.getElementById("country").value;
 
     var isbilling = $('input[name=billing-type]:checked', '#wrapped').val(); 
-    alert(isbilling);
+    
 
 
     var divMensaje = document.getElementById("identify-incorporate");

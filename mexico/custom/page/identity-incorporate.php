@@ -393,7 +393,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 </div>
 
-<?php if ($isbilling == 1) { }?>
+<?php if ($isbilling == 0) { ?>
 
 
 <div class="row">
@@ -409,12 +409,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 		</div>
 
 	</div>
-<?php if ($isbilling == 1) { ?> <script type="text/javascript">
-	View_identity_invoice();
-	console.log("entro");
-	var miCheckbox = document.getElementById('check-invoice');
-	miCheckbox.checked;
-</script> <?php } ?>
+
 	<div class="clearfix"></div>
 
 	<div class="col-md-12">
@@ -471,7 +466,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 </div>
 
-
+<?php } ?>
 
 <div id="identify-incorporate-invoice"></div>
 
