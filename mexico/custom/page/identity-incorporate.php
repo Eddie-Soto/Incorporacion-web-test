@@ -30,9 +30,6 @@ $country = $_POST["country"];
 
 $isbilling = $_POST["isbilling"];
 
-echo $isbilling;
-exit;
-
 $type = $_POST["type"];
 
 $type_incorporate = $_POST["type_incorporate"];
@@ -396,7 +393,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 </div>
 
-
+<?php if ($isbilling == 0) { ?>
 
 
 <div class="row">
@@ -469,7 +466,7 @@ if($type_incorporate == 0) /*Solo para empresas*/
 
 </div>
 
-
+<?php } ?>
 
 <div id="identify-incorporate-invoice"></div>
 
