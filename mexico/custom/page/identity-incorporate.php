@@ -412,6 +412,8 @@ if($type_incorporate == 0) /*Solo para empresas*/
 <?php if ($isbilling == 1) { ?> <script type="text/javascript">
 	View_identity_invoice();
 	console.log("entro");
+	var miCheckbox = document.getElementById('check-invoice');
+	miCheckbox.checked;
 </script> <?php } ?>
 	<div class="clearfix"></div>
 
