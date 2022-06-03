@@ -1851,7 +1851,7 @@ function View_identity_invoice()
 
     if (isbilling == 1) {
         $('#check-invoice').prop('checked', true);
-        $('#check-invoice').attr("false",true);
+        $('#check-invoice').removeAttr("hidden");
     }else{
         alert("entro al else de no quiero");
         $('#check-invoice').attr("hidden",true);
