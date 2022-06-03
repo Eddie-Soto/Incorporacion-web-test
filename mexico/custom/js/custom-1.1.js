@@ -1863,7 +1863,8 @@ function View_identity_invoice()
     if (isbilling == 1) {
         $('#check-invoice').prop('checked', true);
     }else{
-        $('#check-invoice').prop('hidden', true);
+        alert("entro al else de no quiero");
+        $('#check-invoice').attr("hidden",true);
     }
 
     if (jQuery("#check-invoice").is(":checked")) {
