@@ -900,6 +900,8 @@
 
 		View_sponsor(); /*Mostrar información del patroniador*/
 
+		Facturacion(1);
+
 	</script>
 
 
