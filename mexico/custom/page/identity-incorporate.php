@@ -30,6 +30,9 @@ $country = $_POST["country"];
 
 $isbilling = $_POST["isbilling"];
 
+echo $isbilling;
+exit;
+
 $type = $_POST["type"];
 
 $type_incorporate = $_POST["type_incorporate"];
