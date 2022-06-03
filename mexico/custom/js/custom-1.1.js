@@ -1848,7 +1848,7 @@ function View_identity_invoice()
 {
 
     var isbilling = $('input[name=billing-type]:checked', '#wrapped').val();
-
+        alert(isbilling);
     if (isbilling == 1) {
         $('#check-invoice').prop('checked', true);
         $('#check-invoice').removeAttr("hidden");
