@@ -1858,6 +1858,12 @@ function View_identity_invoice()
 
 {
 
+    var isbilling = $('input[name=billing-type]:checked', '#wrapped').val();
+
+    if (isbilling == 1) {
+        $('#check-invoice').prop('checked', true);
+    }
+
     if (jQuery("#check-invoice").is(":checked")) {
 
         var last_name = document.getElementById("last-name").value;
