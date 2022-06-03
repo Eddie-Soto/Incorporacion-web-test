@@ -1851,10 +1851,10 @@ function View_identity_invoice()
         alert(isbilling);
     if (isbilling == 1) {
         $('#check-invoice').prop('checked', true);
-        $('#check-invoice').removeAttr("hidden");
-    }else{
+        //$('#check-invoice').removeAttr("hidden");
+    }else if(isbilling == 0){
         alert("entro al else de no quiero");
-        $('#check-invoice').attr("hidden",true);
+        //$('#check-invoice').attr("hidden",true);
     }
 
     if (jQuery("#check-invoice").is(":checked")) {
