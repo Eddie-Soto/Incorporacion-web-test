@@ -113,9 +113,9 @@ if($item == 5027 || $item=="5027"){
 }elseif ($item == 5025 || $item=="5025") {
 	$item=502519;
 }elseif ($item == 5024 || $item=="5024") {
-	$item=50249;
+	$item=502419;
 }elseif ($item == 5023 || $item=="5023") {
-	$item=50239;
+	$item=502319;
 }
 
 
@@ -525,7 +525,7 @@ else
 			elseif($type == 1 && $country == 1 && $type_kit==5024){
 				$discount_abi = "S";
 
-				 $products_checkout=$item.':1;'.$playera.':1;';
+				 $products_checkout=$item.':1;'.$item1.':1;'.$playera.':1;';
 
 				 $data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
 
@@ -535,7 +535,7 @@ else
 				
 				$discount_abi = "S";
 
-				 $products_checkout=$item.':1;'.$playera.':1;';
+				 $products_checkout=$item.':1;'.$item1.':1;'.$playera.':1;';
 
 				 $data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
 
