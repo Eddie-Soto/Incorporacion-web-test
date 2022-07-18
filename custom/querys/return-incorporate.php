@@ -5,7 +5,7 @@
 require_once('../../functions.php'); /*Funciones*/
 
 
-
+// changueMI
 /*vars*/
 
 $email = $_POST["email"];
@@ -16,7 +16,7 @@ $item1 = 5006;
 
 
 //$queryResult = $pdo->prepare("SELECT type, payment, sponsor FROM contracts where email = :email union SELECT CASE WHEN tipo_incorporacion = 'ab' THEN 1 ELSE 0 END, pago, patrocinador FROM nikkenla_incorporacion.informacion where correo = :email");
-$queryResult = $pdo->prepare("SELECT type, payment, sponsor, kit, playera, country, code FROM contracts_test where email = :email");
+$queryResult = $pdo->prepare("SELECT type, payment, sponsor, kit, playera, country, code, changueMI FROM contracts_test where email = :email");
 
 $queryResult->execute(array(':email' => $email));
 
@@ -27,6 +27,17 @@ if($done)
 {
 $type_kit=$done['kit'];
 $playera=$done['playera'];
+$changueMI=$done['changueMI'];
+if ($changueMI == 1) {
+		$discount_abi = "S";
+
+		$products_checkout=$type_kit.':1;'.$done['playera'].':1;';
+
+		$data = base64_encode($email . "&" . $products_checkout . "&" . $discount_abi);
+
+		echo "1///https://nikkenlatam.com/services/checkout/testredirect.php?app=incorporacion&data=$data";
+		exit;
+}
 	if($done['payment'] != 0)
 
 	{
