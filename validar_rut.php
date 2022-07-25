@@ -44,10 +44,14 @@ function valida_rut($rut)
     if($dvr == 10)
         $dvr = 'K';
 
-    if($dvr == strtoupper($dv))
+    if($dvr == strtoupper($dv)){
         echo "verdadero";
+        exit;
         return true;
-    else
+    }
+    else{
         echo "falso";
         return false;
+        exit;
+    }
 }
