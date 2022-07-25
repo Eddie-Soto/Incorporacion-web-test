@@ -45,7 +45,9 @@ function valida_rut($rut)
         $dvr = 'K';
 
     if($dvr == strtoupper($dv))
+        echo "verdadero";
         return true;
     else
+        echo "falso";
         return false;
 }
