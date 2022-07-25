@@ -45,12 +45,12 @@ function valida_rut($rut)
         $dvr = 'K';
 
     if($dvr == strtoupper($dv)){
-        echo "verdadero";
+        echo "0verdadero";
         exit;
         return true;
     }
     else{
-        echo "falso";
+        echo "1falso";
         return false;
         exit;
     }
