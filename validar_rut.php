@@ -5,6 +5,18 @@
  *
  * @param $rut string
  * @return true o false
+ este 12518142-2 si e svalido
+
+ Validos
+9685338-6
+2681977-6
+
+
+Falso
+
+12403123-5
+2681977-1
+
  */
 $rut = $_GET["rut"];
 valida_rut($rut);
