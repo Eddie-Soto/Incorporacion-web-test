@@ -492,6 +492,18 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
 	    }
 	});
 
+	$(document).ready(function(){
+  $("#number-document-one").on('paste', function(e){
+    e.preventDefault();
+    alert('Esta acción está prohibida');
+  })
+  
+  $("#number-document-one").on('copy', function(e){
+    e.preventDefault();
+    alert('Esta acción está prohibida');
+  })
+})
+
 	function exist_dv(){
 		var document_t=document.getElementById("type-document").value;
 		var digit_input=document.getElementById("verify_digit");
