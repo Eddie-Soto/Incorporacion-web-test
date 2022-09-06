@@ -502,6 +502,16 @@ var num_ident=document.getElementById('number-document-one'); num_ident.setAttri
     e.preventDefault();
     alert('Esta acción está prohibida');
   })
+
+  $("#number-document-cotitular").on('paste', function(e){
+    e.preventDefault();
+    alert('Esta acción está prohibida');
+  })
+  
+  $("#number-document-cotitular").on('copy', function(e){
+    e.preventDefault();
+    alert('Esta acción está prohibida');
+  })
 })
 
 	function exist_dv(){
