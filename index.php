@@ -233,7 +233,7 @@
 
 						<figure><img src="img/questionare_bg.svg" alt="Incorporación Web NIKKEN Latinoamérica"></figure>
 
-						<h2>¡Bienvenido a la Incorporación Web!</h2>
+						<h2>¡Bienvenido a la Incorporación Web! DE COLOMBIA</h2>
 
 						<p>
 
