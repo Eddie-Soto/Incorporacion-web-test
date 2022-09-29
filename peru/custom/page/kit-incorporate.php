@@ -251,7 +251,7 @@ if ($country > 0 and $type == 1) {
 
 						<option value="5024"><?php echo $kit3 ?></option>
 
-						<option value="5002"><?php echo $kit ?></option>
+						<option value="5002"><?php echo $kit8 ?></option>
 
 						
 
@@ -298,6 +298,7 @@ if ($country > 0 and $type == 1) {
 
 						<option value="5031">5031 KIT DE INICIO MIEMBRO DE LA COMUNIDAD $0.00</option>
 						<option value="5032">5032 Inscripción con Alcancía Electrónica S/ 3.60.00</option>
+						<option value="5002"><?php echo $kit8 ?></option>
 
 						
 

@@ -268,6 +268,7 @@ if ($country > 0 and $type== 1) {
 						<!--option value="5027"><?php echo $kit6 ?></option--> 
 
 						<!--option value="5028"><?php echo $kit7 ?></option--> 
+						<option value="5002"><?php echo $kit8 ?></option> 
 
 						<?php if(isset($kitcupon)){ ?>	<option value="5002" <?php if(isset($kitcupon)){ ?> selected="true" <?php } ?> > <?php echo $kit8 ?> </option> <?php } ?> 
 						
@@ -315,6 +316,7 @@ if ($country > 0 and $type== 1) {
 
 						<option value="5031">5031 KIT DE INICIO MIEMBRO DE LA COMUNIDAD ₡ 0.00</option>
 						<option value="5032">5032 Inscripción con Alcancía Electrónica ₡ 610.00</option>
+						<option value="5002"><?php echo $kit8 ?></option> 
 
 						
 
