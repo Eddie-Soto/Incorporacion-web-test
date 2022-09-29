@@ -242,7 +242,7 @@ if ($country == 8) {
 	<?php } else { ?>
 		<div class="col-md-2 align-bottom">
 			<div class="form-group text-right align-bottom m-0 pl-2">
-				<input type="text" placeholder="507 +" disabled class="form-control required input-cellular">
+				<input type="text" placeholder="507 +" disabled class="form-control input-cellular">
 			</div>
 		</div>
 		<div class="col-md-4">
