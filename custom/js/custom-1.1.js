@@ -1498,13 +1498,10 @@ $(function () {
 
 
         var email = $form.find('.input-email').val(); // Correo electrónico
-        
+        var cellular = $form.find('.input-cellular').val(); // Teléfono celular
         if(country == 5){
-        var cellular2 = $form.find('.input-cellular').val(); // Teléfono celular
-            cellular = '507' + cellular2;
-        }else{
-            var cellular = $form.find('.input-cellular').val(); // Teléfono celular
-
+        
+            cellular = '507' + cellular;
         }
         
         if(country == 3)
