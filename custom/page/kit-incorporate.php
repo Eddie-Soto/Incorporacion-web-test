@@ -314,6 +314,8 @@ if ($country > 0 and $type == 1) {
 						<option value="5006"><?php echo $kit ?></option>
 						<option value="5023"><?php echo $kit2 ?></option>
 						<option value="5024"><?php echo $kit3 ?></option>
+						<option value="5002"><?php echo $kit8 ?></option>
+						
 						<!--option value="5025"><?php echo $kit4 ?></option> 
 						<option value="5026"><?php echo $kit5 ?></option-->  
 				<!--option value="5027"><?php echo $kit6 ?></option--> 
@@ -394,6 +396,7 @@ else{
 						
 
 						<option value="5027"><?php echo $kit6 ?></option>
+						<option value="5002"><?php echo $kit8 ?></option>
 
 						
 
