@@ -1499,12 +1499,13 @@ $(function () {
 
         var email = $form.find('.input-email').val(); // Correo electrónico
         
-        var cellular = $form.find('.input-cellular').val(); // Teléfono celular
-
         if(country == 5){
-            cellular = '507' + cellular;
-        }
+           var  cellular = '507' + cellular;
+        }else{
+            var cellular = $form.find('.input-cellular').val(); // Teléfono celular
 
+        }
+        
         if(country == 3)
 
         {
