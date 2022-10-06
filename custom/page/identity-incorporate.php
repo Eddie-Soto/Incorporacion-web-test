@@ -157,7 +157,7 @@ if ($country != 7) {
 </div>
 	<div class="col-md-6">
 		<div class="form-group">
-			<input type="text" id="number-document-one"  name="number-document" onclick="DuiSlv();" onblur="Validate_identification(this.value);" maxlength="10" minlength="10"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+			<input type="text" id="number-document-one"  name="number-document" onclick="DuiSlv();" onblur="Validate_identification(this.value);" maxlength="10" minlength="10" onkeypress="return JustNumbers(event,$(this).val());" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 			<input type="hidden" class="form-control required" id="validator-identification" value="">
 		</div>
 	</div>
@@ -191,7 +191,7 @@ if ($country != 7) {
 
 			<div class="col-md-12" hidden="true" id="ContribuyenteIva">
 				<div class="form-group">
-					<input type="text" id="number-document-nrc" onchange="NrcSlv();"  name="number-document-nrc"  minlength="3" maxlength="12"  class="form-control required input-number-document-nrc" onkeypress="return JustNumbers(event,$(this).val());" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
+					<input type="text" id="number-document-nrc" onchange="NrcSlv();"  name="number-document-nrc"  minlength="3" maxlength="12"  class="form-control required input-number-document-nrc" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
 					
 				</div>
 			</div>
