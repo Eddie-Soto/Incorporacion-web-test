@@ -43,7 +43,7 @@ if($country == 8)
 <div class="row">
 	<div class="col-md-6">
 		<div class="form-group">
-			<input type="text" name="number-account" id="number_account" maxlength="45" class="form-control input-number-account" placeholder="<?php echo $name_number_account_value ?>">
+			<input type="text" name="number-account" id="number_account" onkeypress="return JustNumbers(event,$(this).val());" maxlength="45" class="form-control input-number-account" placeholder="<?php echo $name_number_account_value ?>">
 		</div>
 	</div>
 	<?php 
@@ -55,7 +55,7 @@ if($country == 8)
 		?>
 		<div class="col-md-6">
 			<div class="form-group">
-				<input type="text" name="number-clabe-account" maxlength="45" class="form-control input-number-clabe-account <?php if($country == 8){ echo "required"; } ?>" placeholder="<?php echo $name_clabe_account_value ?>">
+				<input type="text" name="number-clabe-account" onkeypress="return JustNumbers(event,$(this).val());" maxlength="45" class="form-control input-number-clabe-account <?php if($country == 8){ echo "required"; } ?>" placeholder="<?php echo $name_clabe_account_value ?>">
 			</div>
 		</div>
 		<?php	
