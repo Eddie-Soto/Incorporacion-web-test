@@ -1793,3 +1793,17 @@ function View_kit(type,country){
     ajax.send("type=" + type + "&country=" + country);
 }
 //Mostrar los datos de identificaci?
+
+
+$('#country').on('change',function(){
+    if($('#country').val() != ''){
+        $('#kit-incorporate').show();
+    }
+    else{
+        $('#kit-incorporate').hide();
+    }
+})
+
+$( document ).ready(function() {
+    $('#kit-incorporate').hide();
+});
