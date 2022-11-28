@@ -122,7 +122,7 @@ if ($country != 7) {
 			<?php if($country == 5){ ?>
 				<!-- -->
 				<input type="text" id="number-document-one"  name="number-document"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="26"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
-				<!-- <p>Recuerda colocar </p>  -->
+				<p>Recuerda colocar los guíones correspondientes conforme tu identificación.</p> 
 			<?php } else {?>
 				<input type="text" id="number-document-one"  name="number-document"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="13"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 
