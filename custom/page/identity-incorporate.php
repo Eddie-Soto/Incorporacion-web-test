@@ -120,6 +120,7 @@ if ($country != 7) {
 	<div class="col-md-<?php echo $columns ?>">
 		<div class="form-group">
 			<?php if($country == 5){ ?>
+				<p>Recuerda colocar </p>
 				<input type="text" id="number-document-one"  name="number-document"  <?php if($country==1){ ?>  minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="26"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 
 			<?php } else {?>
