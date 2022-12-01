@@ -87,7 +87,7 @@ if ($country == 2) {
 																																		} ?> <?php
 																																				if ($country == 1) {
 																																				?> onchange="Empresas_validate();" <?php
-																																						} ?>></select>
+																																												} ?>></select>
 					</div>
 				</div>
 			</div>
@@ -118,7 +118,7 @@ if ($country == 2) {
 				<?php
 				if ($country == 5) {
 				?>
-					<div class="col-md-12" id="dv" hidden="">
+					<!-- <div class="col-md-12" id="dv" hidden="">
 						<div class="form-group">
 							<div class="row">
 								<div class="col-12">
@@ -130,43 +130,32 @@ if ($country == 2) {
 									<input type="text" id="verify_digit" onkeypress="return JustNumbers(event,$(this).val());" name="verify_digit" class="form-control verify_digit" placeholder="DV" maxlength="2" minlength="2" required="">
 								</div>
 							</div>
+						</div> -->
+					<div class="col-md-3" id="dv" hidden="">
+						<div class="form-group">
+							<input type="text" id="verify_digit" onkeypress="return JustNumbers(event,$(this).val());" name="verify_digit" class="form-control verify_digit" placeholder="DV" maxlength="2" minlength="2" required="">
 						</div>
-					<?php
+					</div>
+
+				<?php
 				}
-					?>
+				?>
 
-					<pre id="RFCResultMoral"></pre>
-					<input id="number_document_input_value" style="display: none;" value="<?php echo $number_document_value ?>">
-					</div>
+				<pre id="RFCResultMoral"></pre>
+				<input id="number_document_input_value" style="display: none;" value="<?php echo $number_document_value ?>">
 			</div>
-		<?php } else { /*SOLO PARA SLV*/ ?>
+		</div>
+	<?php } else { /*SOLO PARA SLV*/ ?>
 
 
 
-			<?php if ($type_incorporate == 1) {
-			?>
-				<div class="col-md-6">
-					<div class="form-group">
-						<div class="styled-select">
-							<select class="required input-type-document" name="type-document" id="type-document">
-								<option value="9" selected="true">DUI</option>
-							</select>
-
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<input type="text" id="number-document-one" name="number-document" onclick="DuiSlv();" onblur="Validate_identification(this.value);" maxlength="10" minlength="10" onkeypress="return JustNumbers(event,$(this).val());" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
-						<input type="hidden" class="form-control required" id="validator-identification" value="">
-					</div>
-				</div>
-			<?php } ?>
+		<?php if ($type_incorporate == 1) {
+		?>
 			<div class="col-md-6">
 				<div class="form-group">
 					<div class="styled-select">
-						<select class="required input-type-document-two" name="type-document-two" id="type-document-two">
-							<option value="23" selected="true">NIT</option>
+						<select class="required input-type-document" name="type-document" id="type-document">
+							<option value="9" selected="true">DUI</option>
 						</select>
 
 					</div>
@@ -174,353 +163,370 @@ if ($country == 2) {
 			</div>
 			<div class="col-md-6">
 				<div class="form-group">
-					<input type="text" id="number-document-two" onclick="NitSlv();" name="number-document-two" minlength="17" maxlength="17" class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
-
+					<input type="text" id="number-document-one" name="number-document" onclick="DuiSlv();" onblur="Validate_identification(this.value);" maxlength="10" minlength="10" onkeypress="return JustNumbers(event,$(this).val());" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+					<input type="hidden" class="form-control required" id="validator-identification" value="">
 				</div>
 			</div>
-
-
-			<div class="col-md-12">
-				<div class="form-group">
-					<input name="check-nrc" id="check-nrc" type="checkbox" class="icheck" value="1" onclick="View_identity_nrc(); ">
-					<label>Contribuyente de IVA</label>
-				</div>
-			</div>
-
-
-
-			<div class="col-md-12" hidden="true" id="ContribuyenteIva">
-				<div class="form-group">
-					<input type="text" id="number-document-nrc" onchange="NrcSlv();" name="number-document-nrc" minlength="3" maxlength="12" class="form-control required input-number-document-nrc" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
-
-				</div>
-			</div>
-
-
-
-
 		<?php } ?>
+		<div class="col-md-6">
+			<div class="form-group">
+				<div class="styled-select">
+					<select class="required input-type-document-two" name="type-document-two" id="type-document-two">
+						<option value="23" selected="true">NIT</option>
+					</select>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<input type="text" id="number-document-two" onclick="NitSlv();" name="number-document-two" minlength="17" maxlength="17" class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
+
+			</div>
+		</div>
+
+
+		<div class="col-md-12">
+			<div class="form-group">
+				<input name="check-nrc" id="check-nrc" type="checkbox" class="icheck" value="1" onclick="View_identity_nrc(); ">
+				<label>Contribuyente de IVA</label>
+			</div>
 		</div>
 
 
 
-		<script type="text/javascript">
-			function View_alert(text, type)
+		<div class="col-md-12" hidden="true" id="ContribuyenteIva">
+			<div class="form-group">
+				<input type="text" id="number-document-nrc" onchange="NrcSlv();" name="number-document-nrc" minlength="3" maxlength="12" class="form-control required input-number-document-nrc" placeholder="N° de Registro (NRC)" value="<?php echo $number_document_nc ?>" required>
 
-			{
-
-				$.notify({
-
-					message: text
+			</div>
+		</div>
 
 
 
-				}, {
 
-					type: type,
-
-					timer: 9000
-
-				});
-
-			}
-
-			function soloNumeros(e) {
-				var key = window.Event ? e.which : e.keyCode
-				return (key >= 48 && key <= 57)
-			}
-		</script>
+	<?php } ?>
+</div>
 
 
 
+<script type="text/javascript">
+	function View_alert(text, type)
+
+	{
+
+		$.notify({
+
+			message: text
+
+
+
+		}, {
+
+			type: type,
+
+			timer: 9000
+
+		});
+
+	}
+
+	function soloNumeros(e) {
+		var key = window.Event ? e.which : e.keyCode
+		return (key >= 48 && key <= 57)
+	}
+</script>
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="form-group">
+			<input type="text" name="address" class="form-control required input-address" placeholder="<?php echo $address_value ?>" value="<?php echo $address_nc ?>">
+		</div>
+	</div>
+</div>
+
+<?php
+
+if ($type_incorporate == 0) /*Solo para empresas*/ {
+?>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<input type="text" name="name-legal-representative" maxlength="120" class="form-control required input-name-legal-representative" placeholder="<?php echo $legal_representative_name_value ?>" value="<?php echo $name_legal_representative_nc ?>">
+			</div>
+		</div>
+	</div>
+<?php
+}
+
+if ($type_incorporate == 1 && $type == 1) {
+?>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<input name="check-cotitular" id="check-cotitular" type="checkbox" class="icheck" value="1" onclick="View_identity_cotitular(); ">
+				<label>Deseo incorporarme con un Cotitular</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="identify-incorporate-cotitular"></div>
+
+	<?php
+}
+
+if ($type == 1) {
+	if ($country != 2) {
+	?>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="form-group">
-					<input type="text" name="address" class="form-control required input-address" placeholder="<?php echo $address_value ?>" value="<?php echo $address_nc ?>">
+					<input name="check-bank" id="check-bank" type="checkbox" class="icheck" value="1" onclick="View_bank();View_upload_documentos();">
+					<label>Deseo ingresar mi información bancaria <small>(Necesaria para el pago de bonificaciones)</small></label>
+
 				</div>
 			</div>
 		</div>
 
-		<?php
+		<div id="bank-incorporate"></div>
+<?php
+	}
+}
 
-		if ($type_incorporate == 0) /*Solo para empresas*/ {
-		?>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="form-group">
-						<input type="text" name="name-legal-representative" maxlength="120" class="form-control required input-name-legal-representative" placeholder="<?php echo $legal_representative_name_value ?>" value="<?php echo $name_legal_representative_nc ?>">
-					</div>
-				</div>
-			</div>
-		<?php
+?>
+<script>
+	function Empresas_validate() {
+		var empresa = document.getElementById("type-incorporate").value;
+		var regimen_comun = document.getElementById("type-document").value;
+
+		if (empresa == 0 && regimen_comun == 12) {
+			var num_ident = document.getElementById('number-document-one');
+			num_ident.setAttribute('minLength', 10);
+
+			$('#number-document-one').mask('000000000-0');
+
+		}
+	}
+
+	function DuiSlv() {
+		$('#number-document-one').mask('00000000-0');
+	}
+
+	function NitSlv() {
+		$('#number-document-two').mask('0000-000000-000-0');
+	}
+
+	function NrcSlv() {
+		let nrc = $('#number-document-nrc').val();
+		let search = nrc.includes('-');
+		if (search == true) {
+
+		} else {
+			//alert("error debe llevar -");
+			View_alert("Lo sentimos, N° de Registro (NRC) debe contener <strong>-</strong>", "warning");
 		}
 
-		if ($type_incorporate == 1 && $type == 1) {
-		?>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="form-group">
-						<input name="check-cotitular" id="check-cotitular" type="checkbox" class="icheck" value="1" onclick="View_identity_cotitular(); ">
-						<label>Deseo incorporarme con un Cotitular</label>
-					</div>
-				</div>
-			</div>
+	}
+</script>
 
-			<div id="identify-incorporate-cotitular"></div>
+<!-- No permitir espacios en input -->
+<script>
+	function validaRFC() {
+		let pattern = /^[a-zA-Z]{3,4}(\d{6})((\D|\d){2,3})?$/;
+		let rfc = document.getElementById("number-document-two").value;
 
-			<?php
+		rfcLength = 13;
+
+		if (pattern.test(rfc) && rfc.length == rfcLength) { // ⬅️ Acá se comprueba
+			valido = "Válido";
+			//resultado.classList.add("ok");
+			validate = true;
+		} else {
+			valido = "No válido";
+
+			validate = false;
+			//resultado.classList.remove("ok");
 		}
 
-		if ($type == 1) {
-			if ($country != 2) {
-			?>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<input name="check-bank" id="check-bank" type="checkbox" class="icheck" value="1" onclick="View_bank();View_upload_documentos();">
-							<label>Deseo ingresar mi información bancaria <small>(Necesaria para el pago de bonificaciones)</small></label>
+		document.getElementById("RFCResult").innerText = "\nFormato: " + valido;
+		return validate;
+	}
 
-						</div>
-					</div>
-				</div>
+	function Disabled_space(e, campo) {
+		key = e.keyCode ? e.keyCode : e.which;
+		if (key == 32) {
+			return false;
+		}
+	}
 
-				<div id="bank-incorporate"></div>
-		<?php
-			}
+	$('#number-document-one').on('input', function(e) {
+		if (!/^[a-z0-9]-*$/i.test(this.value)) {
+			this.value = this.value.replace(/[^a-z0-9]-+/ig, "");
+		}
+	});
+
+	$("#number-document-one").on("change", function() {
+
+		validate_document_one()
+
+	});
+
+	$("#number-document-one").keypress(function() {
+
+		validate_document_one()
+
+	});
+
+	$("#btn-continue").on("click", function() {
+		validate_document_one()
+	});
+
+
+
+
+	$('#type-document').on("change", function(e) {
+
+		if ($('#type-document').val() == 13) {
+			$('#number-document-one').val('');
+			$('#number-document-one').attr('maxlength', '10');
+		}
+		if ($('#type-document').val() == 21) {
+			$('#number-document-one').val('');
+			$('#number-document-one').attr('maxlength', '12');
+		}
+		if ($('#type-document').val() == 39) {
+			$('#number-document-one').val('');
+			$('#number-document-one').attr('maxlength', '13');
 		}
 
-		?>
-		<script>
-			function Empresas_validate() {
-				var empresa = document.getElementById("type-incorporate").value;
-				var regimen_comun = document.getElementById("type-document").value;
+	});
 
-				if (empresa == 0 && regimen_comun == 12) {
-					var num_ident = document.getElementById('number-document-one');
-					num_ident.setAttribute('minLength', 10);
 
-					$('#number-document-one').mask('000000000-0');
+	$('#number-document-one').on("keypress", function(e) {
 
+		if ($('#type-document').val() == 13) {
+
+			key = e.keyCode ? e.keyCode : e.which;
+			if (key == 48 && $("#number-document-one").val() == "") {
+				return false;
+			}
+
+			var myLength = $("#number-document-one").val().length;
+			if ($(this).val() == 1) //To check only when entering first character.
+			{
+				if ($("#number-document-one").val() === '0') {
+					//alert('No se permite el 0 como primer carácter');
+					$("#number-document-one").val('');
 				}
 			}
 
-			function DuiSlv() {
-				$('#number-document-one').mask('00000000-0');
+			var charCode = (e.which) ? e.which : e.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+				return false;
 			}
 
-			function NitSlv() {
-				$('#number-document-two').mask('0000-000000-000-0');
+			Disabled_space(event, this);
+
+		}
+		if ($('#type-document').val() == 21) {
+
+			key = e.keyCode ? e.keyCode : e.which;
+			if (key == 48 && $("#number-document-one").val() == "") {
+				return false;
 			}
 
-			function NrcSlv() {
-				let nrc = $('#number-document-nrc').val();
-				let search = nrc.includes('-');
-				if (search == true) {
-
-				} else {
-					//alert("error debe llevar -");
-					View_alert("Lo sentimos, N° de Registro (NRC) debe contener <strong>-</strong>", "warning");
-				}
-
-			}
-		</script>
-
-		<!-- No permitir espacios en input -->
-		<script>
-			function validaRFC() {
-				let pattern = /^[a-zA-Z]{3,4}(\d{6})((\D|\d){2,3})?$/;
-				let rfc = document.getElementById("number-document-two").value;
-
-				rfcLength = 13;
-
-				if (pattern.test(rfc) && rfc.length == rfcLength) { // ⬅️ Acá se comprueba
-					valido = "Válido";
-					//resultado.classList.add("ok");
-					validate = true;
-				} else {
-					valido = "No válido";
-
-					validate = false;
-					//resultado.classList.remove("ok");
-				}
-
-				document.getElementById("RFCResult").innerText = "\nFormato: " + valido;
-				return validate;
-			}
-
-			function Disabled_space(e, campo) {
-				key = e.keyCode ? e.keyCode : e.which;
-				if (key == 32) {
-					return false;
+			var myLength = $("#number-document-one").val().length;
+			if ($(this).val() == 1) //To check only when entering first character.
+			{
+				if ($("#number-document-one").val() === '0') {
+					//alert('No se permite el 0 como primer carácter');
+					$("#number-document-one").val('');
 				}
 			}
 
-			$('#number-document-one').on('input', function(e) {
-				if (!/^[a-z0-9]-*$/i.test(this.value)) {
-					this.value = this.value.replace(/[^a-z0-9]-+/ig, "");
-				}
-			});
+			var charCode = (e.which) ? e.which : e.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+				return false;
+			}
 
-			$("#number-document-one").on("change", function() {
+			Disabled_space(event, this);
 
-				validate_document_one()
+		}
+		if ($('#type-document').val() == 40) {
 
-			});
+			key = e.keyCode ? e.keyCode : e.which;
+			if (key == 48 && $("#number-document-one").val() == "") {
+				return false;
+			}
 
-			$("#number-document-one").keypress(function() {
-
-				validate_document_one()
-
-			});
-
-			$("#btn-continue").on("click", function() {
-				validate_document_one()
-			});
-
-
-
-
-			$('#type-document').on("change", function(e) {
-
-				if ($('#type-document').val() == 13) {
-					$('#number-document-one').val('');
-					$('#number-document-one').attr('maxlength', '10');
-				}
-				if ($('#type-document').val() == 21) {
-					$('#number-document-one').val('');
-					$('#number-document-one').attr('maxlength', '12');
-				}
-				if ($('#type-document').val() == 39) {
-					$('#number-document-one').val('');
-					$('#number-document-one').attr('maxlength', '13');
-				}
-
-			});
-
-
-			$('#number-document-one').on("keypress", function(e) {
-
-				if ($('#type-document').val() == 13) {
-
-					key = e.keyCode ? e.keyCode : e.which;
-					if (key == 48 && $("#number-document-one").val() == "") {
-						return false;
-					}
-
-					var myLength = $("#number-document-one").val().length;
-					if ($(this).val() == 1) //To check only when entering first character.
-					{
-						if ($("#number-document-one").val() === '0') {
-							//alert('No se permite el 0 como primer carácter');
-							$("#number-document-one").val('');
-						}
-					}
-
-					var charCode = (e.which) ? e.which : e.keyCode;
-					if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-						return false;
-					}
-
-					Disabled_space(event, this);
-
-				}
-				if ($('#type-document').val() == 21) {
-
-					key = e.keyCode ? e.keyCode : e.which;
-					if (key == 48 && $("#number-document-one").val() == "") {
-						return false;
-					}
-
-					var myLength = $("#number-document-one").val().length;
-					if ($(this).val() == 1) //To check only when entering first character.
-					{
-						if ($("#number-document-one").val() === '0') {
-							//alert('No se permite el 0 como primer carácter');
-							$("#number-document-one").val('');
-						}
-					}
-
-					var charCode = (e.which) ? e.which : e.keyCode;
-					if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-						return false;
-					}
-
-					Disabled_space(event, this);
-
-				}
-				if ($('#type-document').val() == 40) {
-
-					key = e.keyCode ? e.keyCode : e.which;
-					if (key == 48 && $("#number-document-one").val() == "") {
-						return false;
-					}
-
-					var myLength = $("#number-document-one").val().length;
-					if ($(this).val() == 1) //To check only when entering first character.
-					{
-						if ($("#number-document-one").val() === '0') {
-							//alert('No se permite el 0 como primer carácter');
-							$("#number-document-one").val('');
-						}
-					}
-
-					var charCode = (e.which) ? e.which : e.keyCode;
-					if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-						return false;
-					}
-
-					Disabled_space(event, this);
-
-				}
-				if ($('#type-document').val() == 39) {
-
-					Disabled_space(event, this);
-
-				}
-
-			});
-
-			$('#number-document-two').on('input', function(e) {
-				if (!/^[a-z0-9]-*$/i.test(this.value)) {
-					this.value = this.value.replace(/[^a-z0-9]-+/ig, "");
-				}
-			});
-
-			$(document).ready(function() {
-				$("#number-document-one").on('paste', function(e) {
-					e.preventDefault();
-					alert('Esta acción está prohibida');
-				})
-
-				$("#number-document-one").on('copy', function(e) {
-					e.preventDefault();
-					alert('Esta acción está prohibida');
-				})
-
-				$("#number-document-cotitular").on('paste', function(e) {
-					e.preventDefault();
-					alert('Esta acción está prohibida');
-				})
-
-				$("#number-document-cotitular").on('copy', function(e) {
-					e.preventDefault();
-					alert('Esta acción está prohibida');
-				})
-			})
-
-			function exist_dv() {
-				var document_t = document.getElementById("type-document").value;
-				var digit_input = document.getElementById("verify_digit");
-				var dv = document.getElementById("dv");
-				if (document_t == '28' || document_t == '11') {
-					dv.removeAttribute('hidden', false);
-					digit_input.setAttribute('required', true);
-					//digit_input.addClass("required");
-				} else {
-					dv.setAttribute('hidden', true);
-					digit_input.removeAttribute('required', false);
-					//digit_input.removeClass("required");
+			var myLength = $("#number-document-one").val().length;
+			if ($(this).val() == 1) //To check only when entering first character.
+			{
+				if ($("#number-document-one").val() === '0') {
+					//alert('No se permite el 0 como primer carácter');
+					$("#number-document-one").val('');
 				}
 			}
-		</script>
-		<!-- No permitir espacios en input -->
+
+			var charCode = (e.which) ? e.which : e.keyCode;
+			if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+				return false;
+			}
+
+			Disabled_space(event, this);
+
+		}
+		if ($('#type-document').val() == 39) {
+
+			Disabled_space(event, this);
+
+		}
+
+	});
+
+	$('#number-document-two').on('input', function(e) {
+		if (!/^[a-z0-9]-*$/i.test(this.value)) {
+			this.value = this.value.replace(/[^a-z0-9]-+/ig, "");
+		}
+	});
+
+	$(document).ready(function() {
+		$("#number-document-one").on('paste', function(e) {
+			e.preventDefault();
+			alert('Esta acción está prohibida');
+		})
+
+		$("#number-document-one").on('copy', function(e) {
+			e.preventDefault();
+			alert('Esta acción está prohibida');
+		})
+
+		$("#number-document-cotitular").on('paste', function(e) {
+			e.preventDefault();
+			alert('Esta acción está prohibida');
+		})
+
+		$("#number-document-cotitular").on('copy', function(e) {
+			e.preventDefault();
+			alert('Esta acción está prohibida');
+		})
+	})
+
+	function exist_dv() {
+		var document_t = document.getElementById("type-document").value;
+		var digit_input = document.getElementById("verify_digit");
+		var dv = document.getElementById("dv");
+		if (document_t == '28' || document_t == '11') {
+			dv.removeAttribute('hidden', false);
+			digit_input.setAttribute('required', true);
+			//digit_input.addClass("required");
+		} else {
+			dv.setAttribute('hidden', true);
+			digit_input.removeAttribute('required', false);
+			//digit_input.removeClass("required");
+		}
+	}
+</script>
+<!-- No permitir espacios en input -->
