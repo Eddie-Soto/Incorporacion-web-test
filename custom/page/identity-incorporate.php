@@ -131,7 +131,7 @@ if ($country == 2) {
 								</div>
 							</div>
 						</div> -->
-					<div class="col-md-6" id="dv" hidden="">
+					<div class="col-md-12" id="dv" hidden="">
 						<div class="row">
 							<div class="form-group">
 								<p style="font-weight:bold ; color:maroon">Incluye los guiones como se muestra en tu identificación</p>
