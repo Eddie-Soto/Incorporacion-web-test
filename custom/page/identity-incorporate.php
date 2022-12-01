@@ -118,10 +118,7 @@ if ($country == 2) {
 				<?php
 				if ($country == 5) {
 				?>
-					<div class="form-gruop">
-
-					</div>
-					<div class="col-md-6" id="dv" hidden="">
+					<div class="col-md-12" id="dv" hidden="">
 						<div class="form-group">
 							<div class="row">
 								<div class="col-12">
