@@ -142,7 +142,6 @@ if ($country == 2) {
 								<input type="text" id="verify_digit" onkeypress="return JustNumbers(event,$(this).val());" name="verify_digit" class="form-control verify_digit" placeholder="DV" maxlength="2" minlength="2" required="">
 							</div>
 						</div>
-
 					</div>
 
 				<?php
