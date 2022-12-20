@@ -1838,6 +1838,28 @@ function Validate_rfc(value)
     }
 
 }
+//ALERTA
+
+function View_alert(text, type)
+
+{
+
+    $.notify({
+
+        message: text
+
+
+
+    },{
+
+        type: type,
+
+        timer: 9000
+
+    });
+
+}
+
 
 //Validacion identificacion 2 pasos
 function validar_identificacion() {
