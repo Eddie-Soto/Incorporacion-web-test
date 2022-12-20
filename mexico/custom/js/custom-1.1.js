@@ -1768,7 +1768,7 @@ function Search_colony(municipality)
 function Validate_rfc(value)
 
 {
-
+    validar_identificacion();
     string = value.replace ("&", "%26");
 
     if(string != "")
