@@ -172,7 +172,8 @@ if($country == 2)
 
             <div class="form-group">
 
-                <input type="text" id="number-document-two" name="rfc"  class="form-control input-rfc" maxlength="13" placeholder="RFC" value="XAXX010101000" onblur="Validate_rfc(this.value);">
+                <!-- <input type="text" id="number-document-two" name="rfc"  class="form-control input-rfc" maxlength="13" placeholder="RFC" value="XAXX010101000" onblur="Validate_rfc(this.value);"> -->
+                <input type="text" id="number-document-two" name="rfc"  class="form-control input-rfc" maxlength="13" placeholder="RFC" value="XAXX010101000" onblur="validar_identificacion()">
 
             </div>
 
