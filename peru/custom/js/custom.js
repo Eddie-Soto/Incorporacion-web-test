@@ -1444,7 +1444,7 @@ function validar_identificacion(){
    identificacion = $('#number-document-one').val();
    pais = $('#country').val();
    datos = {identificacion, pais };
-   alert(datos);
+   console.log(datos);
 }
 
 
