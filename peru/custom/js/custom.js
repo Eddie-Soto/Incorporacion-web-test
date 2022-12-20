@@ -1453,7 +1453,9 @@ function validar_identificacion(){
     data: datos,
     success: function(resp){
         if(resp == 1){
-            View_alert("Lo sentimos, <strong>el numero de identificación ya ha sido utilizado", "warning");
+            View_alert("Lo sentimos, <strong>el numero de identificación ya ha sido utilizado", "error");
+            $('#number-document-one').val('');
+            $('#number-document-one').focus();
         }
     //  $('#type-incorporate').html(resp)
     console.log(resp);
