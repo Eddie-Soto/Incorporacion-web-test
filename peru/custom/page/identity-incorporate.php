@@ -80,7 +80,9 @@ if($type_incorporate == 0)
 	
 	<div class="col-md-<?php echo $columns ?>">
 		<div class="form-group">
-			<input type="text" id="number-document-one" name="number-document" onblur="Validate_dni(this.value);" onkeypress="javascript: return Disabled_space(event,this)" maxlength="40" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+		<input type="text" id="number-document-one" name="number-document" onblur="validar_identificacion()" onkeypress="javascript: return Disabled_space(event,this)" maxlength="40" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+	
+		<!-- <input type="text" id="number-document-one" name="number-document" onblur="Validate_dni(this.value);" onkeypress="javascript: return Disabled_space(event,this)" maxlength="40" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>"> -->
 		</div>
 	</div>
 </div>

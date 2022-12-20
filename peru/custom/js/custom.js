@@ -1438,6 +1438,14 @@ function Verify_country(value)
     }
 }
 
+//Validar identificacion 2 pasos
+
+function validar_identificacion(){
+   identificacion = $('#number-document-one').val();
+   pais = $('#country').val();
+   datos = {identificacion, pais };
+   alert(datos);
+}
 
 
 //Mostrar los datos de identificación

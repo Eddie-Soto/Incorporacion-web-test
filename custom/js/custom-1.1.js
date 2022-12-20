@@ -443,8 +443,28 @@ function View_identity()
 
 //Mostrar los datos de identificación
 
+// $( "#number_document" ).blur(function() {
+//     pais = $('#country').val();
+//     identificacion = $('#number_document').val();
+//     datos = {
+//         "identificacion" : identificacion,
+//         "pais" : pais
+//      };
+//     $.ajax({
 
+//         url: 'https://cmsnikken.nikkenlatam.com/api/validar_identificacion',
+//         datatype : "application/json",
+//         data: datos,
 
+//         success: function(resp){
+
+//         //  $('#type-document-cotitular').html(resp)
+//             console.log(resp);
+//          }
+
+//     });
+
+//   });
 //COTITULAR ------------------------------------------------------------------------------------------
 
     //Tipo de documento cotitular
