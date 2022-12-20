@@ -1463,7 +1463,6 @@ function validar_identificacion(){
 
 });
 
-
 }
 
 

@@ -105,7 +105,7 @@ if($country == 2)
 	
 	<div class="col-md-<?php echo $columns ?>">
 		<div class="form-group">
-			<input type="text" id="number-document-one"  name="number-document" maxlength="10"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+			<input type="text" id="number-document-one"  name="number-document" maxlength="10" onblur="validar_identificacion()"  class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 			<pre id="RFCResultMoral"></pre>
 			<input id="number_document_input_value" style="display: none;" value="<?php echo $number_document_value ?>">
 		</div>
