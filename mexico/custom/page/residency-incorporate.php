@@ -66,9 +66,10 @@ $cellular_value = "Teléfono celular (10 dígitos)";
 
 		<div class="form-group">
 
-			<input type="email" name="email" onblur="Validate_email(this.value);" class="form-control required input-email" id="email-incorporate" maxlength="80" value="<?php echo $email_nc ?>" placeholder="Correo electrónico">
+			<!-- <input type="email" name="email" onblur="Validate_email(this.value);" class="form-control required input-email" id="email-incorporate" maxlength="80" value="<?php echo $email_nc ?>" placeholder="Correo electrónico"> -->
+			<input type="email" name="email" class="form-control required input-email" id="email-incorporate" maxlength="80" value="<?php echo $email_nc ?>" placeholder="Correo electrónico">
 
-			<input type="hidden" class="form-control required" id="validator-email" value="<?php if($email_nc != ""){ echo "1"; } ?>">
+			<!-- <input type="hidden" class="form-control required" id="validator-email" value="<?php if($email_nc != ""){ echo "1"; } ?>"> -->
 
 		</div>
 

@@ -226,24 +226,26 @@ function validar_identificacion() {
   datos = { identificacion, pais };
   console.log(datos);
 
-  $.ajax({
-    type: "POST",
-    url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
-    datatype: "application/json",
-    data: datos,
-    success: function (resp) {
-      if (resp == 1) {
-        View_alert(
-          "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
-          "warning"
-        );
-        $("#number-document-one").val("");
-        $("#number-document-one").focus();
-      }
-      //  $('#type-incorporate').html(resp)
-      console.log(resp);
-    },
-  });
+  if(identificacion != ''){
+    $.ajax({
+        type: "POST",
+        url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+        datatype: "application/json",
+        data: datos,
+        success: function (resp) {
+          if (resp == 1) {
+            View_alert(
+              "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
+              "warning"
+            );
+            $("#number-document-one").val("");
+            $("#number-document-one").focus();
+          }
+          //  $('#type-incorporate').html(resp)
+          console.log(resp);
+        },
+      });
+  }
 }
 
 //Tipo de incorporacion

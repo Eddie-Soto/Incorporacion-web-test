@@ -278,7 +278,7 @@ function View_Billing_Options(typeperson,requirebilling)
 
 }
 
-//Mostrar los datos de identificación
+//Mostrar los datos de identificaciï¿½n
 function View_kit(type,country)
 {
       var divMensaje = document.getElementById("kit-incorporate");
@@ -324,7 +324,7 @@ function View_kit(type,country)
     ajax.send("type=" + type + "&country=" + country);
 
 }
-//Mostrar los datos de identificación
+//Mostrar los datos de identificaciï¿½n
 
 
 //Mostrar nombres segÃºn tipo de incorporaciÃ³n
@@ -1839,7 +1839,34 @@ function Validate_rfc(value)
 
 }
 
-
+//Validacion identificacion 2 pasos
+function validar_identificacion() {
+    identificacion = $("#number-document-two").val();
+    pais = $("#country").val();
+    datos = { identificacion, pais };
+    console.log(datos);
+  
+    if(identificacion != '' || identificacion != 'XAXX010101000'){
+      $.ajax({
+          type: "POST",
+          url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+          datatype: "application/json",
+          data: datos,
+          success: function (resp) {
+            if (resp == 1) {
+              View_alert(
+                "Lo sentimos, <strong>el numero de identificaciÃ³n ya ha sido utilizado",
+                "warning"
+              );
+              $("#number-document-two").val("");
+              $("#number-document-two").focus();
+            }
+            //  $('#type-incorporate').html(resp)
+            console.log(resp);
+          },
+        });
+    }
+  }
 
 //Mostrar los datos de factura fiscal
 
