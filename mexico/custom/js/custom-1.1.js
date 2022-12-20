@@ -1876,10 +1876,27 @@ function validar_identificacion() {
           data: datos,
           success: function (resp) {
             if (resp == 1) {
-              View_alert(
-                "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
-                "warning"
-              );
+            //   View_alert(
+            //     "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
+            //     "warning"
+            //   );
+            
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-right",
+                    iconColor: "white",
+                    customClass: {
+                        popup: "colored-toast",
+                    },
+                    showConfirmButton: false,
+                    timer: 1500,
+                    timerProgressBar: true,
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Se ha generado un avancen en tu curso",
+                });
+            
               $("#number-document-two").val("");
               $("#number-document-two").focus();
             }
