@@ -1445,6 +1445,21 @@ function validar_identificacion(){
    pais = $('#country').val();
    datos = {identificacion, pais };
    console.log(datos);
+
+   $.ajax({
+    type : "POST",
+    url: 'https://cmsnikken.nikkenlatam.com/api/validar_identificacion',
+    datatype : "application/json",
+    data: datos,
+    success: function(resp){
+
+    //  $('#type-incorporate').html(resp)
+    console.log(resp);
+     }
+
+});
+
+
 }
 
 
