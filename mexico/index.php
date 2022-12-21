@@ -755,7 +755,7 @@
 
 		<!-- YOUR CUSTOM JS -->
 
-		<script src="custom/js/custom-1.1.js?v=5.0.22"></script>
+		<script src="custom/js/custom-1.1.js?v=5.0.23"></script>
 
 		<script src="plugins/Interpretador Ajax/interpretadorAjax.js"></script>
 
