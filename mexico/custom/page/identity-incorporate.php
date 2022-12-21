@@ -146,7 +146,7 @@ if($country == 2)
 
 		<div class="form-group">
 
-			<input type="text" id="number-document-one" name="number-document" onkeypress="javascript: return Disabled_space(event,this)" maxlength="40" <?php if($type_incorporate == 0){ ?> onblur="Validate_rfc(this.value);" <?php } ?> class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>">
+			<input type="text" id="number-document-one" name="number-document" onkeypress="javascript: return Disabled_space(event,this)" maxlength="40" <?php if($type_incorporate == 0){ ?> onblur="validar_identificacion()" <?php } ?> class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>">
 
 		</div>
 
@@ -172,7 +172,7 @@ if($country == 2)
 
             <div class="form-group">
 
-                <input type="text" id="number-document-two" name="rfc"  class="form-control input-rfc" maxlength="13" placeholder="RFC" value="XAXX010101000" onblur="Validate_rfc(this.value);">
+                <input type="text" id="number-document-two" name="rfc"  class="form-control input-rfc" maxlength="13" placeholder="RFC" value="XAXX010101000" onblur="validar_identificacion();">
                 <!-- <input type="text" id="number-document-two" name="rfc"  class="form-control input-rfc" maxlength="13" placeholder="RFC" value="XAXX010101000" onblur="validar_identificacion()"> -->
 
             </div>
