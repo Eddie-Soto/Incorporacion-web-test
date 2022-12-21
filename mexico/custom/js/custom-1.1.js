@@ -1763,12 +1763,13 @@ function Search_colony(municipality)
 
 //Validacion identificacion 2 pasos
 function validar_identificacion() {
-    identificacion = $("#number-document-two").val().trim();
-    pais = $("#country").val();
-    datos = { identificacion, pais };
-    console.log(datos);
-  
-    if (identificacion != "" || identificacion != "XAXX010101000") {
+  identificacion = $("#number-document-two").val().trim();
+  pais = $("#country").val();
+  datos = { identificacion, pais };
+  console.log(datos);
+
+  if (identificacion != "") {
+    if (identificacion != "XAXX010101000") {
       $.ajax({
         type: "POST",
         url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
@@ -1789,6 +1790,7 @@ function validar_identificacion() {
       });
     }
   }
+}
 
 
 /*Validar RFC*/
