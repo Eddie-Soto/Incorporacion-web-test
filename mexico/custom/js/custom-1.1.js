@@ -1863,7 +1863,7 @@ function View_alert(text, type)
 
 //Validacion identificacion 2 pasos
 function validar_identificacion() {
-  identificacion = $("#number-document-two").val();
+  identificacion = $("#number-document-two").val().trim();
   pais = $("#country").val();
   datos = { identificacion, pais };
   console.log(datos);
