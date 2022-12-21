@@ -1863,49 +1863,32 @@ function View_alert(text, type)
 
 //Validacion identificacion 2 pasos
 function validar_identificacion() {
-    identificacion = $("#number-document-two").val();
-    pais = $("#country").val();
-    datos = { identificacion, pais };
-    console.log(datos);
-  
-    if(identificacion != '' || identificacion != 'XAXX010101000'){
-      $.ajax({
-          type: "POST",
-          url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
-          datatype: "application/json",
-          data: datos,
-          success: function (resp) {
-            if (resp == 1) {
-            //   View_alert(
-            //     "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
-            //     "warning"
-            //   );
-            
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: "top-right",
-                    iconColor: "white",
-                    customClass: {
-                        popup: "colored-toast",
-                    },
-                    showConfirmButton: false,
-                    timer: 1500,
-                    timerProgressBar: true,
-                });
-                Toast.fire({
-                    icon: "success",
-                    title: "Se ha generado un avancen en tu curso",
-                });
-            
-              $("#number-document-two").val("");
-              $("#number-document-two").focus();
-            }
-            //  $('#type-incorporate').html(resp)
-            console.log(resp);
-          },
-        });
-    }
+  identificacion = $("#number-document-two").val();
+  pais = $("#country").val();
+  datos = { identificacion, pais };
+  console.log(datos);
+
+  if (identificacion != "" || identificacion == "XAXX010101000") {
+    $.ajax({
+      type: "POST",
+      url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+      datatype: "application/json",
+      data: datos,
+      success: function (resp) {
+        if (resp == 1) {
+          View_alert(
+            "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
+            "warning"
+          );
+          $("#number-document-two").val("");
+          $("#number-document-two").focus();
+        }
+        //  $('#type-incorporate').html(resp)
+        // console.log(resp);
+      },
+    });
   }
+}
 
 //Mostrar los datos de factura fiscal
 
