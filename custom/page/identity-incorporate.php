@@ -108,9 +108,9 @@ if ($country == 2) {
 			<div class="form-group">
 				<?php if ($country == 5) { ?>
 					<!-- -->
-					<input type="text" id="number-document-one" name="number-document" <?php if ($country == 1) { ?> minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="26" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+					<input type="text" id="number-document-one" name="number-document" <?php if ($country == 1) { ?> minlength="6" maxlength="10" <?php } ?> onblur="validar_identificacion()" maxlength="26" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 				<?php } else { ?>
-					<input type="text" id="number-document-one" name="number-document" <?php if ($country == 1) { ?> minlength="6" maxlength="10" <?php } ?> onblur="Validate_identification(this.value);" maxlength="13" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+					<input type="text" id="number-document-one" name="number-document" <?php if ($country == 1) { ?> minlength="6" maxlength="10" <?php } ?> onblur="validar_identificacion()" maxlength="13" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 
 				<?php } ?>
 				<input type="hidden" class="form-control required" id="validator-identification" value="">
@@ -170,7 +170,7 @@ if ($country == 2) {
 			</div>
 			<div class="col-md-6">
 				<div class="form-group">
-					<input type="text" id="number-document-one" name="number-document" onclick="DuiSlv();" onblur="Validate_identification(this.value);" maxlength="10" minlength="10" onkeypress="return JustNumbers(event,$(this).val());" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
+					<input type="text" id="number-document-one" name="number-document" onclick="DuiSlv();" onblur="validar_identificacion()" maxlength="10" minlength="10" onkeypress="return JustNumbers(event,$(this).val());" class="form-control required input-number-document" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>">
 					<input type="hidden" class="form-control required" id="validator-identification" value="">
 				</div>
 			</div>
@@ -187,7 +187,8 @@ if ($country == 2) {
 		</div>
 		<div class="col-md-6">
 			<div class="form-group">
-				<input type="text" id="number-document-two" onclick="NitSlv();" name="number-document-two" minlength="17" maxlength="17" class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
+				<!-- <input type="text" id="number-document-two" onclick="NitSlv();" name="number-document-two" minlength="17" maxlength="17" class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required> -->
+				<input type="text" id="number-document-two" onclick="validar_identificacion();" name="number-document-two" minlength="17" maxlength="17" class="form-control required input-number-document-two" placeholder="<?php echo $number_document_value ?>" value="<?php echo $number_document_nc ?>" required>
 
 			</div>
 		</div>

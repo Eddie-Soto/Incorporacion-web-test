@@ -1323,6 +1323,38 @@ function Validate_identification(identification)
 
 }
 
+function validar_identificacion() {
+    pais = $("#country").val();
+    if(pais != 7){
+        identificacion = $("#number-document-one").val();
+    }else{
+        identificacion = $("#number-document-two").val();
+    }
+    
+    datos = { identificacion, pais };
+    console.log(datos);
+  
+    if(identificacion != ''){
+      $.ajax({
+          type: "POST",
+          url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+          datatype: "application/json",
+          data: datos,
+          success: function (resp) {
+            if (resp == 1) {
+              View_alert(
+                "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
+                "warning"
+              );
+              $("#number-document-one").val("");
+              $("#number-document-one").focus();
+            }
+            //  $('#type-incorporate').html(resp)
+            console.log(resp);
+          },
+        });
+    }
+  }
 //Validar identificacion
 
 //Validar email
