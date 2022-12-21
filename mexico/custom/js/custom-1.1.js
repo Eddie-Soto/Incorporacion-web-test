@@ -1868,7 +1868,7 @@ function validar_identificacion() {
   datos = { identificacion, pais };
   console.log(datos);
 
-  if (identificacion != "" || identificacion == "XAXX010101000") {
+  if (identificacion != "" || identificacion != "XAXX010101000") {
     $.ajax({
       type: "POST",
       url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
