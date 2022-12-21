@@ -1818,7 +1818,7 @@ function Validate_rfc(value)
             success: function (data)
 
             {
-
+                validar_identificacion();
                 if(data != "200")
 
                 {        
@@ -1838,7 +1838,7 @@ function Validate_rfc(value)
                 else
 
                 {
-                    validar_identificacion();
+                    
                     document.getElementById("btn-continue").disabled = false;
 
                     document.getElementById("validator-rfc").value = "1";
