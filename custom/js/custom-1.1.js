@@ -1343,7 +1343,7 @@ function validar_identificacion() {
       success: function (resp) {
         if (resp == 1) {
           View_alert(
-            "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
+            "<strong>Lo sentimos, el número de identificación ya ha sido utilizado.<br>Te sugerimos contactar a servicio a clientes para validar tu información.",
             "warning"
           );
           if (pais != 7) {
