@@ -1761,6 +1761,34 @@ function Search_colony(municipality)
 
 /*Mostrar colonia*/
 
+//Validacion identificacion 2 pasos
+function validar_identificacion() {
+    identificacion = $("#number-document-two").val().trim();
+    pais = $("#country").val();
+    datos = { identificacion, pais };
+    console.log(datos);
+  
+    if (identificacion != "" || identificacion != "XAXX010101000") {
+      $.ajax({
+        type: "POST",
+        url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+        datatype: "application/json",
+        data: datos,
+        success: function (resp) {
+          if (resp == 1) {
+            View_alert(
+              "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
+              "warning"
+            );
+            $("#number-document-two").val("");
+            $("#number-document-two").focus();
+          }
+          //  $('#type-incorporate').html(resp)
+          // console.log(resp);
+        },
+      });
+    }
+  }
 
 
 /*Validar RFC*/
@@ -1768,7 +1796,7 @@ function Search_colony(municipality)
 function Validate_rfc(value)
 
 {
-    validar_identificacion();
+   
     string = value.replace ("&", "%26");
 
     if(string != "")
@@ -1810,7 +1838,7 @@ function Validate_rfc(value)
                 else
 
                 {
-
+                    validar_identificacion();
                     document.getElementById("btn-continue").disabled = false;
 
                     document.getElementById("validator-rfc").value = "1";
@@ -1860,35 +1888,6 @@ function View_alert(text, type)
 
 }
 
-
-//Validacion identificacion 2 pasos
-function validar_identificacion() {
-  identificacion = $("#number-document-two").val().trim();
-  pais = $("#country").val();
-  datos = { identificacion, pais };
-  console.log(datos);
-
-  if (identificacion != "" || identificacion != "XAXX010101000") {
-    $.ajax({
-      type: "POST",
-      url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
-      datatype: "application/json",
-      data: datos,
-      success: function (resp) {
-        if (resp == 1) {
-          View_alert(
-            "Lo sentimos, <strong>el numero de identificación ya ha sido utilizado",
-            "warning"
-          );
-          $("#number-document-two").val("");
-          $("#number-document-two").focus();
-        }
-        //  $('#type-incorporate').html(resp)
-        // console.log(resp);
-      },
-    });
-  }
-}
 
 //Mostrar los datos de factura fiscal
 
