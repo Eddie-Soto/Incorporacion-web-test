@@ -1353,6 +1353,8 @@ function validar_identificacion() {
             $("#number-document-two").val("");
             $("#number-document-two").focus();
           }
+        }else{
+            $('#validator-identification').val(1);
         }
         //  $('#type-incorporate').html(resp)
         //console.log(resp);
