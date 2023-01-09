@@ -389,12 +389,12 @@
 												?> disabled <?php } ?> >
 
 														<option value="">País de residencia</option>
-														<!-- <option value="10">Chile</option>
+														<option value="10">Chile</option>
 
 
 														<option value="1">Colombia</option>
 
-														<option value="8">Costa Rica</option> -->
+														<option value="8">Costa Rica</option>
 
 														<option value="4">Ecuador</option>
 
@@ -405,8 +405,8 @@
 														<option value="2" selected>México</option>
 
 														<option value="5">Panamá</option>
-<!-- 
-														<option value="3">Perú</option> -->
+
+														<option value="3">Perú</option>
 
 													</select>
 
