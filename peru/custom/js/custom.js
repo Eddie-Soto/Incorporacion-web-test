@@ -1420,8 +1420,8 @@ function Verify_country(value)
     else if(value == "2")
     {
 
-        document.location.href = "../mexico/";
-
+        // document.location.href = "../mexico/";
+        location.href = "https://incorporacionregional.nikkenlatam.com/mexico";
     }
  else if(value == "10")
     {
