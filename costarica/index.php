@@ -323,11 +323,11 @@
 
 														<option value="6">Guatemala</option>
 
-														<!--option value="2">México</option-->
+														<option value="2">México</option>
 
 														<option value="5">Panamá</option>
 
-														<!--option value="3">Perú</option-->
+														<option value="3">Perú</option>
 
 													</select>
 
