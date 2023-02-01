@@ -309,11 +309,11 @@
 
 														<option value="">País de residencia</option>
 
-														<!--option value="10">Chile</option-->
+														<option value="10">Chile</option>
 
 
 
-														<!--option value="1">Colombia</option-->
+														<option value="1">Colombia</option>
 
 														<option value="8" selected>Costa Rica</option>
 

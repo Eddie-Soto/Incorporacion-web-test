@@ -620,7 +620,7 @@
 
 	<!-- YOUR CUSTOM JS -->
 
-	<script src="custom/js/custom.js?3.0.8"></script>
+	<script src="custom/js/custom.js?3.0.9"></script>
 
 	<script src="plugins/Interpretador Ajax/interpretadorAjax.js"></script>
 
