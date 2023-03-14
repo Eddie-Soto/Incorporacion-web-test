@@ -543,7 +543,7 @@ if ($type == 1) {
 		//console.log($(this).val());
 		var $radios = $('input:radio[name=gdi]');
 
-            $radios.filter('[value=]').prop('checked', true);
+            // $radios.filter('[value=]').prop('checked', true);
         
 		if ($(this).val() == 11) {
 			$('#div_gdi').show();
