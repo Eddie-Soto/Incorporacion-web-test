@@ -16,7 +16,7 @@ $segmentacion = $_POST["segmentacion"];
 
 
 
-/* Logica que verifica el nuemro de archivos al final del formularío solo para COLOMBIA */
+/* Logica que verifica el nuemro de archivos al final del formularï¿½o solo para COLOMBIA */
 /*
 if($country == 1){
 	if($type == 1 and $type_incorporate == 1){ // si es asesor y es persona natural
@@ -24,7 +24,7 @@ if($country == 1){
 				$count1=$_SESSION["count_files"];
 				$ope = $count1 - $_SESSION["cou"];
 				if($ope < 1){
-					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 1 archivo </strong> <br>";
+					echo "Verifica el nï¿½mero de archivos que debes subir en el paso 3 <strong> debes subir 1 archivo </strong> <br>";
 					//echo "se han borrado hasta el momento".$_SESSION["cou"];
 					//echo "<br>se deben subir: ".$count1;
 					//echo "<br> la operacion da:".$ope;
@@ -41,7 +41,7 @@ if($country == 1){
 				$count1=$_SESSION["count_files"];
 				$ope = $count1 - $_SESSION["cou"];
 				if($ope < 5){
-					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 5 archivos </strong> <br>";
+					echo "Verifica el nï¿½mero de archivos que debes subir en el paso 3 <strong> debes subir 5 archivos </strong> <br>";
 					//echo "se han borrado hasta el momento".$_SESSION["cou"];
 					//echo "<br>se deben subir: ".$count1;
 					//echo "<br> la operacion da:".$ope;
@@ -60,7 +60,7 @@ if($country == 1){
 				$count1=$_SESSION["count_files"];
 				$ope = $count1 - $_SESSION["cou"];
 				if($ope < 4){
-					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 4 archivos </strong> <br>";
+					echo "Verifica el nï¿½mero de archivos que debes subir en el paso 3 <strong> debes subir 4 archivos </strong> <br>";
 				//	echo "se han borrado hasta el momento".$_SESSION["cou"];
 			//		echo "<br>se deben subir: ".$count1;
 			//		echo "<br> la operacion da:".$ope;
@@ -76,7 +76,7 @@ if($country == 1){
 session_destroy();
 }
 */
-/* Logica que verifica el nuemro de archivos al final del formularío solo para COLOMBIA */
+/* Logica que verifica el nuemro de archivos al final del formularï¿½o solo para COLOMBIA */
 
 
 /*Variables*/
@@ -195,6 +195,19 @@ if($type_document == 0){
 	$type_document = 0;	
 
 }
+
+
+
+	$dgi = $_POST["dgi"];
+	if($dgi == 0){
+		$dgi = 'Consumidor Final';
+	}
+	elseif($dgi == 1){
+		$dgi = 'Contribuyente';
+	}
+	else{
+		$dgi = '';
+	}
 
 
 
@@ -320,7 +333,7 @@ if(isset($_SESSION["boleto"])){
 		exit;
 	/*if($done['payment'] == 0)
 	{
-		echo "el correo ingresado esta pendiente por generar el pago del Kit de inicio, por favor, utiliza la opción <strong>RETOMAR INCORPORACIÓN</strong>";
+		echo "el correo ingresado esta pendiente por generar el pago del Kit de inicio, por favor, utiliza la opciï¿½n <strong>RETOMAR INCORPORACIï¿½N</strong>";
 		exit;
 	}
 	else
@@ -374,7 +387,7 @@ else
 	if($result != true)
 
 	{
-		echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo kit USD " . $result;
+		echo "<strong>no fue posible guardar la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo kit USD " . $result;
 
 		exit;
 	}
@@ -396,7 +409,7 @@ if($done)
 
 
 
-		$sql = "INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit)";
+		$sql = "INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit, :dgi)";
 
 		$query = $pdo->prepare($sql);
 
@@ -468,7 +481,9 @@ if($done)
 
 			'tallaLetra' => $tallaLetra,
 
-			'verify_digit' => $verify_digit
+			'verify_digit' => $verify_digit,
+
+			'dgi' => $dgi
 
 		]);
 
@@ -490,7 +505,7 @@ else
 
 
 
-		$sqlt = "INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit)";
+		$sqlt = "INSERT INTO nikkenla_incorporation.contracts_test (id_contract, country, code, name, type, type_incorporate, type_sponsor, sponsor, email, cellular, birthday, address, residency_one, residency_two, residency_three, residency_four, name_legal_representative, type_document, number_document, name_cotitular, type_document_cotitular, number_document_cotitular, bank, bank_type, number_account, number_clabe, rfc, ip, browser, gender, kit, playera, talla, verify_digit) VALUES (:id, :country, :code, :name, :type, :type_incorporate, :type_sponsor, :sponsor, :email, :cellular, :birthday, :address, :residency_one, :residency_two, :residency_three, :residency_four, :name_legal_representative, :type_document, :number_document, :name_cotitular, :type_document_cotitular, :number_document_cotitular, :bank, :bank_type, :number_account, :number_clabe, :rfc, :ip, :browser, :gender, :kit, :playera, :tallaLetra, :verify_digit, :dgi)";
 
 		$query = $pdo->prepare($sqlt);
 
@@ -562,7 +577,9 @@ else
 
 			'tallaLetra' => $tallaLetra,
 
-			'verify_digit' => $verify_digit
+			'verify_digit' => $verify_digit,
+
+			'dgi' => $dgi
 
 		]);
 
@@ -581,7 +598,7 @@ if($result != true)
 
 {
 
-	echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo " . $result;
+	echo "<strong>no fue posible guardar la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo " . $result;
 
 	exit;
 
@@ -635,7 +652,7 @@ if($result != true)
 
 {
 
-	echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo " . $result;
+	echo "<strong>no fue posible guardar la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo " . $result;
 
 	exit;
 
@@ -749,7 +766,7 @@ else
 
 	{
 
-		echo "<strong>no fue posible toda la incorporación</strong>, por favor verifica la información e intentalo de nuevo";
+		echo "<strong>no fue posible toda la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo";
 
 		exit;
 
@@ -860,7 +877,7 @@ else
 
 			{
 
-				echo "<strong>no fue posible detectar el tipo de incorporación</strong>, por favor verifica la información e intentalo de nuevo";
+				echo "<strong>no fue posible detectar el tipo de incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo";
 
 				exit;
 
