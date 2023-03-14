@@ -540,9 +540,11 @@ if ($type == 1) {
 		$('#div_gdi').hide();
 	})
 	$('#type-document').change(function() {
-		console.log($(this).val());
+		//console.log($(this).val());
 		if ($(this).val() == 11) {
 			$('#div_gdi').show();
+		}else{
+			$('#div_gdi').hide();
 		}
 	})
 
