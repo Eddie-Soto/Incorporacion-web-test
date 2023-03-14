@@ -541,7 +541,7 @@ if ($type == 1) {
 	})
 	$('#type-document').change(function() {
 		//console.log($(this).val());
-		var $radios = $('input:radio[name=gdi]');
+		var $radios = $('input:radio[name=dgi]');
 
             // $radios.filter('[value=]').prop('checked', true);
         
@@ -553,11 +553,13 @@ if ($type == 1) {
 			$('#div_gdi').hide();
 			$radios.filter("[value=1]").prop('checked', true);
 			$radios.prop('required',false);
+			console.log($radios.val());
 		}
 		if($(this).val()== 29){
 			$('#div_gdi').hide();
 			$radios.filter("[value=0]").prop('checked', true);
 			$radios.prop('required',false);
+			console.log($radios.val());
 		}
 	})
 
