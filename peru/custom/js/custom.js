@@ -1444,7 +1444,7 @@ function validar_identificacion(){
    identificacion = $('#number-document-one').val();
    pais = $('#country').val();
    datos = {identificacion, pais };
-   console.log(datos);
+  // console.log(datos);
 
    if(identificacion != ''){
     $.ajax({
@@ -1459,7 +1459,7 @@ function validar_identificacion(){
                 $('#number-document-one').focus();
             }
         //  $('#type-incorporate').html(resp)
-        console.log(resp);
+       // console.log(resp);
          }
     
     });

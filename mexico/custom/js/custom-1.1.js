@@ -1766,7 +1766,7 @@ function validar_identificacion() {
   identificacion = $("#number-document-two").val().trim();
   pais = $("#country").val();
   datos = { identificacion, pais };
-  console.log(datos);
+ // console.log(datos);
 
   if (identificacion != "") {
     if (identificacion != "XAXX010101000") {
