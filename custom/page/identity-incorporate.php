@@ -543,7 +543,7 @@ if ($type == 1) {
 		var document_t = document.getElementById("type-document").value;
 		var digit_input = document.getElementById("verify_digit");
 		var dv = document.getElementById("dv");
-		var gdi = document.getElementById('div_gdi');
+		// var gdi = document.getElementById('div_gdi');
 		if (document_t == '28' || document_t == '11') {
 			dv.removeAttribute('hidden', false);
 			digit_input.setAttribute('required', true);
