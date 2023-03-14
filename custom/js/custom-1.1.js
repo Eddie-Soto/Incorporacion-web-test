@@ -1865,6 +1865,7 @@ $('#country').on('change',function(){
 })
 
 $('#type-document').on('change',function(){
+    console.log($(this).val());
     if($(this).val() ==  11){
         $('#div_gdi').show();
     }
