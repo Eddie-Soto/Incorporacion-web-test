@@ -215,18 +215,24 @@ if ($country == 2) {
 
 
 	<?php } ?>
-	
+
 </div>
-<div class="row" id="dgi_div">
-					<div class="col-12">
-						<div class="col-12 col-md-6 col-sm-12">
-						<p for="">¿Es usted contribuyente afiliado en la DGI?</p>
-						</div>
-						<div class="col-12 col-md-3 col-sm-6"><input type="radio" name="dgi" id="dgi_1"></div>
-						<div class="col-12 col-md-3 col-sm-6"><input type="radio" name="dgi" id="dgi_2"></div>
-						
-					</div>
+<div id="div_gdi">
+<div class="row">
+	<div class="col-12">
+
+		<p for="">¿Es usted contribuyente afiliado en la DGI?</p>
+
+
+	</div>
 </div>
+<div class="row">
+
+	<div class="col-12 col-md-3 col-sm-6"><input type="radio" name="dgi" id="dgi_1"></div>
+	<div class="col-12 col-md-3 col-sm-6"><input type="radio" name="dgi" id="dgi_2"></div>
+</div>
+</div>
+
 
 
 <script type="text/javascript">
