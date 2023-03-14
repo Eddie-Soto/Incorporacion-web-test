@@ -551,14 +551,16 @@ if ($type == 1) {
 		}
 		if($(this).val()== 28){
 			$('#div_gdi').hide();
-			$radios.filter("[value=1]").prop('checked', true);
+			// $radios.filter("[value=1]").prop('checked', true);
+			$radios.val(1);
 			$radios.change();
 			$radios.prop('required',false);
 			console.log($radios.val());
 		}
 		if($(this).val()== 29){
 			$('#div_gdi').hide();
-			$radios.filter("[value=0]").prop('checked', true);
+			// $radios.filter("[value=0]").prop('checked', true);
+			$radios.val(0);
 			$radios.change();
 			$radios.prop('required',false);
 			console.log($radios.val());
