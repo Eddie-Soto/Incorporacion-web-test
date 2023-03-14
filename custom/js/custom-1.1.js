@@ -1864,6 +1864,14 @@ $('#country').on('change',function(){
     }
 })
 
+$('#type-document').on('change',function(){
+    if($(this).val() ==  11){
+        $('#div_gdi').show();
+    }
+})
+
+
 $( document ).ready(function() {
     $('#kit-incorporate').hide();
+    $('#div_gdi').hide();
 });

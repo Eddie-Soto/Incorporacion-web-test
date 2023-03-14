@@ -217,7 +217,7 @@ if ($country == 2) {
 	<?php } ?>
 
 </div>
-<div id="div_gdi" style="margin-bottom:1rem;display:none">
+<div id="div_gdi" style="margin-bottom:1rem;">
 <div class="row">
 	<div class="col-12">
 
@@ -547,11 +547,11 @@ if ($type == 1) {
 		if (document_t == '28' || document_t == '11') {
 			dv.removeAttribute('hidden', false);
 			digit_input.setAttribute('required', true);
-			gdi.removeAttribute('hidden',false);
+			//gdi.removeAttribute('hidden',false);
 			//digit_input.addClass("required");
 		} else {
 			dv.setAttribute('hidden', true);
-			gdi.setAttribute('hidden',true);
+			//gdi.setAttribute('hidden',true);
 			digit_input.removeAttribute('required', false);
 			//digit_input.removeClass("required");
 		}
