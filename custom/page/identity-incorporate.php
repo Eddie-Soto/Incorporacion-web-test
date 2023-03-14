@@ -228,8 +228,8 @@ if ($country == 2) {
 	</div>
 	<div class="row">
 
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1"></div>
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2"></div>
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1"></div>
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0"></div>
 	</div>
 </div>
 
@@ -541,10 +541,23 @@ if ($type == 1) {
 	})
 	$('#type-document').change(function() {
 		//console.log($(this).val());
+		var $radios = $('input:radio[name=gdi]');
+
+            $radios.filter('[value=]').prop('checked', true);
+        
 		if ($(this).val() == 11) {
 			$('#div_gdi').show();
-		}else{
+			$radios.prop('required',true);
+		}
+		if($(this).val()== 28){
 			$('#div_gdi').hide();
+			$radios.filter("[value=1]").prop('checked', true);
+			$radios.prop('required',false);
+		}
+		if($(this).val()== 29){
+			$('#div_gdi').hide();
+			$radios.filter("[value=0]").prop('checked', true);
+			$radios.prop('required',false);
 		}
 	})
 
