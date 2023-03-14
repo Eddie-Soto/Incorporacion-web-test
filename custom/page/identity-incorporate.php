@@ -217,7 +217,7 @@ if ($country == 2) {
 	<?php } ?>
 
 </div>
-<div id="div_gdi">
+<div id="div_gdi" style="margin-bottom:1rem;">
 <div class="row">
 	<div class="col-12">
 
@@ -228,9 +228,9 @@ if ($country == 2) {
 </div>
 <div class="row">
 
-	<div class="col-12 col-md-3 col-sm-6"><input type="radio" name="dgi" id="dgi_1"></div>
-	<div class="col-12 col-md-3 col-sm-6"><input type="radio" name="dgi" id="dgi_2"></div>
-</div>
+	<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:center;align-items:center;"><label for="dg1_1"></label><input type="radio" name="dgi" id="dgi_1"></div>
+	<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:center;align-items:center;"><label for="dg1_2"></label><input type="radio" name="dgi" id="dgi_2"></div>
+</div>ter
 </div>
 
 
