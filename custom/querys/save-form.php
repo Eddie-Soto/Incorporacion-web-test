@@ -198,7 +198,7 @@ if($type_document == 0){
 
 
 
-	$dgi = $_POST["dgi"];
+	$dgi = $_POST["dgi_value"];
 	if($dgi == 0){
 		$dgi = 'Consumidor Final';
 	}
