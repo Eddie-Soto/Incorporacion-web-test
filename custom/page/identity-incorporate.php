@@ -217,7 +217,7 @@ if ($country == 2) {
 	<?php } ?>
 
 </div>
-<input type="hidden" name="dgi_value" id="dgi_value" value="">
+<input type="number" name="dgi_value" id="dgi_value" value="">
 <div id="div_gdi" style="margin-bottom:1rem;">
 	<!-- <div class="row">
 		<div class="col-12">
