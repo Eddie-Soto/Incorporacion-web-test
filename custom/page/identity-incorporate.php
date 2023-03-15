@@ -229,7 +229,7 @@ if ($country == 2) {
 	</div>
 	<div class="row">
 		
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)"></div>
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)" required></div>
 		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0" onclick="set_dgi(0)"></div>
 	</div> -->
 </div>
