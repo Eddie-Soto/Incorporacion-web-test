@@ -208,7 +208,7 @@ if($type_document == 0){
 	else{
 		$dgi = '';
 	}
-return $dgi;
+return $_POST;
 
 $number_document = $_POST["number_document"];
 if ($country == 7 || $country == '7') {
