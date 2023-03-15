@@ -198,7 +198,7 @@ if($type_document == 0){
 
 
 
-	$dgi = $_POST["dgi_value"];
+	$dgi = $_POST["dgi"];
 	if($dgi == 0){
 		$dgi = 'Consumidor Final';
 	}
@@ -208,7 +208,7 @@ if($type_document == 0){
 	else{
 		$dgi = '';
 	}
-return $_POST;
+// return $_POST;
 
 $number_document = $_POST["number_document"];
 if ($country == 7 || $country == '7') {
