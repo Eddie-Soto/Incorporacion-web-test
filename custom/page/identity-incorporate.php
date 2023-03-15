@@ -218,7 +218,7 @@ if ($country == 2) {
 
 </div>
 <div id="div_gdi" style="margin-bottom:1rem;">
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-12">
 
 			<p for="">¿Es usted contribuyente afiliado en la DGI?</p>
@@ -230,7 +230,7 @@ if ($country == 2) {
 			<input type="hidden" name="dgi_value" id="dgi_value" value="">
 		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)"></div>
 		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0" onclick="set_dgi(0)"></div>
-	</div>
+	</div> -->
 </div>
 
 
@@ -541,29 +541,46 @@ if ($type == 1) {
 	})
 	$('#type-document').change(function() {
 		//console.log($(this).val());
-		var $radios = $('input:radio[name=dgi]');
+		 //var radio_dgi = $('input:radio[name=dgi]');
 
             // $radios.filter('[value=]').prop('checked', true);
         
 		if ($(this).val() == 11) {
+			$('#div_gdi').append(`<div class="row">
+		<div class="col-12">
+
+			<p for="">¿Es usted contribuyente afiliado en la DGI?</p>
+
+
+		</div>
+	</div>
+	<div class="row">
+			<input type="hidden" name="dgi_value" id="dgi_value" value="">
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)"></div>
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0" onclick="set_dgi(0)"></div>
+	</div>`);
 			$('#div_gdi').show();
-			$radios.prop('required',true);
+			//radio_dgi.prop('required',true);
 		}
 		if($(this).val()== 28){
+			$('#div_gdi').empty();
 			$('#div_gdi').hide();
 			// $radios.filter("[value=1]").prop('checked', true);
 			$('#dgi_value').val(1);
-			$radios.change();
-			$radios.prop('required',false);
+			//radio_dgi.prop('required',false);
+			// $radios.change();
+			// $radios.setAttribute('required', true);
 			console.log($('#dgi_value').val());
 		
 		}
 		if($(this).val()== 29){
 			$('#div_gdi').hide();
+			$('#div_gdi').empty();
+			//radio_dgi.prop('required',false);
 			// $radios.filter("[value=0]").prop('checked', true);
 			$('#dgi_value').val(0);
-			$radios.change();
-			$radios.prop('required',false);
+			// $radios.change();
+			// $radios.removeAttr('required',false);
 			//console.log($radios.val());
 			console.log($('#dgi_value').val());
 		}
