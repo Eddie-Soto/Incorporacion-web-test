@@ -227,9 +227,9 @@ if ($country == 2) {
 		</div>
 	</div>
 	<div class="row">
-
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1"></div>
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0"></div>
+			<input type="hidden" name="dgi_value" id="dgi_value" value="">
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)"></div>
+		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0" onclick="set_dgi(0)"></div>
 	</div>
 </div>
 
@@ -552,20 +552,26 @@ if ($type == 1) {
 		if($(this).val()== 28){
 			$('#div_gdi').hide();
 			// $radios.filter("[value=1]").prop('checked', true);
-			$radios.val(1);
+			$('#dgi_value').val(1);
 			$radios.change();
 			$radios.prop('required',false);
-			console.log($radios.val());
+			console.log($('#dgi_value').val());
+		
 		}
 		if($(this).val()== 29){
 			$('#div_gdi').hide();
 			// $radios.filter("[value=0]").prop('checked', true);
-			$radios.val(0);
+			$('#dgi_value').val(0);
 			$radios.change();
 			$radios.prop('required',false);
-			console.log($radios.val());
+			//console.log($radios.val());
+			console.log($('#dgi_value').val());
 		}
 	})
+
+	function set_dgi(value){
+		$('#dgi_value').val(value);
+	}
 
 	function exist_dv() {
 		var document_t = document.getElementById("type-document").value;
