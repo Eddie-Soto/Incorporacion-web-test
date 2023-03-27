@@ -1360,6 +1360,7 @@ function validar_identificacion() {
           }
         }else{
             $('#validator-identification').val('1');
+            $('#btn-continue').prop('disabled',false);
         }
         //  $('#type-incorporate').html(resp)
         //console.log(resp);
