@@ -81,7 +81,7 @@ if ($country == 2) {
 			<div class="col-md-<?php echo $columns ?>">
 				<div class="form-group">
 					<div class="styled-select">
-						<select class="required input-type-document" name="type-document" id="type-document" <?php
+						<select class="required input-type-document" onchage="disabledbtn()" name="type-document" id="type-document" <?php
 																												if ($country == 5) {
 																												?> onchange="exist_dv();" <?php
 																																		} ?> <?php
