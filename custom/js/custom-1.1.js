@@ -1324,7 +1324,7 @@ function Validate_identification(identification)
 }
 
 function disabledbtn(){
-    $('#btn-continue').prop('disabled',true);
+    // $('#btn-continue').prop('disabled',true);
     $("#number-document-one").val("");
 }
 
@@ -1360,7 +1360,7 @@ function validar_identificacion() {
           }
         }else{
             $('#validator-identification').val('1');
-            $('#btn-continue').prop('disabled',false);
+            // $('#btn-continue').prop('disabled',false);
         }
         //  $('#type-incorporate').html(resp)
         //console.log(resp);
