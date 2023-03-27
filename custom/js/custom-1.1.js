@@ -1323,6 +1323,11 @@ function Validate_identification(identification)
 
 }
 
+function disabledbtn(){
+    $('#btn-continue').prop('disabled',true);
+    $("#number-document-one").val("");
+}
+
 function validar_identificacion() {
   pais = $("#country").val();
   if (pais != 7) {
