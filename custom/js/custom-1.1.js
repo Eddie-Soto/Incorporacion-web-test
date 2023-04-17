@@ -1435,7 +1435,31 @@ function Validate_email(email)
                 datatype: "application/json",
                 data: { email },
                 success: function (resp) {
-                  console.log(resp);
+                  if(resp.status == 200){
+                    switch (resp.validate) {
+                        case 0:
+                            $('#validator-email').val(1);
+                          break;
+                        case 1:
+                            View_alert("Lo sentimos, " + 'el correo ya se encuentra activo. Por favor utilice otro correo.', "danger");
+                          break;
+                        case 2:
+                            View_alert("Lo sentimos, " + 'el correo ya se encuentra en proceso de pago, favor de revisar con Servico al cliente.', "danger");
+                          break;
+                        case 3:
+                            View_alert("Lo sentimos, " + 'el correo cuenta con pago pendiente, por favor utilice RETOMAR INCORPORACIÓN.', "danger");
+                          break;
+                        case 4:
+                            View_alert("Lo sentimos, " + 'el correo esta registrado de manera incorrecta por favor solicite depuración en Servicio al Cliente.', "danger");
+                            break;
+                        default:
+                            View_alert("Lo sentimos, " + 'hubo un error de conexión por favor escriba de nuevo su correo.', "danger");
+                        }
+                  }else{
+                    $('#validator-email').val('');
+                    View_alert("Lo sentimos, " + 'hubo un error de conexión por favor escriba de nuevo su correo.', "danger");
+                    $('#email-incorporate').val('');
+                  }
 
                     
                 },
