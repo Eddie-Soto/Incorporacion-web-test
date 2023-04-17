@@ -1442,6 +1442,7 @@ function Validate_email(email)
                           break;
                         case 1:
                             $('#validator-email').val('');
+                            $('#email-incorporate').val('');
                             View_alert("Lo sentimos, " + 'el correo ya se encuentra activo. Por favor utilice otro correo.', "danger");
                           break;
                         case 2:
