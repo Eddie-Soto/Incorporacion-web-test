@@ -83,7 +83,7 @@ if ($country == 2) {
 					<div class="styled-select">
 						<select class="required input-type-document" onchange="disabledbtn()" name="type-document" id="type-document" <?php
 																												if ($country == 5) {
-																												?> onchange="exist_dv();" <?php
+																												?>  <?php
 																																		} ?> <?php
 																																				if ($country == 1) {
 																																				?> onchange="Empresas_validate();" <?php
@@ -545,8 +545,12 @@ if ($type == 1) {
 		 //var radio_dgi = $('input:radio[name=dgi]');
 
             // $radios.filter('[value=]').prop('checked', true);
+			var digit_input = document.getElementById("verify_digit");
+		var dv = document.getElementById("dv");
         
 		if ($(this).val() == 11) {
+			dv.removeAttribute('hidden', false);
+			digit_input.setAttribute('required', true);
 			$('#div_gdi').append(`<div class="row">
 				<div class="col-12">
 
@@ -563,6 +567,8 @@ if ($type == 1) {
 			//radio_dgi.prop('required',true);
 		}
 		if($(this).val()== 28){
+			dv.removeAttribute('hidden', false);
+			digit_input.setAttribute('required', true);
 			$('#div_gdi').empty();
 			$('#div_gdi').hide();
 			// $radios.filter("[value=1]").prop('checked', true);
@@ -574,6 +580,9 @@ if ($type == 1) {
 		
 		}
 		if($(this).val()== 29){
+			dv.setAttribute('hidden', true);
+			//gdi.setAttribute('hidden',true);
+			digit_input.removeAttribute('required', false);
 			$('#div_gdi').hide();
 			$('#div_gdi').empty();
 			//radio_dgi.prop('required',false);
@@ -584,6 +593,7 @@ if ($type == 1) {
 			//console.log($radios.val());
 			console.log($('#dgi_value').val());
 		}
+		
 	})
 
 	function set_dgi(value){
