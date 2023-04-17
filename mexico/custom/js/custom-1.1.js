@@ -1153,54 +1153,109 @@ function Validate_email(email)
 
 {
 
-    if(email != "")
+    // if(email != "")
 
-    {
+    // {
 
-        var dataString = 'email=' + email;
-
-
-
-        $.ajax({
-
-            type: 'POST',
-
-            url: 'custom/querys/validate-email.php',
-
-            data: dataString,
-
-            success: function (data)
-
-            {
-
-                if(data != "")
-
-                {        
-
-                    document.getElementById("validator-email").value = "";
-
-                    View_alert("Lo sentimos, " + data, "danger");
-
-                    return false;
-
-                }
-
-                else
-
-                {
-
-                    document.getElementById("validator-email").value = "1";
-
-                }
-
-            }
-
-        });
+    //     var dataString = 'email=' + email;
 
 
 
-        return false;
+    //     $.ajax({
 
+    //         type: 'POST',
+
+    //         url: 'custom/querys/validate-email.php',
+
+    //         data: dataString,
+
+    //         success: function (data)
+
+    //         {
+
+    //             if(data != "")
+
+    //             {        
+
+    //                 document.getElementById("validator-email").value = "";
+
+    //                 View_alert("Lo sentimos, " + data, "danger");
+
+    //                 return false;
+
+    //             }
+
+    //             else
+
+    //             {
+
+    //                 document.getElementById("validator-email").value = "1";
+
+    //             }
+
+    //         }
+
+    //     });
+
+
+
+    //     return false;
+
+    // }
+    if(email != ''){
+        var regex =/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        
+        if(regex.test(email)){
+            $.ajax({
+                url: "https://cmsnikken.nikkenlatam.com/api/validar_email",
+                type: "POST",
+                datatype: "application/json",
+                data: { email },
+                success: function (resp) {
+                  if(resp.status == 200){
+                    switch (resp.validate) {
+                        case 0:
+                            $('#validator-email').val(1);
+                          break;
+                        case 1:
+                            $('#validator-email').val('');
+                            $('#email-incorporate').val('');
+                            View_alert("Lo sentimos, " + 'el correo ya se encuentra activo. Por favor utilice otro correo.', "danger");
+                          break;
+                        case 2:
+                            $('#validator-email').val('');
+                            $('#email-incorporate').val('');
+                            View_alert("Lo sentimos, " + 'el correo ya se encuentra en proceso de pago, favor de revisar con Servico al cliente.', "danger");
+                          break;
+                        case 3:
+                            $('#validator-email').val('');
+                            $('#email-incorporate').val('');
+                            View_alert("Lo sentimos, " + 'el correo cuenta con pago pendiente, por favor utilice RETOMAR INCORPORACIÓN.', "danger");
+                          break;
+                        case 4:
+                            $('#validator-email').val('');
+                            $('#email-incorporate').val('');
+                            View_alert("Lo sentimos, " + 'el correo esta registrado de manera incorrecta por favor solicite depuración en Servicio al Cliente.', "danger");
+                            break;
+                        default:
+                            $('#validator-email').val('');
+                            $('#email-incorporate').val('');
+                            View_alert("Lo sentimos, " + 'hubo un error de conexión por favor escriba de nuevo su correo.', "danger");
+                        }
+                  }else{
+                    $('#validator-email').val('');
+                    View_alert("Lo sentimos, " + 'hubo un error de conexión por favor escriba de nuevo su correo.', "danger");
+                    $('#email-incorporate').val('');
+                  }
+
+                    
+                },
+            });
+        }else{
+            $('#validator-email').val('');
+            View_alert("Por favor coloque un correo válido.", "danger");
+            $('#email-incorporate').val('');
+        }
     }
 
 }
