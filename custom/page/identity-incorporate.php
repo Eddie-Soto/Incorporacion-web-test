@@ -548,18 +548,17 @@ if ($type == 1) {
         
 		if ($(this).val() == 11) {
 			$('#div_gdi').append(`<div class="row">
-		<div class="col-12">
+				<div class="col-12">
 
-			<p for="">¿Es usted contribuyente afiliado en la DGI?</p>
+					<p for="">¿Es usted contribuyente afiliado en la DGI?</p>
 
 
-		</div>
-	</div>
-	<div class="row">
-			<input type="hidden" name="dgi_value" id="dgi_value" value="">
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)" required></div>
-		<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0" onclick="set_dgi(0)"></div>
-	</div>`);
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_1">SI</label><input type="radio" name="dgi" id="dgi_1" value="1" onclick="set_dgi(1)" required></div>
+				<div class="col-12 col-md-3 col-sm-6" style="display:flex;justify-content:space-evenly;align-items:baseline;"><label for="dgi_2">NO</label><input type="radio" name="dgi" id="dgi_2" value="0" onclick="set_dgi(0)"></div>
+			</div>`);
 			$('#div_gdi').show();
 			//radio_dgi.prop('required',true);
 		}
