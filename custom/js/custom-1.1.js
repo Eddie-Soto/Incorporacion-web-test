@@ -1474,6 +1474,10 @@ function Validate_email(email)
                     
                 },
             });
+        }else{
+            $('#validator-email').val('');
+            View_alert("Por favor coloque un correo válido.", "danger");
+            $('#email-incorporate').val('');
         }
     }
 
