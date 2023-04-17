@@ -1376,54 +1376,71 @@ function Validate_email(email)
 
 {
 
-    if(email != "")
+    // if(email != "")
 
-    {
+    // {
 
-        var dataString = 'email=' + email;
-
-
-
-        $.ajax({
-
-            type: 'POST',
-
-            url: 'custom/querys/validate-email.php',
-
-            data: dataString,
-
-            success: function (data)
-
-            {
-
-                if(data != "")
-
-                {        
-
-                    document.getElementById("validator-email").value = "";
-
-                    View_alert("Lo sentimos, " + data, "danger");
-
-                    return false;
-
-                }
-
-                else
-
-                {
-
-                    document.getElementById("validator-email").value = "1";
-
-                }
-
-            }
-
-        });
+    //     var dataString = 'email=' + email;
 
 
 
-        return false;
+    //     $.ajax({
 
+    //         type: 'POST',
+
+    //         url: 'custom/querys/validate-email.php',
+
+    //         data: dataString,
+
+    //         success: function (data)
+
+    //         {
+
+    //             if(data != "")
+
+    //             {        
+
+    //                 document.getElementById("validator-email").value = "";
+
+    //                 View_alert("Lo sentimos, " + data, "danger");
+
+    //                 return false;
+
+    //             }
+
+    //             else
+
+    //             {
+
+    //                 document.getElementById("validator-email").value = "1";
+
+    //             }
+
+    //         }
+
+    //     });
+
+
+
+    //     return false;
+
+    // }
+    if(email != ''){
+        var regex =/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        
+        if(regex.test(email)){
+            $.ajax({
+                url: "https://cmsnikken.nikkenlatam.com/api/validar_email",
+                type: "POST",
+                datatype: "application/json",
+                data: { email },
+                success: function (resp) {
+                  console.log(resp);
+
+                    
+                },
+            });
+        }
     }
 
 }
