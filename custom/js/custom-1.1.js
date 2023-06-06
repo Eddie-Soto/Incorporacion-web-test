@@ -1336,17 +1336,18 @@ function validar_identificacion() {
     identificacion = $("#number-document-two").val();
   }
 
-  datos = { identificacion, pais };
-  console.log(datos);
+  datos = { identificacion };
+  //console.log(datos);
 
   if (identificacion != "") {
     $.ajax({
       type: "POST",
-      url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+      url: "https://services.nikkenlatam.com/api/validate_identity",
       datatype: "application/json",
       data: datos,
       success: function (resp) {
-        if (resp == 1) {
+        response = JSON.parse(resp);
+        if (response.status == 200 && response.validate == 1) {
           View_alert(
             "<strong>Lo sentimos, el número de identificación ya ha sido utilizado.<br>Te sugerimos contactar a servicio a clientes para validar tu información.",
             "warning"
@@ -1430,13 +1431,14 @@ function Validate_email(email)
         
         if(regex.test(email)){
             $.ajax({
-                url: "https://cmsnikken.nikkenlatam.com/api/validar_email",
+                url: "https://services.nikkenlatam.com/api/validate_email",
                 type: "POST",
                 datatype: "application/json",
                 data: { email },
                 success: function (resp) {
-                  if(resp.status == 200){
-                    switch (resp.validate) {
+                    response = JSON.parse(resp);
+                  if(response.status == 200){
+                    switch (response.validate) {
                         case 0:
                             $('#validator-email').val(1);
                           break;
