@@ -1,5 +1,5 @@
 //FUNCIONALIDADES GENERALES -----------------------------------------------------------
-
+    console.log("en iw col");
     //AJAX
 
     function Ajax()
