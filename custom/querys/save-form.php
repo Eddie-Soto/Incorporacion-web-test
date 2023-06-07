@@ -114,7 +114,7 @@ if($country == 2)
 	}
 }
 
-$form_file = $_FILES["files"];
+$form_file = $_POST["files"];
 
 return $form_file;
 
