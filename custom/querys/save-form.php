@@ -4,6 +4,8 @@ session_name("incorporacion");
 session_start();
 require_once('../../conexion-modified-for-tv.php');
 require_once('../../functions.php'); /*Funciones*/
+require_once('../../vendor/autoload.php'); //Plugins
+use Google\Cloud\Storage\StorageClient;
 
 $type = $_POST["type"];
 
@@ -111,6 +113,10 @@ if($country == 2)
 		$item = $item.'m';
 	}
 }
+
+$form_file = $_FILES["files"];
+
+return $form_file;
 
 /* =====================================================*/
 
