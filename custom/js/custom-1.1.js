@@ -1335,16 +1335,12 @@ function validar_identificacion() {
   } else {
     identificacion = $("#number-document-two").val();
   }
-
-  datos = { identificacion };
-  //console.log(datos);
-
   if (identificacion != "") {
     $.ajax({
       type: "POST",
       url: "https://services.nikkenlatam.com/api/validate_identity",
       datatype: "application/json",
-      data: datos,
+      data: {identificacion},
       success: function (resp) {
         response = JSON.parse(resp);
         if (response.status == 200 && response.validate == 1) {
@@ -1352,6 +1348,7 @@ function validar_identificacion() {
             "<strong>Lo sentimos, el número de identificación ya ha sido utilizado.<br>Te sugerimos contactar a servicio a clientes para validar tu información.",
             "warning"
           );
+          $('#validator-identification').val('');
           if (pais != 7) {
             $("#number-document-one").val("");
             $("#number-document-one").focus();
