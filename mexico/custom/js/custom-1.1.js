@@ -1819,19 +1819,19 @@ function Search_colony(municipality)
 //Validacion identificacion 2 pasos
 function validar_identificacion() {
   identificacion = $("#number-document-two").val().trim();
-  pais = $("#country").val();
-  datos = { identificacion, pais };
+
  // console.log(datos);
 
   if (identificacion != "") {
     if (identificacion != "XAXX010101000") {
       $.ajax({
         type: "POST",
-        url: "https://cmsnikken.nikkenlatam.com/api/validar_identificacion",
+        url: "https://services.nikkenlatam.com/api/validate_identity",
         datatype: "application/json",
-        data: datos,
+        data: {identificacion},
         success: function (resp) {
-          if (resp == 1) {
+            response = JSON.parse(resp);
+          if (response.status == 200 && response.validate == 1) {
             View_alert(
               "<strong>Lo sentimos, el número de identificación ya ha sido utilizado.<br>Te sugerimos contactar a servicio a clientes para validar tu información.",
               "warning"
