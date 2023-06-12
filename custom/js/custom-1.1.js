@@ -1341,6 +1341,9 @@ function validar_identificacion() {
       url: "https://services.nikkenlatam.com/api/validate_identity",
       datatype: "application/json",
       data: {identificacion},
+      beforeSend : function(){
+        $('#btn-continue').prop('disabled',true);
+      },
       success: function (resp) {
         response = JSON.parse(resp);
         if (response.status == 200 && response.validate == 1) {
@@ -1363,6 +1366,21 @@ function validar_identificacion() {
         //  $('#type-incorporate').html(resp)
         //console.log(resp);
       },
+    }).fail(function () {
+        View_alert(
+            "<strong>Lo sentimos, ocurrió un error favor de intentar nuevamente",
+            "warning"
+          );
+          $('#validator-identification').val('');
+          if (pais != 7) {
+            $("#number-document-one").val("");
+            $("#number-document-one").focus();
+          } else {
+            $("#number-document-two").val("");
+            $("#number-document-two").focus();
+          }
+    }).always(function () {
+        $('#btn-continue').prop('disabled',false);
     });
   }
 }
