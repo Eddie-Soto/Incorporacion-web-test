@@ -1450,6 +1450,9 @@ function Validate_email(email)
                 type: "POST",
                 datatype: "application/json",
                 data: { email },
+                beforeSend: function(){
+                    $('#btn-continue').prop('disabled',true);
+                },
                 success: function (resp) {
                     response = JSON.parse(resp);
                   if(response.status == 200){
@@ -1490,6 +1493,13 @@ function Validate_email(email)
 
                     
                 },
+            }).fail(function () {
+                $('#validator-email').val('');
+                    View_alert("Lo sentimos, " + 'hubo un error de conexión por favor escriba de nuevo su correo.', "danger");
+                    $('#email-incorporate').val('');
+
+            }).always(function () {
+                $('#btn-continue').prop('disabled',false);
             });
         }else{
             $('#validator-email').val('');
