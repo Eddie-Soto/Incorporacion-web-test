@@ -242,7 +242,16 @@ function validar_identificacion() {
           //  $('#type-incorporate').html(resp)
           //console.log(resp);
         },
-      });
+      }).fail(function () {
+        View_alert(
+            "<strong>Lo sentimos, ocurrió un error favor de intentar nuevamente",
+            "warning"
+          );
+          $("#number-document-one").val("");
+          $("#number-document-one").focus();
+    }).always(function () {
+        $('#btn-continue').prop('disabled',false);
+    });
   }
 }
 
@@ -1277,6 +1286,13 @@ function Validate_email(email)
 
                     
                 },
+            }).fail(function () {
+                $('#validator-email').val('');
+                    View_alert("Lo sentimos, " + 'hubo un error de conexión por favor escriba de nuevo su correo.', "danger");
+                    $('#email-incorporate').val('');
+
+            }).always(function () {
+                $('#btn-continue').prop('disabled',false);
             });
         }else{
             $('#validator-email').val('');
