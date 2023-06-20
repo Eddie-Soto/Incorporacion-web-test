@@ -27,7 +27,7 @@ function connect_new_tv()
 
 function connect_new_tv_test()
 {
-	$conn = mysqli_connect("52.8.217.47", "forge", "jTalzP67KvNYWDVH4UBo");
+	$conn = mysqli_connect("35.207.42.243", "forge", "jTalzP67KvNYWDVH4UBo");
 	mysqli_select_db($conn, "testmitiendanikken_04_05_2019");
 	mysqli_set_charset( $conn, 'utf8');
 
