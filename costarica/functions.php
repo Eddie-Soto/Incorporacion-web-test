@@ -419,7 +419,7 @@ function Code_consecutive()
 
 
 
-		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes_test order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes order by id_consecutive_code desc");
 
 		$queryResult->execute();
 
@@ -433,7 +433,7 @@ function Code_consecutive()
 
 
 
-			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes_test (code) VALUES (:code)";
+			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes (code) VALUES (:code)";
 
 			$query = $pdo->prepare($sql);
 
@@ -492,14 +492,14 @@ function Code_consecutive_second()
 		$pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes_test order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes order by id_consecutive_code desc");
 		$queryResult->execute();
 		$done = $queryResult->fetch();
 		if($done)
 		{
 			$code = $done['code'] + 1;
 
-			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes_test (code) VALUES (:code)";
+			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes (code) VALUES (:code)";
 			$query = $pdo->prepare($sql);
 			$result = $query->execute([
 				'code'	=> $code

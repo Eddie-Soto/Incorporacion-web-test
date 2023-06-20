@@ -31,7 +31,7 @@ function Code_consecutive()
 
 
 
-		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes_test order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes order by id_consecutive_code desc");
 
 		$queryResult->execute();
 
@@ -45,7 +45,7 @@ function Code_consecutive()
 
 
 
-			$sql = "INSERT INTO consecutive_codes_test (code) VALUES (:code)";
+			$sql = "INSERT INTO consecutive_codes (code) VALUES (:code)";
 
 			$query = $pdo->prepare($sql);
 
@@ -91,7 +91,7 @@ function Code_consecutive()
 
 //Generar consecutivo de cÃ³digo
 
-//Generar consecutivo de código alternativa
+//Generar consecutivo de cï¿½digo alternativa
 function Code_consecutive_second()
 {
 	$dbHost = '104.130.46.73';
@@ -104,14 +104,14 @@ function Code_consecutive_second()
 		$pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes_test order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM consecutive_codes order by id_consecutive_code desc");
 		$queryResult->execute();
 		$done = $queryResult->fetch();
 		if($done)
 		{
 			$code = $done['code'] + 1;
 
-			$sql = "INSERT INTO consecutive_codes_test (code) VALUES (:code)";
+			$sql = "INSERT INTO consecutive_codes (code) VALUES (:code)";
 			$query = $pdo->prepare($sql);
 			$result = $query->execute([
 				'code'	=> $code
@@ -133,12 +133,12 @@ function Code_consecutive_second()
 		exit;
 	}
 }
-//Generar consecutivo de código alternativa
-//Información por país
+//Generar consecutivo de cï¿½digo alternativa
+//Informaciï¿½n por paï¿½s
 	function Search_country_info($country){
 		if($country == 0)
 		{
-			return array("servicio.lat@nikkenlatam.com", "latinoamerica", "Latinoamérica", "LAT");
+			return array("servicio.lat@nikkenlatam.com", "latinoamerica", "Latinoamï¿½rica", "LAT");
 		}
 		if($country == 1)
 		{
@@ -146,11 +146,11 @@ function Code_consecutive_second()
 		}
 		if($country == 2)
 		{
-			return array("servicio.mex@nikkenlatam.com", "mexico", "México", "MEX");
+			return array("servicio.mex@nikkenlatam.com", "mexico", "Mï¿½xico", "MEX");
 		}
 		if($country == 3)
 		{
-			return array("servicio.per@nikkenlatam.com", "peru", "Perú", "PER");
+			return array("servicio.per@nikkenlatam.com", "peru", "Perï¿½", "PER");
 		}
 		if($country == 4)
 		{
@@ -158,7 +158,7 @@ function Code_consecutive_second()
 		}
 		if($country == 5)
 		{
-			return array("servicio.pan@nikkenlatam.com", "panama", "Panamá", "PAN");
+			return array("servicio.pan@nikkenlatam.com", "panama", "Panamï¿½", "PAN");
 		}
 		if($country == 6)
 		{
@@ -181,7 +181,7 @@ function Code_consecutive_second()
 			return array("servicio.lat@nikkenlatam.com", "chile", "Chile", "CHL");
 		}
 	}
-//Información por país
+//Informaciï¿½n por paï¿½s
 //Asignar sponsor automaticamente
 function Assigned_sponsores($name,$email,$phone,$country,$state,$platform,$user)
 {
@@ -229,7 +229,7 @@ if($email_client != ""){
 	  	if($row > 0){
 	  		$code_customers = $row["code_customers"];
 
-	  		/*Validar si el asesor está como nivel 0 -> Manual */
+	  		/*Validar si el asesor estï¿½ como nivel 0 -> Manual */
 				$queryResult = $pdo->prepare("SELECT id_panel_assigned_sponsor, name as name_abi, country as country_abi FROM nikkenla_administracion.panel_assigned_sponsor where code = :code and level = 0");
 			  	$queryResult->execute(array(':code' => $code_customers));
 			  	$row = $queryResult->fetch(PDO::FETCH_ASSOC);
@@ -246,11 +246,11 @@ if($email_client != ""){
 						$result = $query->execute([
 							'code' => $code_customers,
 							'level' => 0,
-							'user_create' => 'Proceso automático UBI'
+							'user_create' => 'Proceso automï¿½tico UBI'
 						]);
 					/*Guardar en base de datos*/
 
-					/*Actualizar información del nuevo registro*/
+					/*Actualizar informaciï¿½n del nuevo registro*/
 						$queryResult = $pdo->prepare("SELECT t0.id_panel_assigned_sponsor, t1.nombre, t1.correo, t1.pais, t1.telefono, t1.celular, t1.estado, t1.rango FROM nikkenla_administracion.panel_assigned_sponsor t0 inner join nikkenla_marketing.control_ci t1 on t0.code = t1.codigo and t1.estatus = 1 and t1.b1 = 1 and t1.tipo = 'CI' WHERE t0.code = :code and t0.status = 1");
 					  	$queryResult->execute(array(':code' => $code_customers));
 					  	while($row = $queryResult->fetch(PDO::FETCH_ASSOC)){
@@ -284,9 +284,9 @@ if($email_client != ""){
 			                    'code' => $code_customers
 			                ]);
 					  	}
-				  	/*Actualizar información del nuevo registro*/
+				  	/*Actualizar informaciï¿½n del nuevo registro*/
 			  	}
-			/*Validar si el asesor está como nivel 0 -> Manual */
+			/*Validar si el asesor estï¿½ como nivel 0 -> Manual */
 
 			/*Guardar registro cliente manual*/
 				$sql = "INSERT INTO nikkenla_administracion.panel_assigned_sponsor_clients (id_panel_assigned_sponsor, name, email, phone, state, country, user_assigned, external_url, type) VALUES (:id_panel_assigned_sponsor, :name, :email, :phone, :state, :country, :user_assigned, :external_url, :type)";
@@ -298,9 +298,9 @@ if($email_client != ""){
 					'phone' => $phone_client,
 					'state' => $state_client,
 					'country' => $country_client,
-					'user_assigned' => 'Proceso automático UBI',
+					'user_assigned' => 'Proceso automï¿½tico UBI',
 					'external_url' => $platform_client,
-					'type' => 'Automático'
+					'type' => 'Automï¿½tico'
 				]);
 			/*Guardar registro cliente manual*/
 
@@ -551,7 +551,7 @@ function Assigned_sponsor($name,$email,$phone,$country,$state,$platform,$user)
 			return $code;
 		}
 
-		echo "<strong>no fue posible toda la incorporación</strong>, error al asignar sponsor";
+		echo "<strong>no fue posible toda la incorporaciï¿½n</strong>, error al asignar sponsor";
 		exit;
 	//Asignar sponsor
 
