@@ -20,11 +20,11 @@ $counter = 0;
 
 ?><option value="">Departamento</option><?php
 
-$queryResult = $pdo->prepare("SELECT DISTINCT state_code, state_name FROM nikkenla_marketing.control_states where pais = :country order by state_name ASC");
+$queryResult = $pdo->prepare("SELECT DISTINCT abreviature_state, state_name FROM nikkenla_marketing.control_states where pais = :country order by state_name ASC");
 $queryResult->execute(array(':country' => $country));
 while($row = $queryResult->fetch(PDO::FETCH_ASSOC))
 {
-	?><option value="<?php echo $row['state_code'] ?>" <?php if($row['state_name'] == ucfirst(strtolower((trim($residency_two_nc))))){ echo "selected"; $counter++; } ?>><?php echo $row['state_name']; ?></option><?php
+	?><option value="<?php echo $row['abreviature_state'] ?>" <?php if($row['state_name'] == ucfirst(strtolower((trim($residency_two_nc))))){ echo "selected"; $counter++; } ?>><?php echo $row['state_name']; ?></option><?php
 }
 
 if($counter > 0){
