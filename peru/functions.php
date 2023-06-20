@@ -413,7 +413,7 @@ function Code_consecutive()
 		{
 			$code = $done['code'] + 2;
 
-			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes (code) VALUES (:code)";
+			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes_test (code) VALUES (:code)";
 			$query = $pdo->prepare($sql);
 			$result = $query->execute([
 				'code'	=> $code
@@ -457,7 +457,7 @@ function Code_consecutive_second()
 		{
 			$code = $done['code'] + 1;
 
-			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes (code) VALUES (:code)";
+			$sql = "INSERT INTO nikkenla_incorporation.consecutive_codes_test (code) VALUES (:code)";
 			$query = $pdo->prepare($sql);
 			$result = $query->execute([
 				'code'	=> $code
