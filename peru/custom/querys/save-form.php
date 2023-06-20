@@ -225,6 +225,8 @@ $bank_type = $_POST["bank_type"];
 if($bank_type == 0){	$bank_type = 0;	}
 
 
+$bank = $bank =='' ? 0 : $bank;
+$bank_type = $bank_type =='' ? 0 : $bank_type;
 
 $number_account = $_POST["number_account"];
 
