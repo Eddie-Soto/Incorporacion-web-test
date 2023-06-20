@@ -586,7 +586,8 @@ catch (Exception $e)
 
 {
 
-	$result = $e;
+	$result = false;
+	$error = $e;
 
 }
  
@@ -598,7 +599,7 @@ if($result != true)
 
 {
 
-	echo "<strong>no fue posible guardar la incorporaci�n</strong>, por favor verifica la informaci�n e intentalo de nuevo " . $result;
+	echo "<strong>no fue posible guardar la incorporaci�n</strong>, por favor verifica la informaci�n e intentalo de nuevo " . $error;
 
 	exit;
 
