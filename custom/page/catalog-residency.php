@@ -58,11 +58,12 @@ if($country == 8)
 
 ?><option value=""><?php echo $residency_two_value ?></option><?php
 
-$queryResult = $pdo->prepare("SELECT code, name FROM citys where country = :country order by name ASC");
+// $queryResult = $pdo->prepare("SELECT code, name FROM citys where country = :country order by name ASC");
+$queryResult = $pdo->prepare("SELECT distinct(state_name),abreviature_state  from control_states cs where pais = :country order by state_name asc");
 $queryResult->execute(array(':country' => $country));
 while($row = $queryResult->fetch(PDO::FETCH_ASSOC))
 {
-	?><option value="<?php echo $row['code'] ?>" <?php if($row["code"] == $residency_two_nc){ echo "selected"; } ?>><?php echo mb_convert_case(mb_strtolower($row['name']), MB_CASE_TITLE, "UTF-8");; ?></option><?php
+	?><option value="<?php echo $row['abreviature_state'] ?>" <?php if($row["state_name"] == $residency_two_nc){ echo "selected"; } ?>><?php echo mb_convert_case(mb_strtolower($row['state_name']), MB_CASE_TITLE, "UTF-8");; ?></option><?php
 }
 
 ?>
