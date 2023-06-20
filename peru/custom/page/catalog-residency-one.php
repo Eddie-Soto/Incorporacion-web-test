@@ -21,7 +21,7 @@ $counter = 0;
 
 ?><option value="">Provincia</option><?php
 
-$queryResult = $pdo->prepare("SELECT DISTINCT province_code, province_name FROM nikkenla_marketing.control_states where pais = :country and state_code = :state_code order by province_name ASC");
+$queryResult = $pdo->prepare("SELECT DISTINCT province_code, province_name FROM nikkenla_marketing.control_states where pais = :country and abreviature_state = :state_code order by province_name ASC");
 $queryResult->execute(array(':country' => $country, ':state_code' => $value));
 while($row = $queryResult->fetch(PDO::FETCH_ASSOC))
 {
