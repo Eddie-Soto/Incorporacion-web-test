@@ -21,7 +21,7 @@ $value_one = $_GET["value_one"];
 
 ?><option value="" selected>Distrito</option><?php
 
-$queryResult = $pdo->prepare("SELECT DISTINCT colony_code, colony_name FROM nikkenla_marketing.control_states where pais = :country and province_code = :province_code and state_code = :state_code order by colony_name ASC");
+$queryResult = $pdo->prepare("SELECT DISTINCT colony_code, colony_name FROM nikkenla_marketing.control_states where pais = :country and province_code = :province_code and abreviature_state = :state_code order by colony_name ASC");
 $queryResult->execute(array(':country' => $country, ':province_code' => $value_one, ':state_code' => $value));
 while($row = $queryResult->fetch(PDO::FETCH_ASSOC))
 {
