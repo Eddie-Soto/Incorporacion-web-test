@@ -11,7 +11,7 @@ $type_incorporate = $_POST["type_incorporate"];
 
 /*SEGMENTACION*/
 $segmentacion = $_POST["segmentacion"];
-/* Logica que verifica el nuemro de archivos al final del formularío solo para COLOMBIA */
+/* Logica que verifica el nuemro de archivos al final del formularï¿½o solo para COLOMBIA */
 /*
 if($country == 1){
 	if($type == 1 and $type_incorporate == 1){ // si es asesor y es persona natural
@@ -19,7 +19,7 @@ if($country == 1){
 				$count1=$_SESSION["count_files"];
 				$ope = $count1 - $_SESSION["cou"];
 				if($ope < 1){
-					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 1 archivo </strong> <br>";
+					echo "Verifica el nï¿½mero de archivos que debes subir en el paso 3 <strong> debes subir 1 archivo </strong> <br>";
 					//echo "se han borrado hasta el momento".$_SESSION["cou"];
 					//echo "<br>se deben subir: ".$count1;
 					//echo "<br> la operacion da:".$ope;
@@ -36,7 +36,7 @@ if($country == 1){
 				$count1=$_SESSION["count_files"];
 				$ope = $count1 - $_SESSION["cou"];
 				if($ope < 5){
-					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 5 archivos </strong> <br>";
+					echo "Verifica el nï¿½mero de archivos que debes subir en el paso 3 <strong> debes subir 5 archivos </strong> <br>";
 					//echo "se han borrado hasta el momento".$_SESSION["cou"];
 					//echo "<br>se deben subir: ".$count1;
 					//echo "<br> la operacion da:".$ope;
@@ -55,7 +55,7 @@ if($country == 1){
 				$count1=$_SESSION["count_files"];
 				$ope = $count1 - $_SESSION["cou"];
 				if($ope < 4){
-					echo "Verifica el número de archivos que debes subir en el paso 3 <strong> debes subir 4 archivos </strong> <br>";
+					echo "Verifica el nï¿½mero de archivos que debes subir en el paso 3 <strong> debes subir 4 archivos </strong> <br>";
 				//	echo "se han borrado hasta el momento".$_SESSION["cou"];
 			//		echo "<br>se deben subir: ".$count1;
 			//		echo "<br> la operacion da:".$ope;
@@ -71,7 +71,7 @@ if($country == 1){
 session_destroy();
 }
 */
-/* Logica que verifica el nuemro de archivos al final del formularío solo para COLOMBIA */
+/* Logica que verifica el nuemro de archivos al final del formularï¿½o solo para COLOMBIA */
 
 
 /*Variables*/
@@ -291,7 +291,7 @@ if($done)
 	exit;
 	/*if($done['payment'] == 0)
 	{
-		echo "el correo ingresado esta pendiente por generar el pago del Kit de inicio, por favor, utiliza la opción <strong>RETOMAR INCORPORACIÓN</strong>";
+		echo "el correo ingresado esta pendiente por generar el pago del Kit de inicio, por favor, utiliza la opciï¿½n <strong>RETOMAR INCORPORACIï¿½N</strong>";
 		exit;
 	}
 	else
@@ -345,7 +345,7 @@ try
 if($result != true)
 
 {
-	echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo kit USD " . $result;
+	echo "<strong>no fue posible guardar la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo kit USD " . $result;
 
 	exit;
 }
@@ -598,7 +598,7 @@ if($result != true)
 
 {
 
-	echo "<strong>no fue posible guardar la incorporación</strong>, por favor verifica la información e intentalo de nuevo " . $result;
+	echo "<strong>no fue posible guardar la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo " . $result;
 
 	exit;
 
@@ -712,7 +712,7 @@ else
 
 	{
 
-		echo "<strong>no fue posible toda la incorporación</strong>, por favor verifica la información e intentalo de nuevo";
+		echo "<strong>no fue posible toda la incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo";
 
 		exit;
 
@@ -791,8 +791,8 @@ else
 
 			{
 
-				echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
-
+				// echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
+				echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item;
 			}
 
 			else if($type == 0 and $item=="5032") /*Enviar a arma tu entorno*/
@@ -802,7 +802,7 @@ else
 				echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate-apartado.php?email=" . base64_encode($email)."&item=5032";
 				//echo "1///http://test.mitiendanikken.com/mitiendanikken/auto/login/". base64_encode($email);
 				//echo "1///https://nikkenlatam.com/armatuentornotest/login-integration-incorporation.php?email=" . base64_encode($email);
-
+				
 			}
 			else if($type == 0 and $item=="5031") /*Enviar a arma tu entorno*/
 
@@ -818,7 +818,7 @@ else
 
 			{
 
-				echo "<strong>no fue posible detectar el tipo de incorporación</strong>, por favor verifica la información e intentalo de nuevo";
+				echo "<strong>no fue posible detectar el tipo de incorporaciï¿½n</strong>, por favor verifica la informaciï¿½n e intentalo de nuevo";
 
 				exit;
 

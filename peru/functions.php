@@ -406,7 +406,7 @@ function Code_consecutive()
 		$pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes_test order by id_consecutive_code desc");
 		$queryResult->execute();
 		$done = $queryResult->fetch();
 		if($done)
@@ -450,7 +450,7 @@ function Code_consecutive_second()
 		$pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes order by id_consecutive_code desc");
+		$queryResult = $pdo->prepare("SELECT code FROM nikkenla_incorporation.consecutive_codes_test order by id_consecutive_code desc");
 		$queryResult->execute();
 		$done = $queryResult->fetch();
 		if($done)
