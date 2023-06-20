@@ -59,7 +59,7 @@ if($country == 8)
 ?><option value=""><?php echo $residency_two_value ?></option><?php
 
 // $queryResult = $pdo->prepare("SELECT code, name FROM citys where country = :country order by name ASC");
-$queryResult = $pdo->prepare("SELECT distinct(state_name),abreviature_state  from control_states cs where pais = :country order by state_name asc");
+$queryResult = $pdo->prepare("SELECT distinct(state_name),abreviature_state  from nikkenla_marketing.control_states cs where pais = :country order by state_name asc");
 $queryResult->execute(array(':country' => $country));
 while($row = $queryResult->fetch(PDO::FETCH_ASSOC))
 {
