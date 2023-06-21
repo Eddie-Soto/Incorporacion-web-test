@@ -793,11 +793,14 @@ else
 			if($type == 1) /*Enviar a 7/10*/
 
 			{
-
+				$url="https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit;
+				
+				echo "1///https://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$type_kit;
+				
 				// echo "1///https://nikkenlatam.com/interno/carrito-compras-test/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item . "&item2=" . $playera;
-				$url = 'http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=' . base64_encode($email) . '&item=' . $type_kit;
-                header("Location:" . $url, TRUE, 301);
-                exit();
+				// $url = 'http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=' . base64_encode($email) . '&item=' . $type_kit;
+                // header("Location:" . $url, TRUE, 301);
+                // exit();
 				//echo "1///http://shopingcarttest.nikkenlatam.com/login-integration-incorporate.php?email=" . base64_encode($email)."&item=".$item;
 			}
 
