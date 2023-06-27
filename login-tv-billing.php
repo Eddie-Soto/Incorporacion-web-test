@@ -33,15 +33,6 @@ if(isset($sponsor) && isset($country)){
 
 
 // /*Redireccionar*/
-switch ($country) {
-	case 1:
-		header('location: index.php');
-		break;
-	
-	default:
-		# code...
-		break;
-}
 header('location: index.php');
 exit;
 ob_end_flush();
