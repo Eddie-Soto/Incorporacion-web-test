@@ -12,9 +12,13 @@ $sponsor = $_GET["sap_code"];
 $country = $_GET["country"];
 
 if(isset($sponsor) && isset($country)){
-	echo "se recibio -".$sponsor ." - ".$country;
+	// echo "se recibio -".$sponsor ." - ".$country;
+	$_SESSION["sponsor"] = $sponsor;
+	$_SESSION["country_tv"] = $country;
+	
 }else{
-	echo "no se recibio alguno";
+	echo "no se obtuvó el dato";
+	exit;
 }
 
 // if(isset($_GET["sap_code"])){
@@ -29,7 +33,16 @@ if(isset($sponsor) && isset($country)){
 
 
 // /*Redireccionar*/
-// header('location: index.php');
-// exit;
-// ob_end_flush();
+switch ($country) {
+	case 1:
+		header('location: index.php');
+		break;
+	
+	default:
+		# code...
+		break;
+}
+header('location: index.php');
+exit;
+ob_end_flush();
 ?>

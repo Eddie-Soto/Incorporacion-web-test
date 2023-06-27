@@ -344,11 +344,19 @@
 										<div class="form-group radio_input">
 
 											<label><input type="radio" value="1" name="type" id="abi" checked onclick="View_identity(); View_upload_documents(); View_sponsor(); View_kit(1, document.getElementById('country').value);">&nbsp;Asesor de Bienestar Independiente Influencer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-
 <?php @session_name("incorporacion");
 
 @session_start();
 ?>
+<?php if(isset($_SESSION["country_tv"])) {
+	?>
+	<script>
+		$('#country').val($_SESSION["country_tv"]);
+		$('#country').change();
+	</script>
+	<?php
+}?>
+
 
 											<?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
 
