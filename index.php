@@ -348,15 +348,7 @@
 
 @session_start();
 ?>
-<?php if(isset($_SESSION["country_tv"])) {
-	?>
-	<script>
-		// $('#country').val($_SESSION["country_tv"]);
-		// $('#country').change();
-		Verify_country($_SESSION["country_tv"]);
-	</script>
-	<?php
-}?>
+
 
 
 											<?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
@@ -607,6 +599,7 @@
 	<!-- Jquery-->
 
 	<script src="js/jquery-3.2.1.min.js"></script>
+	
 
 	<!-- Common script -->
 
@@ -672,6 +665,15 @@
 
 	" Por tu incorporación en el mes de abril del 2021,  queremos que disfrutes  de tu sistema de aire KenkoAir Purifier con un 30% de descuento. Comparte este beneficio con las personas que te rodean y maximiza tus ingresos.  Ten presente que este beneficio se activara en 2 horas en tu Tienda Virtual."
 -->
+<?php if(isset($_SESSION["country_tv"])) {
+	?>
+	<script>
+		// $('#country').val($_SESSION["country_tv"]);
+		// $('#country').change();
+		Verify_country($_SESSION["country_tv"]);
+	</script>
+	<?php
+}?>
 
 	<script>
 
