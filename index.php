@@ -351,8 +351,9 @@
 <?php if(isset($_SESSION["country_tv"])) {
 	?>
 	<script>
-		$('#country').val($_SESSION["country_tv"]);
-		$('#country').change();
+		// $('#country').val($_SESSION["country_tv"]);
+		// $('#country').change();
+		Verify_country($_SESSION["country_tv"]);
 	</script>
 	<?php
 }?>
