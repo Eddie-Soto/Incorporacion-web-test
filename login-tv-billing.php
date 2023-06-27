@@ -17,19 +17,19 @@ if(isset($sponsor) && isset($country)){
 	echo "no se recibio alguno";
 }
 
-if(isset($_GET["sap_code"])){
-	$_SESSION["sponsor"] = base64_decode($_GET["sap_code"]);
+// if(isset($_GET["sap_code"])){
+// 	$_SESSION["sponsor"] = base64_decode($_GET["sap_code"]);
 
-}else{
-	echo "no se obtuvó el dato";
-	exit;
-}
-
-
+// }else{
+// 	echo "no se obtuvó el dato";
+// 	exit;
+// }
 
 
-/*Redireccionar*/
-header('location: index.php');
-exit;
-ob_end_flush();
+
+
+// /*Redireccionar*/
+// header('location: index.php');
+// exit;
+// ob_end_flush();
 ?>
