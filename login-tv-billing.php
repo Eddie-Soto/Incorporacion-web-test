@@ -12,9 +12,9 @@ $sponsor = $_GET["sap_code"];
 $country = $_GET["country"];
 
 if(isset($sponsor) && isset($country)){
-	return "se recibio -".$sponsor ." - ".$country;
+	echo "se recibio -".$sponsor ." - ".$country;
 }else{
-	return "no se recibio alguno";
+	echo "no se recibio alguno";
 }
 
 if(isset($_GET["sap_code"])){
