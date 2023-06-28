@@ -1,3 +1,7 @@
+<?php if(isset($_SESSION["country_tv"])) {
+	$country_tv = $_SESSION["country_tv"];
+}?>
+
 <!DOCTYPE html> 
 
 <html lang="es"> 
@@ -338,12 +342,9 @@
 
 											</div>
 </div>
-<?php if(isset($_SESSION["country_tv"])) {
-	?>
-	<input type="hidden" name="country_tv" id="country_tv" value="<?php echo $_SESSION["country_tv"] ?>">
-	<?php
-}?>
-							
+
+<input type="hidden" name="country_tv" id="country_tv" value="<?php if(isset($country_tv)) echo $country_tv ?>">
+
 									<div class="col-md-12 format-radio">
 
 										<div class="form-group radio_input">
