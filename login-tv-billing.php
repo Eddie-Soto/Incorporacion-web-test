@@ -7,8 +7,8 @@ session_name("incorporacion");
 session_start();
 
 
-// $sponsor = base64_decode($_GET["sap_code"]);
-$sponsor = $_GET["sap_code"];
+$sponsor = base64_decode($_GET["sap_code"]);
+//$sponsor = $_GET["sap_code"];
 $country = $_GET["country"];
 
 if(isset($sponsor) && isset($country)){
