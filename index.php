@@ -350,7 +350,7 @@
 <?php @session_name("incorporacion");
 
 @session_start();
- if(isset($_SESSION["country_tv"])) {
+ if(isset($_SESSION["sponsor"])) {
 	$country_tv = $_SESSION["country_tv"];
 }
 ?>
