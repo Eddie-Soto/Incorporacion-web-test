@@ -674,6 +674,7 @@
 	" Por tu incorporación en el mes de abril del 2021,  queremos que disfrutes  de tu sistema de aire KenkoAir Purifier con un 30% de descuento. Comparte este beneficio con las personas que te rodean y maximiza tus ingresos.  Ten presente que este beneficio se activara en 2 horas en tu Tienda Virtual."
 -->
 
+
 	<script>
 
 		function tst(){
@@ -1126,6 +1127,11 @@
 
 
     </script>
+	<?php if(isset($country_tv)){ ?>
+	<script>
+		Verify_country($('#country_tv').val());
+	</script>
+										<?php }?>
 
 	
 
