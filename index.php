@@ -367,7 +367,7 @@
 
 									</div>
 									<?php if(isset($country_tv)){ ?>
-									<input type="hidden" name="country_tv" id="country_tv" value="3">
+									<input type="hidden" name="country_tv" id="country_tv" value="<?php echo $country_tv?>">
 										<?php }?>
 
 									<div class="row">
