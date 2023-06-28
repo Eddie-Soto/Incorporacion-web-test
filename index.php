@@ -4,7 +4,7 @@
 @session_start();
  if(isset($_SESSION["country_tv"])) {
 	$country_tv = $_SESSION["country_tv"];
-	var_dump($country_tv);
+	// var_dump($country_tv);
 }
 ?>
 <!DOCTYPE html> 
@@ -367,7 +367,7 @@
 
 									</div>
 									<?php if(isset($country_tv)){ ?>
-									<input type="hidden" name="country_tv" id="country_tv" value="2">
+									<input type="hidden" name="country_tv" id="country_tv" value="3">
 										<?php }?>
 
 									<div class="row">
