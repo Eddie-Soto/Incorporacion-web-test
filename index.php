@@ -1,15 +1,14 @@
-
 <?php @session_name("incorporacion");
 
 @session_start();
- if(isset($_SESSION["country_tv"])) {
+if (isset($_SESSION["country_tv"])) {
 	$country_tv = $_SESSION["country_tv"];
 	// var_dump($country_tv);
 }
 ?>
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
-<html lang="es"> 
+<html lang="es">
 
 
 
@@ -77,7 +76,7 @@
 
 	<link href="css/skins/square/grey.css" rel="stylesheet">
 
-	
+
 
 	<!-- YOUR CUSTOM CSS -->
 
@@ -85,16 +84,16 @@
 
 	<!-- Librerias de notificaciones   -->
 
-  	<link href="plugins/notification/animate.min.css" rel="stylesheet"/>
+	<link href="plugins/notification/animate.min.css" rel="stylesheet" />
 
-  	<link href="plugins/notification/paper-dashboard.css" rel="stylesheet"/>
+	<link href="plugins/notification/paper-dashboard.css" rel="stylesheet" />
 
 
-	
+
 
 	<!-- Libreria para cargar archivos -->
 
-  	<link href="plugins/upload/src/jquery.fileuploader.css" media="all" rel="stylesheet">
+	<link href="plugins/upload/src/jquery.fileuploader.css" media="all" rel="stylesheet">
 
 	<link href="plugins/upload/examples/drag-drop/css/jquery.fileuploader-theme-dragdrop.css" media="all" rel="stylesheet">
 
@@ -118,29 +117,43 @@
 
 	<!-- Libreria de alertas javascript -->
 
-    <link rel="stylesheet" type="text/css" href="plugins/sweet-alert/sweetalert.css?2.2.5">
+	<link rel="stylesheet" type="text/css" href="plugins/sweet-alert/sweetalert.css?2.2.5">
 
-    <!-- Libreria de alertas javascript -->
+	<!-- Libreria de alertas javascript -->
 
 
 
-    <!--Start of Zendesk Chat Script-->
+	<!--Start of Zendesk Chat Script-->
 
-        <script type="text/javascript">
+	<script type="text/javascript">
+		window.$zopim || (function(d, s) {
+			var z = $zopim = function(c) {
+					z._.push(c)
+				},
+				$ = z.s =
 
-        window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+				d.createElement(s),
+				e = d.getElementsByTagName(s)[0];
+			z.set = function(o) {
+				z.set.
 
-        d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+				_.push(o)
+			};
+			z._ = [];
+			z.set._ = [];
+			$.async = !0;
+			$.setAttribute("charset", "utf-8");
 
-        _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+			$.src = "https://v2.zopim.com/?4zecWax83gctV361AWsdYBs6oAkS1Lz4";
+			z.t = +new Date;
+			$.
 
-        $.src="https://v2.zopim.com/?4zecWax83gctV361AWsdYBs6oAkS1Lz4";z.t=+new Date;$.
+			type = "text/javascript";
+			e.parentNode.insertBefore($, e)
+		})(document, "script");
+	</script>
 
-        type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-
-        </script>
-
-    <!--End of Zendesk Chat Script-->
+	<!--End of Zendesk Chat Script-->
 
 </head>
 
@@ -156,7 +169,7 @@
 
 	</div><!-- /Preload -->
 
-	
+
 
 	<div id="loader_form">
 
@@ -170,57 +183,57 @@
 
 		<div class="container-fluid">
 
-		    <div class="row">
+			<div class="row">
 
-                <div class="col-5">
+				<div class="col-5">
 
-                    <div id="logo_home">
+					<div id="logo_home">
 
-                        <h1><a href="index.html">Incorporación Web | NIKKEN Latinoamérica</a></h1>
+						<h1><a href="index.html">Incorporación Web | NIKKEN Latinoamérica</a></h1>
 
-                    </div>
+					</div>
 
-                </div>
+				</div>
 
-                <div class="col-7">
+				<div class="col-7">
 
-                    <div id="social">
+					<div id="social">
 
-                        <ul>
+						<ul>
 
-                            <li><a href="https://www.facebook.com/Nikkenlatinoamerica" target="_blank"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.facebook.com/Nikkenlatinoamerica" target="_blank"><i class="icon-facebook"></i></a></li>
 
-                            <li><a href="https://www.instagram.com/nikkenlatam/" target="_blank"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://www.instagram.com/nikkenlatam/" target="_blank"><i class="icon-instagram"></i></a></li>
 
-                            <li><a href="https://www.youtube.com/user/nikkenlatinoamerica/videos?flow=grid&view=1" target="_blank"><i class="icon-youtube"></i></a></li>
+							<li><a href="https://www.youtube.com/user/nikkenlatinoamerica/videos?flow=grid&view=1" target="_blank"><i class="icon-youtube"></i></a></li>
 
-                        </ul>
+						</ul>
 
-                    </div>
+					</div>
 
 
 
-                    <nav>
+					<nav>
 
-                        <ul class="cd-primary-nav">
+						<ul class="cd-primary-nav">
 
-                        	<li><a href="https://nikkenlatam.com/" class="animated_link">¿Qué es NIKKEN?</a></li>
+							<li><a href="https://nikkenlatam.com/" class="animated_link">¿Qué es NIKKEN?</a></li>
 
-                            <li><a href="https://nikkenlatam.com/" class="animated_link">Oficina Virtual</a></li>
+							<li><a href="https://nikkenlatam.com/" class="animated_link">Oficina Virtual</a></li>
 
-                            <li><a href="https://mitiendanikken.com/" class="animated_link">Tienda Virtual</a></li>
+							<li><a href="https://mitiendanikken.com/" class="animated_link">Tienda Virtual</a></li>
 
-                            <li><a href="http://blog.mitiendanikken.com/" class="animated_link">Blog</a></li>
+							<li><a href="http://blog.mitiendanikken.com/" class="animated_link">Blog</a></li>
 
-                            <li><a href="https://nikkenlatam.com/" class="animated_link">Contáctenos</a></li>
+							<li><a href="https://nikkenlatam.com/" class="animated_link">Contáctenos</a></li>
 
-                        </ul>
+						</ul>
 
-                    </nav>
+					</nav>
 
-                </div>
+				</div>
 
-            </div>
+			</div>
 
 		</div>
 
@@ -232,7 +245,7 @@
 
 		<div id="form_container">
 
-			
+
 
 			<div class="row">
 
@@ -248,30 +261,30 @@
 
 							<strong><u>Para que tu incorporación sea exitosa</u></strong>, ten a la mano la siguiente información antes de continuar:
 
-							<ul class="format-ul">
+						<ul class="format-ul">
 
-								<li>Copia del documento de identificación vigente.</li>
+							<li>Copia del documento de identificación vigente.</li>
 
-								<li>Copia de régimen tributario <small>(empresas)</small>.</li>
+							<li>Copia de régimen tributario <small>(empresas)</small>.</li>
 
-								<li>Información de domicilio y datos principales de contacto vigentes.</li>
+							<li>Información de domicilio y datos principales de contacto vigentes.</li>
 
-							</ul>
+						</ul>
 
-							<br/>
+						<br />
 
-							<p class="format-margin-bottom"><small>Si ya has iniciado el proceso de incorporación utiliza</small></p>
+						<p class="format-margin-bottom"><small>Si ya has iniciado el proceso de incorporación utiliza</small></p>
 
-							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-return-incorporate" data-keyboard="false">Retomar incorporación  <i class="pe-7s-info"></i></button>
+						<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-return-incorporate" data-keyboard="false">Retomar incorporación <i class="pe-7s-info"></i></button>
 
 						</p>
 
 						<div class="row">
-							
+
 							<div class="col-md-12">
-								<center><a class='flotante' target="_blank" href='https://wa.me/51989079782' ><img src='img/whatsapp1.jpg' width="200px" height="80px"  border="0"/></a></center>
+								<center><a class='flotante' target="_blank" href='https://wa.me/51989079782'><img src='img/whatsapp1.jpg' width="200px" height="80px" border="0" /></a></center>
 							</div>
-							
+
 						</div>
 
 					</div>
@@ -291,7 +304,7 @@
 
 
 						<form name="example-1" id="wrapped" method="POST">
-							
+
 
 							<input id="website" name="website" type="text" value="">
 
@@ -307,46 +320,46 @@
 
 								<div class="step">
 
-							
+
 
 									<h3 class="main_question"><strong>Paso 1/4</strong>Información general</h3>
 
 									<p>A continuación diligencia la siguiente información para <strong>iniciar con tu incorporación</strong> a NIKKEN Latinoamérica</p>
 
-<div class="col-md-12">
-<div class="form-group">
+									<div class="col-md-12">
+										<div class="form-group">
 
-												<div class="styled-select">
+											<div class="styled-select">
 
-													<select class="required input-country" onchange="getDataShirt(); Verify_country(this.value); Type_person(this.value); View_residency(this.value); View_identity(); View_upload_documents();  View_sponsor();  View_kit(1, this.value); Always_ABI(); " name="country" id="country">
+												<select class="required input-country" onchange="getDataShirt(); Verify_country(this.value); Type_person(this.value); View_residency(this.value); View_identity(); View_upload_documents();  View_sponsor();  View_kit(1, this.value); Always_ABI(); " name="country" id="country">
 
-														<option value="" selected>País de residencia</option>
+													<option value="" selected>País de residencia</option>
 
-														<option value="10">Chile</option>
+													<option value="10">Chile</option>
 
 
-														<option value="1">Colombia</option>
+													<option value="1">Colombia</option>
 
-														<option value="8">Costa Rica</option>
+													<option value="8">Costa Rica</option>
 
-														<option value="4">Ecuador</option>
+													<option value="4">Ecuador</option>
 
-														<option value="7">El Salvador</option>
+													<option value="7">El Salvador</option>
 
-														<option value="6">Guatemala</option>
+													<option value="6">Guatemala</option>
 
-														<option value="2">México</option>
+													<option value="2">México</option>
 
-														<option value="5">Panamá</option>
+													<option value="5">Panamá</option>
 
-														<option value="3">Perú</option>
+													<option value="3">Perú</option>
 
-													</select>
-
-												</div>
+												</select>
 
 											</div>
-</div>
+
+										</div>
+									</div>
 
 
 									<div class="col-md-12 format-radio">
@@ -358,21 +371,21 @@
 
 
 
-											<?php if(isset($_SESSION["kit"])){ ?>  <?php }else{ ?>
+											<?php if (isset($_SESSION["kit"])) { ?> <?php } else { ?>
 
-											<label><input type="radio" value="0" name="type" onclick="View_identity(); View_upload_documents(); View_sponsor(); View_hidde(); View_kit(0, document.getElementById('country').value);"  >&nbsp;Miembro de la Comunidad NIKKEN</label>
-										<?php } ?>
+												<label><input type="radio" value="0" name="type" onclick="View_identity(); View_upload_documents(); View_sponsor(); View_hidde(); View_kit(0, document.getElementById('country').value);">&nbsp;Miembro de la Comunidad NIKKEN</label>
+											<?php } ?>
 
 										</div>
 
 									</div>
-									<?php if(isset($country_tv)){ ?>
-									<input type="hidden" name="country_tv" id="country_tv" value="<?php echo $country_tv?>">
-										<?php }?>
+									<?php if (isset($country_tv)) { ?>
+										<input type="hidden" name="country_tv" id="country_tv" value="<?php echo $country_tv ?>">
+									<?php } ?>
 
 									<div class="row">
 
-										
+
 										<div class="col-md-12">
 
 											<div class="form-group">
@@ -408,7 +421,7 @@
 
 									<h3 class="main_question"><strong>Paso 2/4</strong>Información de titular</h3>
 
-									
+
 
 									<div id="identify-incorporate"></div>
 
@@ -430,7 +443,7 @@
 
 								<!-- /Formulario 3-->
 
-								
+
 
 								<div class="submit step">
 
@@ -452,9 +465,9 @@
 
 								<button type="button" name="backward" class="backward">Atrás </button>
 
-								<button type="button" name="forward" id="btn-continue"  class="forward">Continuar</button>
+								<button type="button" name="forward" id="btn-continue" class="forward">Continuar</button>
 
-								<button type="submit" name="process" id="btn-process-form"  class="submit process-button">Proceder a pagar</button>
+								<button type="submit" name="process" id="btn-process-form" class="submit process-button">Proceder a pagar</button>
 
 							</div>
 
@@ -474,7 +487,7 @@
 
 	</main>
 
-	
+
 
 	<footer id="home" class="clearfix">
 
@@ -492,7 +505,7 @@
 
 	<!-- end footer-->
 
-	
+
 
 	<div class="cd-overlay-nav">
 
@@ -607,7 +620,7 @@
 	<!-- Jquery-->
 
 	<script src="js/jquery-3.2.1.min.js"></script>
-	
+
 
 	<!-- Common script -->
 
@@ -643,7 +656,7 @@
 
 	<script src="plugins/notification/bootstrap-notify.js"></script>
 
-	
+
 
 	<!-- Libreria para cargar archivos -->
 
@@ -651,21 +664,21 @@
 
 	<script src="plugins/upload/examples/drag-drop/js/custom.js" type="text/javascript"></script>
 
-	
+
 
 	<!-- Librería para calendario -->
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 
 
 
 	<!-- Libreria de alertas javascript -->
 
-    <script src="plugins/sweet-alert/sweetalert.min.js?1.1.6"></script>
+	<script src="plugins/sweet-alert/sweetalert.min.js?1.1.6"></script>
 
-    <!-- Libreria de alertas javascript -->
+	<!-- Libreria de alertas javascript -->
 
 
 
@@ -676,39 +689,38 @@
 
 
 	<script>
+		function tst() {
 
-		function tst(){
-			
 			swal({
 				title: '¡Te damos la bienvenida a NIKKEN!',
 				text: 'Por tu incorporación en el mes de abril del 2021,  queremos que disfrutes  de tu sistema de aire KenkoAir Purifier con un 30% de descuento. Comparte este beneficio con las personas que te rodean y maximiza tus ingresos.  Ten presente que este beneficio se activara en 2 horas en tu Tienda Virtual.',
 				imageUrl: 'img/aire100.png',
-				
+
 				imageAlt: 'Custom image',
 			})
-			
-			
+
+
 		}
 
 		function Type_person(country)
 
 		{
 
-		    $('#type-incorporate').html('<option value="">Cargando...</option>');
+			$('#type-incorporate').html('<option value="">Cargando...</option>');
 
-		    $.ajax({
+			$.ajax({
 
-		        url: 'custom/page/type-incorporate.php',
+				url: 'custom/page/type-incorporate.php',
 
-		        data: 'country=' + country,
+				data: 'country=' + country,
 
-		        success: function(resp){
+				success: function(resp) {
 
-		         $('#type-incorporate').html(resp)
+					$('#type-incorporate').html(resp)
 
-		         }
+				}
 
-		    });
+			});
 
 		}
 
@@ -718,47 +730,45 @@
 
 		{
 
-		    var divMensaje = document.getElementById("names-incorporate");
+			var divMensaje = document.getElementById("names-incorporate");
 
-		    var ajax = Ajax();
-
-
-
-		    ajax.onreadystatechange=function()
-
-		    {
-
-		        if (ajax.readyState == 4 && ajax.status==200)
-
-		        {
-
-		            var scs=ajax.responseText.extractScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		            scs.evalScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		        }
-
-		        else
-
-		        {
-
-		            divMensaje.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
-
-		        }
-
-		    }
+			var ajax = Ajax();
 
 
 
-		    ajax.open("POST", "custom/page/name-incorporate.php", true);
+			ajax.onreadystatechange = function()
 
-		    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			{
 
-		    ajax.send("type=" + type);
+				if (ajax.readyState == 4 && ajax.status == 200)
+
+				{
+
+					var scs = ajax.responseText.extractScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+					scs.evalScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+				} else
+
+				{
+
+					divMensaje.innerHTML = '<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+
+				}
+
+			}
+
+
+
+			ajax.open("POST", "custom/page/name-incorporate.php", true);
+
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			ajax.send("type=" + type);
 
 		}
 
@@ -768,47 +778,45 @@
 
 		{
 
-		    var divMensaje = document.getElementById("residency-incorporate");
+			var divMensaje = document.getElementById("residency-incorporate");
 
-		    var ajax = Ajax();
-
-
-
-		    ajax.onreadystatechange=function()
-
-		    {
-
-		        if (ajax.readyState == 4 && ajax.status==200)
-
-		        {
-
-		            var scs=ajax.responseText.extractScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		            scs.evalScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		        }
-
-		        else
-
-		        {
-
-		            divMensaje.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
-
-		        }
-
-		    }
+			var ajax = Ajax();
 
 
 
-		    ajax.open("POST", "custom/page/residency-incorporate.php", true);
+			ajax.onreadystatechange = function()
 
-		    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			{
 
-		    ajax.send("country=" + country);
+				if (ajax.readyState == 4 && ajax.status == 200)
+
+				{
+
+					var scs = ajax.responseText.extractScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+					scs.evalScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+				} else
+
+				{
+
+					divMensaje.innerHTML = '<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+
+				}
+
+			}
+
+
+
+			ajax.open("POST", "custom/page/residency-incorporate.php", true);
+
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			ajax.send("country=" + country);
 
 		}
 
@@ -818,55 +826,53 @@
 
 		{
 
-		    var type = $('input[name=type]:checked', '#wrapped').val();
+			var type = $('input[name=type]:checked', '#wrapped').val();
 
-		    var type_incorporate = document.getElementById("type-incorporate").value;
+			var type_incorporate = document.getElementById("type-incorporate").value;
 
-		    var country = document.getElementById("country").value;
-
-
-
-		    var divMensaje = document.getElementById("identify-incorporate");
-
-		    var ajax = Ajax();
+			var country = document.getElementById("country").value;
 
 
 
-		    ajax.onreadystatechange=function()
+			var divMensaje = document.getElementById("identify-incorporate");
 
-		    {
-
-		        if (ajax.readyState == 4 && ajax.status==200)
-
-		        {
-
-		            var scs=ajax.responseText.extractScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		            scs.evalScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		        }
-
-		        else
-
-		        {
-
-		            divMensaje.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
-
-		        }
-
-		    }
+			var ajax = Ajax();
 
 
 
-		    ajax.open("POST", "custom/page/identity-incorporate.php", true);
+			ajax.onreadystatechange = function()
 
-		    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			{
 
-		    ajax.send("country=" + country + "&type=" + type + "&type_incorporate=" + type_incorporate);
+				if (ajax.readyState == 4 && ajax.status == 200)
+
+				{
+
+					var scs = ajax.responseText.extractScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+					scs.evalScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+				} else
+
+				{
+
+					divMensaje.innerHTML = '<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+
+				}
+
+			}
+
+
+
+			ajax.open("POST", "custom/page/identity-incorporate.php", true);
+
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			ajax.send("country=" + country + "&type=" + type + "&type_incorporate=" + type_incorporate);
 
 		}
 
@@ -876,64 +882,64 @@
 
 		{
 
-		    var type = $('input[name=type]:checked', '#wrapped').val();
+			var type = $('input[name=type]:checked', '#wrapped').val();
 
-		    var type_incorporate = document.getElementById("type-incorporate").value;
+			var type_incorporate = document.getElementById("type-incorporate").value;
 
-		    var country = document.getElementById("country").value;
-
-		   
-
-		    
-
-
-		    var cotitular = 0;
-
-		    if (jQuery("#check-cotitular").is(":checked")) { cotitular = 1; }
+			var country = document.getElementById("country").value;
 
 
 
-		    var divMensaje = document.getElementById("view-upload-document");
-
-		    var ajax = Ajax();
 
 
 
-		    ajax.onreadystatechange=function()
+			var cotitular = 0;
 
-		    {
-
-		        if (ajax.readyState == 4 && ajax.status==200)
-
-		        {
-
-		            var scs=ajax.responseText.extractScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		            scs.evalScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		        }
-
-		        else
-
-		        {
-
-		            divMensaje.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
-
-		        }
-
-		    }
+			if (jQuery("#check-cotitular").is(":checked")) {
+				cotitular = 1;
+			}
 
 
 
-		    ajax.open("POST", "custom/page/upload-documents-incorporate.php", true);
+			var divMensaje = document.getElementById("view-upload-document");
 
-		    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			var ajax = Ajax();
 
-		    ajax.send("country=" + country + "&type=" + type + "&type_incorporate=" + type_incorporate + "&cotitular=" + cotitular);
+
+
+			ajax.onreadystatechange = function()
+
+			{
+
+				if (ajax.readyState == 4 && ajax.status == 200)
+
+				{
+
+					var scs = ajax.responseText.extractScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+					scs.evalScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+				} else
+
+				{
+
+					divMensaje.innerHTML = '<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+
+				}
+
+			}
+
+
+
+			ajax.open("POST", "custom/page/upload-documents-incorporate.php", true);
+
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			ajax.send("country=" + country + "&type=" + type + "&type_incorporate=" + type_incorporate + "&cotitular=" + cotitular);
 
 		}
 
@@ -943,57 +949,55 @@
 
 		{
 
-		    var country = document.getElementById("country").value;
+			var country = document.getElementById("country").value;
 
-		    var type = $('input[name=type]:checked', '#wrapped').val();
+			var type = $('input[name=type]:checked', '#wrapped').val();
 
-		    var divMensaje = document.getElementById("view-sponsor");
+			var divMensaje = document.getElementById("view-sponsor");
 
-		    var ajax = Ajax();
-
-
-
-		    ajax.onreadystatechange=function()
-
-		    {
-
-		        if (ajax.readyState == 4 && ajax.status==200)
-
-		        {
-
-		            var scs=ajax.responseText.extractScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		            scs.evalScript();
-
-		            divMensaje.innerHTML=ajax.responseText;
-
-		        }
-
-		        else
-
-		        {
-
-		            divMensaje.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
-
-		        }
-
-		    }
+			var ajax = Ajax();
 
 
 
-		    ajax.open("POST", "custom/page/sponsor-information.php", true);
+			ajax.onreadystatechange = function()
 
-		    ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			{
 
-		    ajax.send("type=" + type + "&country=" + country);
+				if (ajax.readyState == 4 && ajax.status == 200)
+
+				{
+
+					var scs = ajax.responseText.extractScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+					scs.evalScript();
+
+					divMensaje.innerHTML = ajax.responseText;
+
+				} else
+
+				{
+
+					divMensaje.innerHTML = '<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+
+				}
+
+			}
+
+
+
+			ajax.open("POST", "custom/page/sponsor-information.php", true);
+
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+			ajax.send("type=" + type + "&country=" + country);
 
 		}
 
 
 
-		function validate_document_one(){
+		function validate_document_one() {
 
 
 
@@ -1001,49 +1005,49 @@
 
 
 
-				$("#btn-continue").attr("disabled","disabled");
+				$("#btn-continue").attr("disabled", "disabled");
 
 
 
-		        $('#number-document-one').attr('maxlength','13');
+				$('#number-document-one').attr('maxlength', '13');
 
 
 
-		        let pattern = /^[a-zA-Z]{3,4}(\d{6})((\D|\d){2,3})?$/;
+				let pattern = /^[a-zA-Z]{3,4}(\d{6})((\D|\d){2,3})?$/;
 
-		        let rfc = document.getElementById("number-document-one").value;
-
-
-
-	            rfcLength = 12;
+				let rfc = document.getElementById("number-document-one").value;
 
 
 
-		        if (pattern.test(rfc) && rfc.length >= rfcLength) { // ⬅️ Acá se comprueba
+				rfcLength = 12;
 
-		            valido = "Válido";
 
-		            $("#btn-continue").attr("disabled",false);
 
-		            validate = true;
+				if (pattern.test(rfc) && rfc.length >= rfcLength) { // ⬅️ Acá se comprueba
 
-		        } else {
+					valido = "Válido";
 
-		            valido = "No válido";
+					$("#btn-continue").attr("disabled", false);
 
-		    		$("#btn-continue").attr("disabled","disabled");
+					validate = true;
 
-		            validate = false;
+				} else {
 
-		           // rfc.classList.remove("error");
+					valido = "No válido";
 
-		        }
+					$("#btn-continue").attr("disabled", "disabled");
 
-		    
+					validate = false;
 
-		        document.getElementById("RFCResultMoral").innerText = "\nFormato: " + valido;
+					// rfc.classList.remove("error");
 
-		        return validate;
+				}
+
+
+
+				document.getElementById("RFCResultMoral").innerText = "\nFormato: " + valido;
+
+				return validate;
 
 
 
@@ -1053,24 +1057,23 @@
 
 		}
 
-		function View_hidde(){
+		function View_hidde() {
 			document.getElementById('kit-incorporate').innerHTML = "";
 			document.getElementById("show-playeras").innerHTML = "";
 		}
 
-		function playeras(country, gender, kit){
+		function playeras(country, gender, kit) {
 			var divplayeras = document.getElementById('show-playeras');
 			var ajax = Ajax();
 
-			ajax.onreadystatechange=function(){
-				if (ajax.readyState == 4 && ajax.status==200){
-					var scs=ajax.responseText.extractScript();
-					divplayeras.innerHTML=ajax.responseText;
+			ajax.onreadystatechange = function() {
+				if (ajax.readyState == 4 && ajax.status == 200) {
+					var scs = ajax.responseText.extractScript();
+					divplayeras.innerHTML = ajax.responseText;
 					scs.evalScript();
-					divplayeras.innerHTML=ajax.responseText;
-				}
-				else{
-					divplayeras.innerHTML='<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
+					divplayeras.innerHTML = ajax.responseText;
+				} else {
+					divplayeras.innerHTML = '<img src="custom/img/general/loading.gif" width="40" height="40" class="center-block"/>';
 				}
 			}
 			ajax.open("POST", "custom/page/catalog-shirts.php", true);
@@ -1078,17 +1081,17 @@
 			ajax.send("country=" + country + "&gender=" + gender + "&kit=" + kit);
 		}
 
-		function getDataShirt(){
-			var kit="";
+		function getDataShirt() {
+			var kit = "";
 			var country = document.getElementById('country').value;
 			var types = $('input[name=type]:checked', '#wrapped').val();
-			if(types==1){
-			kit = document.getElementById('type-kit').value;
-			var gender = document.getElementById('gender').value;
+			if (types == 1) {
+				kit = document.getElementById('type-kit').value;
+				var gender = document.getElementById('gender').value;
 
-			playeras(country, gender, kit);
+				playeras(country, gender, kit);
 			}
-			
+
 		}
 
 		var country = document.getElementById('country').value;
@@ -1109,35 +1112,30 @@
 		View_sponsor(); /*Mostrar información del patroniador*/
 
 		validate_document_one();
-
 	</script>
 
 
 
 	<script>
+		$zopim(function() {
 
+			$zopim.livechat.setNotes(' Visitante Incorporación Web');
 
-
-	$zopim(function() {
-
-    	$zopim.livechat.setNotes(' Visitante Incorporación Web');
-
-	});
-
-
-
-    </script>
-	<?php if(isset($country_tv)){ ?>
-	<script>
-		// console.log("en script");
-		// console.log($('#country_tv').val());
-		// $('#country').val($('#country_tv').val());
-		// $('#country').change();
-		Verify_country($('#country_tv').val());
+		});
 	</script>
-										<?php }?>
+	<?php if (isset($country_tv)) { ?>
+		<script>
+			// console.log("en script");
+			// console.log($('#country_tv').val());
+			// $('#country').val($('#country_tv').val());
+			// $('#country').change();
+			if ($('#country_tv').val() != 0) {
+				Verify_country($('#country_tv').val());
+			}
+		</script>
+	<?php } ?>
 
-	
+
 
 </body>
 

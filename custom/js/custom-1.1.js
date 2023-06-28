@@ -1854,7 +1854,7 @@ $(function () {
 
             {
 
-
+   
                 var elements = data.split('///');
 
 
@@ -1870,7 +1870,7 @@ $(function () {
                 if(type == 1)
 
                 {
-
+                    $('#country_tv').val(0)
                     document.location.href = message;
 
                 }
