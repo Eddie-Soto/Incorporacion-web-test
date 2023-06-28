@@ -3,8 +3,8 @@
 
 @session_start();
  if(isset($_SESSION["sponsor"])) {
-	$country_tv = $_SESSION["sponsor"];
-	var_dump($_SESSION);
+	$country_tv = $_SESSION["country_tv"];
+	var_dump($country_tv);
 }
 ?>
 <!DOCTYPE html> 
