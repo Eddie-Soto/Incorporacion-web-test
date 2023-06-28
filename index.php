@@ -1129,7 +1129,8 @@
     </script>
 	<?php if(isset($country_tv)){ ?>
 	<script>
-		Verify_country($('#country_tv').val());
+		$('#country').val($country_tv);
+		$('#country').change();
 	</script>
 										<?php }?>
 
