@@ -2,7 +2,7 @@
 <?php @session_name("incorporacion");
 
 @session_start();
- if(isset($_SESSION["sponsor"])) {
+ if(isset($_SESSION["country_tv"])) {
 	$country_tv = $_SESSION["country_tv"];
 	var_dump($country_tv);
 }
