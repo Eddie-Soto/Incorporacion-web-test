@@ -1129,10 +1129,11 @@
     </script>
 	<?php if(isset($country_tv)){ ?>
 	<script>
-		console.log("en script");
-		console.log($('#country_tv').val());
-		$('#country').val($('#country_tv').val());
-		$('#country').change();
+		// console.log("en script");
+		// console.log($('#country_tv').val());
+		// $('#country').val($('#country_tv').val());
+		// $('#country').change();
+		Verify_country($('#country_tv').val());
 	</script>
 										<?php }?>
 
