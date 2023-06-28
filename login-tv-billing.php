@@ -30,10 +30,10 @@ if(isset($sponsor) && isset($country)){
 // }
 
 
-
+echo $_SESSION["country_tv"];
 
 // /*Redireccionar*/
-header('location: index.php');
-exit;
-ob_end_flush();
+// header('location: index.php');
+// exit;
+// ob_end_flush();
 ?>
