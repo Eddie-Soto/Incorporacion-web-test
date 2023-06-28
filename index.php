@@ -1130,8 +1130,8 @@
 	<?php if(isset($country_tv)){ ?>
 	<script>
 		console.log("en script");
-		console.log($country_tv);
-		$('#country').val($country_tv);
+		console.log($('#country_tv').val());
+		$('#country').val($('#country_tv').val());
 		$('#country').change();
 	</script>
 										<?php }?>
