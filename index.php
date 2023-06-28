@@ -1,6 +1,4 @@
-<?php if(isset($_SESSION["country_tv"])) {
-	$country_tv = $_SESSION["country_tv"];
-}?>
+
 
 <!DOCTYPE html> 
 
@@ -143,7 +141,7 @@
 
 <body>
 
-	
+
 
 	<div id="preloader">
 
@@ -343,7 +341,6 @@
 											</div>
 </div>
 
-<input type="hidden" name="country_tv" id="country_tv" value="<?php if(isset($country_tv)) echo $country_tv ?>">
 
 									<div class="col-md-12 format-radio">
 
@@ -353,6 +350,9 @@
 <?php @session_name("incorporacion");
 
 @session_start();
+ if(isset($_SESSION["country_tv"])) {
+	$country_tv = $_SESSION["country_tv"];
+}
 ?>
 
 
@@ -366,6 +366,7 @@
 
 									</div>
 
+									<input type="hidden" name="country_tv" id="country_tv" value="<?php if(isset($country_tv)) echo $country_tv ?>">
 
 
 									<div class="row">
@@ -671,17 +672,6 @@
 
 	" Por tu incorporación en el mes de abril del 2021,  queremos que disfrutes  de tu sistema de aire KenkoAir Purifier con un 30% de descuento. Comparte este beneficio con las personas que te rodean y maximiza tus ingresos.  Ten presente que este beneficio se activara en 2 horas en tu Tienda Virtual."
 -->
-<?php if(isset($_SESSION["country_tv"])) {
-	?>
-	<script>
-		console.log("en script");
-		console.log()
-		// $('#country').val($_SESSION["country_tv"]);
-		// $('#country').change();
-		Verify_country($_SESSION["country_tv"]);
-	</script>
-	<?php
-}?>
 
 	<script>
 
