@@ -29,333 +29,333 @@ require_once('../functions.php'); /*Funciones*/
 		$done = $queryResult->fetch();
 
 		echo '<pre>' , var_dump($done) , '</pre>';
-		if($done)
+		// if($done)
 
-		{
+		// {
 
-			$id_contract = $done["id_contract"];
+		// 	$id_contract = $done["id_contract"];
 
 
 
-			$country = $done["country"];
+		// 	$country = $done["country"];
 
-			$country_letter = Country_letter($country, 1);
+		// 	$country_letter = Country_letter($country, 1);
 
-			$country_abrev = Country_letter($country, 2);
+		// 	$country_abrev = Country_letter($country, 2);
 
 
 
-			$code = $done["code"];
+		// 	$code = $done["code"];
 
-			$name = $done["name"];
+		// 	$name = $done["name"];
 
-			$type = $done["type"];
+		// 	$type = $done["type"];
 
-			$type_incorporate = $done["type_incorporate"];
+		// 	$type_incorporate = $done["type_incorporate"];
 
-			$type_sponsor = $done["type_sponsor"];
+		// 	$type_sponsor = $done["type_sponsor"];
 
-			$sponsor = $done["sponsor"];
+		// 	$sponsor = $done["sponsor"];
 
-			$email = $done["email"];
+		// 	$email = $done["email"];
 
-			$cellular = $done["cellular"];
+		// 	$cellular = $done["cellular"];
 
-			$birthday = obtenerFechaEnLetra(substr($done["birthday"], 0, 10));
+		// 	$birthday = obtenerFechaEnLetra(substr($done["birthday"], 0, 10));
 
-			$address = $done["address"];
+		// 	$address = $done["address"];
 
-			$residency_one = $done["residency_one"];
+		// 	$residency_one = $done["residency_one"];
 
-			$residency_two = $done["residency_two"];
+		// 	$residency_two = $done["residency_two"];
 
-			$residency_three = $done["residency_three"];
+		// 	$residency_three = $done["residency_three"];
 
-			$residency_four = $done["residency_four"];
+		// 	$residency_four = $done["residency_four"];
 
-			$name_legal_representative = $done["name_legal_representative"];
+		// 	$name_legal_representative = $done["name_legal_representative"];
 
-			$type_document = $done["type_document"];
+		// 	$type_document = $done["type_document"];
 
-			$number_document = $done["number_document"];
+		// 	$number_document = $done["number_document"];
 
-			$rfc = $done["rfc"];
+		// 	$rfc = $done["rfc"];
 
-			if($rfc == "0"){ $rfc = ""; }
+		// 	if($rfc == "0"){ $rfc = ""; }
 
-			$name_cotitular = $done["name_cotitular"];
+		// 	$name_cotitular = $done["name_cotitular"];
 
-			$type_document_cotitular = $done["type_document_cotitular"];
+		// 	$type_document_cotitular = $done["type_document_cotitular"];
 
-			$number_document_cotitular = $done["number_document_cotitular"];
+		// 	$number_document_cotitular = $done["number_document_cotitular"];
 
-			$bank = $done["bank"];
+		// 	$bank = $done["bank"];
 
-			$bank_type = $done["bank_type"];
+		// 	$bank_type = $done["bank_type"];
 
-			$number_account = $done["number_account"];
+		// 	$number_account = $done["number_account"];
 
-			$number_clabe = $done["number_clabe"];
+		// 	$number_clabe = $done["number_clabe"];
 
-			$payment = $done["payment"];
+		// 	$payment = $done["payment"];
 
-			$create_at = $done["create_at"];
+		// 	$create_at = $done["create_at"];
 
-			$update_at = $done["update_at"];
+		// 	$update_at = $done["update_at"];
 
-			$user_approved = $done["user_approved"];
+		// 	$user_approved = $done["user_approved"];
 
-			$status = $done["status"];
+		// 	$status = $done["status"];
 
-			$date_payment = $done["date_payment"];
+		// 	$date_payment = $done["date_payment"];
 
-			$type_document_name = $done["type_document_name"];
+		// 	$type_document_name = $done["type_document_name"];
 
-			$residency_two_name = $done["residency_two_name"];
+		// 	$residency_two_name = $done["residency_two_name"];
 
-			$type_document_cotitular_name = $done["type_document_cotitular_name"];
+		// 	$type_document_cotitular_name = $done["type_document_cotitular_name"];
 
-			$ip = $done["ip"];
+		// 	$ip = $done["ip"];
 
-			$browser = $done["browser"];
+		// 	$browser = $done["browser"];
 
-			$name_sponsor = $done["name_sponsor"];
+		// 	$name_sponsor = $done["name_sponsor"];
 
-			$email_sponsor = $done["email_sponsor"];
+		// 	$email_sponsor = $done["email_sponsor"];
 
-			$cellular_sponsor = $done["cellular_sponsor"];
+		// 	$cellular_sponsor = $done["cellular_sponsor"];
 
-			$bank_name = $done["bank_name"];
+		// 	$bank_name = $done["bank_name"];
 
-			$bank_type_name = $done["bank_type_name"];
+		// 	$bank_type_name = $done["bank_type_name"];
 
 
 
-			$text_header = "SOLICITUD DE INSCRIPCIÓN COMO ASESOR DE BIENESTAR Y CONTRATO";
+		// 	$text_header = "SOLICITUD DE INSCRIPCIÓN COMO ASESOR DE BIENESTAR Y CONTRATO";
 
-			$text0 = "Asesor de Bienestar";
+		// 	$text0 = "Asesor de Bienestar";
 
-			$text1 = "Apellidos y nombres";
+		// 	$text1 = "Apellidos y nombres";
 
-			$text2 = "Fecha de nacimiento";
+		// 	$text2 = "Fecha de nacimiento";
 
-			$text3 = "Número de documento";
+		// 	$text3 = "Número de documento";
 
-			$text4 = "";
+		// 	$text4 = "";
 
-			$text5 = "Departamento";
+		// 	$text5 = "Departamento";
 
-			$text6 = "Ciudad";
+		// 	$text6 = "Ciudad";
 
-			$text7 = "";
+		// 	$text7 = "";
 
-			$text8 = "Número de cuenta";
+		// 	$text8 = "Número de cuenta";
 
-			$text9 = "CCI";
+		// 	$text9 = "CCI";
 
-			if ($date_payment != NULL) {
-				$create_at = $date_payment;
-			}
+		// 	if ($date_payment != NULL) {
+		// 		$create_at = $date_payment;
+		// 	}
 
-			if($country == 8)
+		// 	if($country == 8)
 
-			{
+		// 	{
 
-				$text8 = "Número de cuenta bancaria cliente";
+		// 		$text8 = "Número de cuenta bancaria cliente";
 
-				$text9 = "Cédula de propietario de cuenta";	
+		// 		$text9 = "Cédula de propietario de cuenta";	
 
-			}
+		// 	}
 
 
 
-			if($country == 1)
+		// 	if($country == 1)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Departamento";
+		// 		$text5 = "Departamento";
 
-				$text6 = "Ciudad";
+		// 		$text6 = "Ciudad";
 
-				$text7 = "";
+		// 		$text7 = "";
 
-			}
+		// 	}
 
-			if($country == 2)
+		// 	if($country == 2)
 
-			{
+		// 	{
 
-				$text4 = "Código postal";
+		// 		$text4 = "Código postal";
 
-				$text5 = "Estado";
+		// 		$text5 = "Estado";
 
-				$text6 = "Municipio";
+		// 		$text6 = "Municipio";
 
-				$text7 = "Colonia";
+		// 		$text7 = "Colonia";
 
-			}
+		// 	}
 
-			if($country == 3)
+		// 	if($country == 3)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Departamento";
+		// 		$text5 = "Departamento";
 
-				$text6 = "Provincia";
+		// 		$text6 = "Provincia";
 
-				$text7 = "";
+		// 		$text7 = "";
 
-			}
+		// 	}
 
-			if($country == 4)
+		// 	if($country == 4)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Provincia";
+		// 		$text5 = "Provincia";
 
-				$text6 = "Ciudad";
+		// 		$text6 = "Ciudad";
 
-				$text7 = "";
+		// 		$text7 = "";
 
-			}
+		// 	}
 
-			if($country == 5)
+		// 	if($country == 5)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Ciudad";
+		// 		$text5 = "Ciudad";
 
-				$text6 = "Provincia";
+		// 		$text6 = "Provincia";
 
-				$text7 = "";
+		// 		$text7 = "";
 
-			}
+		// 	}
 
-			if($country == 6)
+		// 	if($country == 6)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Departamento";
+		// 		$text5 = "Departamento";
 
-				$text6 = "Ciudad";
+		// 		$text6 = "Ciudad";
 
-				$text7 = "Municipio";
+		// 		$text7 = "Municipio";
 
-			}
+		// 	}
 
-			if($country == 7)
+		// 	if($country == 7)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Departamento";
+		// 		$text5 = "Departamento";
 
-				$text6 = "Ciudad";
+		// 		$text6 = "Ciudad";
 
-				$text7 = "";
+		// 		$text7 = "";
 
-			}
+		// 	}
 
-			if($country == 8)
+		// 	if($country == 8)
 
-			{
+		// 	{
 
-				$text4 = "";
+		// 		$text4 = "";
 
-				$text5 = "Provincia";
+		// 		$text5 = "Provincia";
 
-				$text6 = "Cantón";
+		// 		$text6 = "Cantón";
 
-				$text7 = "";
+		// 		$text7 = "";
 
-			}
+		// 	}
 
 
 
-			if($type == 0)
+		// 	if($type == 0)
 
-			{
+		// 	{
 
-				$text_header = "SOLICITUD DE INSCRIPCIÓN COMO CLUB DE BIENESTAR Y CONTRATO";
+		// 		$text_header = "SOLICITUD DE INSCRIPCIÓN COMO CLUB DE BIENESTAR Y CONTRATO";
 
-				$text0 = "Club de Bienestar";
+		// 		$text0 = "Club de Bienestar";
 
-			}
+		// 	}
 
 
 
-			if($type_incorporate == 0)
+		// 	if($type_incorporate == 0)
 
-			{
+		// 	{
 
-				$text1 = "Nombre de la empresa";
+		// 		$text1 = "Nombre de la empresa";
 
-				$text2 = $text2 . " del representante legal";
+		// 		$text2 = $text2 . " del representante legal";
 
-				if($country == 1)
+		// 		if($country == 1)
 
-				{
+		// 		{
 
-					$text3 = "Número de Identificación Tributaria";
+		// 			$text3 = "Número de Identificación Tributaria";
 
-				}
+		// 		}
 
-				if($country == 2)
+		// 		if($country == 2)
 
-				{
+		// 		{
 
-					$text3 = "Registro Federal de Contribuyentes (RFC)";
+		// 			$text3 = "Registro Federal de Contribuyentes (RFC)";
 
-				}
+		// 		}
 
-				if($country == 3 || $country == 4 || $country == 5)
+		// 		if($country == 3 || $country == 4 || $country == 5)
 
-				{
+		// 		{
 
-					$text3 = "Número de Identificación (RUC)";
+		// 			$text3 = "Número de Identificación (RUC)";
 
-				}
+		// 		}
 
-                if($country == 6 || $country == 7)
+        //         if($country == 6 || $country == 7)
 
-                {
+        //         {
 
-                    $text3 = "Número de Identificación (NIT)";
+        //             $text3 = "Número de Identificación (NIT)";
 
-                }
+        //         }
 
-                if($country == 8)
+        //         if($country == 8)
 
-                {
+        //         {
 
-                    $text3 = "Número de Identificación";
+        //             $text3 = "Número de Identificación";
 
-                }
+        //         }
 
-			}
+		// 	}
 
-		}
+		// }
 
-		else
+		// else
 
-		{			
-			echo "1" . $email;
-			//header("location: ../");
+		// {			
+		// 	echo "1" . $email;
+		// 	//header("location: ../");
 
-			exit;
+		// 	exit;
 
-		}
+		// }
 
 	
 
