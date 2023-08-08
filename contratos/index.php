@@ -22,12 +22,13 @@ require_once('../functions.php'); /*Funciones*/
 
 
 
-		$queryResult = $pdo->prepare("SELECT t0.id_contract, t0.country, t0.code, t0.name, t0.type, t0.type_incorporate, t0.type_sponsor, t0.sponsor, t0.email, t0.cellular, t0.birthday, t0.address, t0.residency_one, t0.residency_two, t0.residency_three, t0.residency_four, t0.name_legal_representative, t0.type_document, t0.number_document, t0.rfc, t0.name_cotitular, t0.type_document_cotitular, t0.number_document_cotitular, t0.bank, bank_type, t0.number_account, t0.number_clabe, t0.payment, t0.create_at, t0.update_at, t0.user_approved, t0.status, t0.date_payment, CASE WHEN t1.name is null THEN '-' ELSE t1.name END as type_document_name, t2.name as residency_two_name, t4.name as type_document_cotitular_name, t0.ip, t0.browser, t5.nombre as name_sponsor, t5.correo as email_sponsor, t5.celular as cellular_sponsor, t6.name as bank_name, t7.name as bank_type_name FROM contracts_test t0 left join citys t2 on t0.residency_two = t2.code and t0.country = t2.country left join nikkenla_marketing.control_ci_test t5 on t0.sponsor = t5.codigo left join nikkenla_office.control_banks t6 on t0.bank = t6.id_bank left join nikkenla_office.control_banks_type t7 on t0.bank_type = t7.id_bank_type left join type_documents t1 on t0.type_document = t1.id_type left join type_documents t4 on t0.type_document_cotitular = t4.id_type where t0.id_contract = 'p38'");
+		$queryResult = $pdo->prepare("SELECT t0.id_contract, t0.country, t0.code, t0.name, t0.type, t0.type_incorporate, t0.type_sponsor, t0.sponsor, t0.email, t0.cellular, t0.birthday, t0.address, t0.residency_one, t0.residency_two, t0.residency_three, t0.residency_four, t0.name_legal_representative, t0.type_document, t0.number_document, t0.rfc, t0.name_cotitular, t0.type_document_cotitular, t0.number_document_cotitular, t0.bank, bank_type, t0.number_account, t0.number_clabe, t0.payment, t0.create_at, t0.update_at, t0.user_approved, t0.status, t0.date_payment, CASE WHEN t1.name is null THEN '-' ELSE t1.name END as type_document_name, t2.name as residency_two_name, t4.name as type_document_cotitular_name, t0.ip, t0.browser, t5.nombre as name_sponsor, t5.correo as email_sponsor, t5.celular as cellular_sponsor, t6.name as bank_name, t7.name as bank_type_name FROM contracts t0 left join citys t2 on t0.residency_two = t2.code and t0.country = t2.country left join nikkenla_marketing.control_ci_test t5 on t0.sponsor = t5.codigo left join nikkenla_office.control_banks t6 on t0.bank = t6.id_bank left join nikkenla_office.control_banks_type t7 on t0.bank_type = t7.id_bank_type left join type_documents t1 on t0.type_document = t1.id_type left join type_documents t4 on t0.type_document_cotitular = t4.id_type where t0.id_contract = 'p38'");
 
 		$queryResult->execute(array(':email' => $email));
 
 		$done = $queryResult->fetch();
 
+		return $done;
 		if($done)
 
 		{
