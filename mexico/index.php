@@ -400,7 +400,7 @@
 
 														<option value="7">El Salvador</option>
 
-														<option value="6">Guatemala</option>-->
+														<option value="6">Guatemala</option>
 
 														<option value="2" selected>México</option>
 

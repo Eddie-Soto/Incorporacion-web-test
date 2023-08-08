@@ -1207,12 +1207,12 @@ function Validate_email(email)
         
         if(regex.test(email)){
             $.ajax({
-                url: "https://cmsnikken.nikkenlatam.com/api/validar_email",
+                url: "https://cmsnikken.nikkenlatam.com/api/validate_email",
                 type: "POST",
                 datatype: "application/json",
                 data: { email },
                 success: function (resp) {
-                  if(resp.status == 200){
+                  if(response.status == 200){
                     switch (resp.validate) {
                         case 0:
                             $('#validator-email').val(1);
