@@ -28,7 +28,7 @@ require_once('../functions.php'); /*Funciones*/
 
 		$done = $queryResult->fetch();
 
-		return $done;
+		echo '<pre>' , var_dump($done) , '</pre>';
 		if($done)
 
 		{
